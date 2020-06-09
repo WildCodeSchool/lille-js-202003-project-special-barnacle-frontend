@@ -1,29 +1,22 @@
 import React from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import './styles/header.css';
 
 const Header = () => {
   return (
     <div className="header">
-      <a href="https://www.negodi.fr/">
+      <Link to="/">
         <img src="./img/logoNegodi.png" alt="logo Negodi" />
-      </a>
+      </Link>
       <nav>
         <ul>
-          <li>
-            <a href="https://www.negodi.fr/">Découvrez Negodi</a>
-          </li>
-          <li>
-            <a href="https://www.negodi.fr/">Nos offres</a>
-          </li>
-          <li>
-            <a href="https://www.negodi.fr/">Démarrez votre projet</a>
-          </li>
-          <li>
-            <a href="https://www.negodi.fr/">Contact</a>
-          </li>
-          <li>
-            <a href="https://www.negodi.fr/">ESPACE CLIENT</a>
-          </li>
+          <NavLink className="navLink" to="/about">
+            Découvrez Negodi
+          </NavLink>
+          <NavLink to="/offer"> Nos offres </NavLink>
+          <NavLink to="/projet"> Démarrez votre projet </NavLink>
+          <NavLink to="/contact"> Contact </NavLink>
+          <NavLink to="/user"> Espace Client </NavLink>
         </ul>
       </nav>
     </div>
