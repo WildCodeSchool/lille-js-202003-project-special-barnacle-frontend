@@ -23,19 +23,6 @@ img {
   width: 14vw;
   margin: 0 4vw;
 }
-/*
-nav a {
-  text-decoration: none;
-  color: #2a96af;
-  font-size: 1.1em;
-}
-
-nav a:hover {
-  font-weight: bold;
-  padding-bottom: 1vh;
-  border-bottom: solid 1px #2a96af;
-  transition: all 0.5s linear;
-}*/
 
 nav a {
   position: relative;
@@ -67,4 +54,66 @@ nav a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  ul {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .lineOpen {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #2a96af;
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+  }
+
+  .lineOpen :nth-child(1) {
+    transform: rotate(0);
+  }
+
+  .lineOpen :nth-child(2) {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .lineOpen :nth-child(3) {
+    transform: rotate(0);
+  }
+
+  .lineClosed {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #2a96af;
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+  }
+
+  .lineClosed :nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .lineClosed :nth-child(2) {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  .lineClosed :nth-child(3) {
+    transform: rotate(-45deg);
+  }
 }
