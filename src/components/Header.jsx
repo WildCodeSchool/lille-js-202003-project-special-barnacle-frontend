@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import './styles/header.css';
 import Burger from './BurgerMenu';
 import Menu from './Menu';
@@ -10,31 +11,24 @@ const Header = () => {
     <div className="header">
       <Burger open={open} setOpen={setOpen} />
       <Menu open={open} setOpen={setOpen} />
-      <a className="logo-box" href="/">
+
+      <Link className="logo-box" to="/">
         <img className="logo" src="./img/logoNegodi.png" alt="logo Negodi" />
-      </a>
+      </Link>
       <nav>
         <ul>
-          <li>
-            <a href="https://www.negodi.fr/">Découvrez Negodi</a>
-          </li>
-          <li>
-            <a href="https://www.negodi.fr/">Nos offres</a>
-          </li>
-          <li>
-            <a href="https://www.negodi.fr/">Démarrez votre projet</a>
-          </li>
-          <li>
-            <a href="https://www.negodi.fr/">Contact</a>
-          </li>
-          <li>
-            <a href="https://www.negodi.fr/">ESPACE CLIENT</a>
-          </li>
+          <NavLink className="navLink" to="/about">
+            Découvrez Negodi
+          </NavLink>
+          <NavLink to="/offer"> Nos offres </NavLink>
+          <NavLink to="/projet"> Démarrez votre projet </NavLink>
+          <NavLink to="/contact"> Contact </NavLink>
+          <NavLink to="/user"> Espace Client </NavLink>
         </ul>
       </nav>
-      <a href="/">
+      <Link href="/">
         <img className="login" src="./img/user.png" alt="connexion" />
-      </a>
+      </Link>
     </div>
   );
 };

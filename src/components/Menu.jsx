@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -44,11 +45,11 @@ const StyledMenu = styled.nav`
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <a href="/">Découvrez Negodi</a>
-      <a href="/">Nos offres</a>
-      <a href="/">Démarrez votre projet</a>
-      <a href="/">Contact</a>
-      <a href="/">ESPACE CLIENT</a>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/user"> Espace Client </NavLink>
+      <NavLink to="/offer"> Nos offres </NavLink>
+      <NavLink to="/projet"> Démarrez votre projet </NavLink>
+      <NavLink to="/contact"> Contact </NavLink>
     </StyledMenu>
   );
 };
