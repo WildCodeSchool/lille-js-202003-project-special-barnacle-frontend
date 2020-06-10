@@ -1,8 +1,8 @@
 .header {
-  height: 7vw;
-  background-color: #ffffff;
+  height: 12vh;
+  background-color: #ffff;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -10,7 +10,6 @@ ul {
   display: flex;
   list-style: none;
   justify-content: space-around;
-  margin-right: 4vw;
   width: 50vw;
 }
 
@@ -18,10 +17,12 @@ li {
   margin: 0 0.2vw;
   text-align: center;
 }
-
-img {
-  width: 14vw;
-  margin: 0 4vw;
+.logo-box {
+  flex-grow: 1;
+}
+.logo {
+  width: 20vh;
+  margin: 1rem 3rem 0 3rem;
 }
 
 nav a {
@@ -55,65 +56,23 @@ nav a:hover:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-
+.login {
+  width: 30px;
+  align-self: flex-end;
+  margin-right: 4vw;
+}
 .burger {
   display: none;
 }
 
 @media (max-width: 1200px) {
+  .logo-box {
+    flex-grow: 0;
+  }
   ul {
     display: none;
   }
-
-  .burger {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: column nowrap;
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .lineOpen {
-    width: 2rem;
-    height: 0.25rem;
-    background-color: #2a96af;
-    border-radius: 10px;
-    transform-origin: 1px;
-    transition: all 0.3s linear;
-  }
-
-  .lineOpen :nth-child(1) {
-    transform: rotate(0);
-  }
-
-  .lineOpen :nth-child(2) {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-  .lineOpen :nth-child(3) {
-    transform: rotate(0);
-  }
-
-  .lineClosed {
-    width: 2rem;
-    height: 0.25rem;
-    background-color: #2a96af;
-    border-radius: 10px;
-    transform-origin: 1px;
-    transition: all 0.3s linear;
-  }
-
-  .lineClosed :nth-child(1) {
-    transform: rotate(45deg);
-  }
-
-  .lineClosed :nth-child(2) {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-
-  .lineClosed :nth-child(3) {
-    transform: rotate(-45deg);
+  .login {
+    margin: 0;
   }
 }
