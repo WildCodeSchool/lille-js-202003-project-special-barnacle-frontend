@@ -48,7 +48,7 @@ const Menu = ({ open }) => {
       <NavLink to="/">Home</NavLink>
       <NavLink to="/user"> Espace Client </NavLink>
       <NavLink to="/offer"> Nos offres </NavLink>
-      <NavLink to="/project"> Démarrez votre project </NavLink>
+      <NavLink to="/project"> Démarrez votre projet </NavLink>
       <NavLink to="/contact"> Contact </NavLink>
     </StyledMenu>
   );
