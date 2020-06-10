@@ -10,6 +10,7 @@ const Footer = () => {
             src="./img/logofooter.png"
             alt="logo Footer Negodi"
             width="150px"
+            className="logofooter"
           />
         </div>
         <div className="footerlists">
@@ -33,40 +34,38 @@ const Footer = () => {
           </div>
           <div className="footerlist">
             <ul>
-              <li>02 41 01 23 45</li>
+              <li>
+                <img className="logoMail" src="./img/tel.png" alt="tel" />
+                <span>02 41 01 23 45</span>
+              </li>
 
               <li>
-                <img src="./img/mail.png" alt="mail" width="50px" />
+                <img className="logoMail" src="./img/mail.png" alt="mail" />
                 <span id="mail">contact@negodi.fr</span>
               </li>
               <li>Consultez notre FAQ</li>
-              <li>Envoyez nous un e-mail</li>
             </ul>
             <h3>Suivez-nous</h3>
             <div className="social">
               <img
+                className="logoSocial"
                 src="./img/iconfacebook.png"
                 alt="facebook"
-                height="80px"
-                width="80px"
               />
               <img
+                className="logoSocial"
                 src="./img/icontwitter.png"
                 alt="facebook"
-                height="80px"
-                width="80px"
               />
               <img
+                className="logoSocial"
                 src="./img/iconlinkedin.png"
                 alt="facebook"
-                height="80px"
-                width="80px"
               />
             </div>
           </div>
         </div>
       </div>
-
       <div className="footerbottom">
         <p>
           ASC Agence de Services en Courtages - RCS Angers 792 071 425 00013
@@ -97,9 +96,9 @@ const Footer = () => {
           125 Rue de la Faisanderie - 75773 Paris Cedex 16 - Police n RCPGP3215
         </p>
         <div />
+        <div className="negodimention">&#169; 2020 - Negodi / ASC</div>
       </div>
     </div>
   );
 };
-
 export default Footer;
