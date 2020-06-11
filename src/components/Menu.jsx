@@ -8,7 +8,7 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: #ffff;
-  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
+  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-120%)')};
   height: 100vh;
   text-align: left;
   position: absolute;

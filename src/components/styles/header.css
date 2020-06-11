@@ -1,22 +1,27 @@
 .header {
-  height: 12vh;
-  background-color: #ffff;
+  background-color: ;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 16vh;
 }
 
+.row {
+  border: 2px solid magenta;
+}
+
+/*
 .header ul {
   display: flex;
-  list-style: none;
   justify-content: space-around;
   width: 50vw;
+  list-style: none;
 }
-
-.header li {
+*/
+/*.header li {
   margin: 0 0.2vw;
   text-align: center;
-}
+}*/
 .logo-box {
   flex-grow: 1;
 }
