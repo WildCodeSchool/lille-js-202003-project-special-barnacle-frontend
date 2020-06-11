@@ -23,11 +23,11 @@ const Header = () => {
     <StyledHeader open={open}>
       <div className="container-fluid px-0">
         <div className="row mx-auto ">
-          <div className="col-2 mt-3 ">
+          <div className="col-2 col-sm-4 mt-3 ">
             <Burger open={open} setOpen={setOpen} />
           </div>
           <Menu open={open} setOpen={setOpen} />
-          <Link to="/" className="col-7 col-lg-1">
+          <Link to="/" className="col-7 col-sm-5 col-lg-1">
             <img
               className="logo-box mt-2"
               src="./img/logoNegodi.png"
@@ -53,7 +53,7 @@ const Header = () => {
             </NavLink>
           </nav>
           <div className="offset-1 offset-lg-1" />
-          <Link href="/" className="col-2 mt-2">
+          <Link href="/" className="col-2 col-sm-2 mt-2">
             <img
               className="login"
               src="./img/user.png"
