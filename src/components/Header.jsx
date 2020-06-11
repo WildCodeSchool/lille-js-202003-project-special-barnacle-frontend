@@ -27,27 +27,27 @@ const Header = () => {
             <Burger open={open} setOpen={setOpen} />
           </div>
           <Menu open={open} setOpen={setOpen} />
-          <Link to="/" className="col-7 col-sm-5 col-lg-3">
+          <Link to="/" className="col-7 col-sm-5 col-lg-3 col-xl-3">
             <img
               className="logo-box mt-2"
               src="./img/logoNegodi.png"
               alt="logo Negodi"
             />
           </Link>
-          <nav className="d-none d-lg-block col-lg-8 my-auto">
-            <NavLink className="mx-2  navLink" to="/about">
+          <nav className="d-none d-lg-block col-lg-8 my-auto text-center">
+            <NavLink className="mx-2 mx-xl-3  navLink" to="/about">
               Découvrez Negodi
             </NavLink>
-            <NavLink className="mx-2" to="/offer">
+            <NavLink className="mx-2 mx-xl-3" to="/offer">
               Nos offres
             </NavLink>
-            <NavLink className="mx-2" to="/project">
+            <NavLink className="mx-2 mx-xl-3" to="/project">
               Démarrez votre projet
             </NavLink>
-            <NavLink className="mx-2" to="/contact">
+            <NavLink className="mx-2 mx-xl-3" to="/contact">
               Contact
             </NavLink>
-            <NavLink className="mx-2" to="/user">
+            <NavLink className="mx-2 mx-xl-3" to="/user">
               Espace Client
             </NavLink>
           </nav>
