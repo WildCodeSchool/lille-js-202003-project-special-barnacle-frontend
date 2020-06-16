@@ -17,10 +17,6 @@ const StyledMenu = styled.nav`
   left: 0;
   transition: transform 0.3s ease-in-out;
 
-  @media (max-width: 576px) {
-    width: 100%;
-  }
-
   a {
     font-size: 30px;
     text-transform: uppercase;
@@ -31,11 +27,9 @@ const StyledMenu = styled.nav`
     text-decoration: none;
     transition: color 0.3s linear;
 
-    @media (max-width: 576px) {
-      font-size: 1rem;
-      text-align: center;
-      width: 100vw;
-    }
+    font-size: 1rem;
+    text-align: center;
+    width: 100vw;
 
     &:hover {
       color: #343078;
