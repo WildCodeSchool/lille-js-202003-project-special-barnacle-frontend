@@ -8,6 +8,35 @@ const StyledHeader = styled.header`
   background-color: #ffffff;
   padding-bottom: 10px;
 
+  nav a {
+    position: relative;
+    color: #2a96af;
+    text-decoration: none;
+  }
+  nav a:hover {
+    color: #2a96af;
+    font-weight: bold;
+  }
+  nav a:before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    bottom: -10px;
+    left: 12%;
+    background-color: #2a96af;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  nav a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
   .login {
     display: ${({ open }) => (open ? 'none' : 'block')};
   }
@@ -27,7 +56,7 @@ const Header = () => {
             <Burger open={open} setOpen={setOpen} />
           </div>
           <Menu open={open} setOpen={setOpen} />
-          <Link to="/" className="col-7 col-sm-5 col-lg-3 col-xl-3">
+          <Link to="/" className="col-7 col-sm-5 col-lg-3">
             <img
               className="logo-box mt-2"
               src="./img/logoNegodi.png"

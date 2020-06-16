@@ -29,7 +29,7 @@
   width: 20vh;
   margin: 1rem 4rem 0rem 6rem;
 }
-
+/* COPIER EN STYLEDCOMPONENT DANS HEADER.JSX
 nav a {
   position: relative;
   color: #2a96af;
@@ -60,7 +60,7 @@ nav a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
-}
+} */
 .login {
   width: 30px;
   align-self: flex-end;
