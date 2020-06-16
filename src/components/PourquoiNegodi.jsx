@@ -16,9 +16,17 @@ function PourquoiNegodi() {
       <div className="container-fluid">
         <div className="row">
           <h4 className="col-12 text-center my-5">Pourquoi Choisir Negodi ?</h4>
-          <Liberte />
-          <Efficiency />
-          <Transparence />
+        </div>
+        <div className="row">
+          <div className="col">
+            <Liberte />
+          </div>
+          <div className="col">
+            <Efficiency />
+          </div>
+          <div className="col">
+            <Transparence />
+          </div>
         </div>
       </div>
     </Pourquoi>
