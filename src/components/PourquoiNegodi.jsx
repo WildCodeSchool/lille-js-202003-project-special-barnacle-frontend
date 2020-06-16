@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Liberte from './Liberte';
+import Efficiency from './Efficacite';
+import Transparence from './Transparence';
 
 const Pourquoi = styled.h4`
   h4 {
@@ -15,6 +17,8 @@ function PourquoiNegodi() {
         <div className="row">
           <h4 className="col-12 text-center my-5">Pourquoi Choisir Negodi ?</h4>
           <Liberte />
+          <Efficiency />
+          <Transparence />
         </div>
       </div>
     </Pourquoi>
