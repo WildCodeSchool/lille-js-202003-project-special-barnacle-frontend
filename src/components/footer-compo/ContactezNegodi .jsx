@@ -4,8 +4,8 @@ import MailIcon from '@material-ui/icons/Mail';
 
 const ContactezNegodi = () => {
   return (
-    <div className="col-sm-6 pt-5 mx-auto text-center">
-      <h4>Nous contacter</h4>
+    <div className="col-sm-4 p-2 text-center mx-auto text-sm-left ">
+      <h4 className=" list-group-item listBackground ">Nous contacter</h4>
       <ul>
         <li className=" list-group-item listBackground ">
           <PhoneIcon />

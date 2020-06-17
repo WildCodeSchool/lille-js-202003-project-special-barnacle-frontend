@@ -59,6 +59,7 @@ const Footer = () => {
 
             <IconLandingPage />
           </div>
+
           <MentionsNegodi />
         </div>
       </Router>
