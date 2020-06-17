@@ -5,7 +5,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import DecouvrezNegodi from './footer-compo/DecouvrezNegodi';
 import MentionsNegodi from './footer-compo/MentionsNegodi';
 import ContactezNegodi from './footer-compo/ContactezNegodi ';
-import IconLandingPage from './footer-compo/IconLandingPage';
 import LogoNegodiBottom from './footer-compo/LogoNegodiBottom';
 
 const StyledFooter = styled.footer`
@@ -50,17 +49,17 @@ const Footer = () => {
   return (
     <StyledFooter>
       <Router>
-        <div className="footer">
-          <LogoNegodiBottom />
+        <div className="container-fluid footer">
           <div className="row">
-            <DecouvrezNegodi />
-
-            <ContactezNegodi />
-
-            <IconLandingPage />
+            <LogoNegodiBottom />
           </div>
-
-          <MentionsNegodi />
+          <div className="row row-cols-2">
+            <DecouvrezNegodi />
+            <ContactezNegodi />
+          </div>
+          <div className="row d-block">
+            <MentionsNegodi />
+          </div>
         </div>
       </Router>
     </StyledFooter>

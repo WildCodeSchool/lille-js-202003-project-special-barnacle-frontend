@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom';
 
 const LogoNegodiBottom = () => {
   return (
-    <Link className="row pt-5" to="/">
-      <img
-        src="./img/logofooter.png"
-        alt="logo Footer Negodi"
-        width="150px"
-        className="logofooter mx-auto"
-      />
-    </Link>
+    <div className="container-fluid">
+      <Link className="row" to="/">
+        <img
+          className="mx-auto mx-lg-5 my-2"
+          src="./img/logofooter.png"
+          alt="logo Footer Negodi"
+          width="150px"
+        />
+      </Link>
+    </div>
   );
 };
 
