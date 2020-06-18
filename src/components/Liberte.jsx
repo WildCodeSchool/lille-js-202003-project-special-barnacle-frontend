@@ -28,7 +28,7 @@ function Liberte() {
           <h5 className="title col-12 text-center mb-4">Liberté</h5>
         </div>
         <div className="row">
-          <div className="col-12 text-center">
+          <div className="col-12 text-center ">
             <p className="mx-3">
               Priorisez vos objectifs! Vous souhaitez obtenir les meilleures
               conditions dans l’établissement que vous avez choisi? Mettez
