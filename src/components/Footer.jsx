@@ -49,13 +49,17 @@ const Footer = () => {
   return (
     <StyledFooter>
       <Router>
-        <div className="container-fluid footer">
-          <div className="row">
-            <LogoNegodiBottom />
-          </div>
-          <div className="row row-cols-2">
-            <DecouvrezNegodi />
-            <ContactezNegodi />
+        <div className="footer">
+          <LogoNegodiBottom />
+          <div className="row row-cols-1 row-cols-lg-2 mb-5">
+            <div className="offset-2" />
+            <div className="col-lg">
+              <DecouvrezNegodi />
+            </div>
+            <div className="col-lg">
+              <ContactezNegodi />
+            </div>
+            <div className="offset-2" />
           </div>
           <div className="row d-block">
             <MentionsNegodi />

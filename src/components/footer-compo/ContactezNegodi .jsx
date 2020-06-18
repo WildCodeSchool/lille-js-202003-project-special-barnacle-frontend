@@ -5,24 +5,21 @@ import { Link } from 'react-router-dom';
 
 const ContactezNegodi = () => {
   return (
-    <div className="container-fluid">
-      {/* <div className="col-sm-4 p-2 text-center mx-auto text-sm-left"> */}
-      <h4 className="text-center list-group-item listBackground col-lg-6">
-        Nous contacter
-      </h4>
+    <div className="container text-center">
+      <h4 className=" list-group-item listBackground ">Nous contacter</h4>
       <ul>
-        <li className="text-center list-group-item listBackground col-lg-6">
+        <li className="list-group-item listBackground">
           <PhoneIcon />
           <span className=""> 02 41 01 23 45</span>
         </li>
-        <li className="text-center list-group-item listBackground col-lg-6">
+        <li className="list-group-item listBackground">
           <MailIcon />
-          <span className="text-center ml-2 col-lg-6" id="mail">
+          <span className="ml-2" id="mail">
             contact@negodi.fr
           </span>
         </li>
 
-        <li className="text-center list-group-item listBackground col-lg-6">
+        <li className="list-group-item listBackground">
           <Link to="/">
             <img
               src="img/iconfacebook.png"

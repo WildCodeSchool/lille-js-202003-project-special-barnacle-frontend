@@ -11,7 +11,7 @@ const StyledMentionsNegodi = styled.footer`
 const MentionsNegodi = () => {
   return (
     <StyledMentionsNegodi>
-      <div className="container-fluid footerbottom px-2">
+      <div className="container-fluid footerbottom px-4">
         <p className="text-center m-0 pt-4">
           ASC Agence de Services en Courtages - RCS Angers 792 071 425 00013
         </p>
