@@ -2,11 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Efficiency = styled.section`
-  .number {
-    background-color: #2b95ad;
-    border-radius: 50%;
-    color: #ffff;
-  }
   .title {
     color: #2b95ad;
   }
@@ -22,7 +17,9 @@ function Efficacite() {
     <Efficiency>
       <div className="container">
         <div className="row">
-          <div className="number col-1 mx-auto my-3 px-0 text-center">2</div>
+          <div className="text-center mx-auto mb-4">
+            <img src="img/two.png" alt="2" width="50px" />
+          </div>
         </div>
         <div className="row">
           <h5 className="title col-12 text-center mb-4">Efficacité</h5>

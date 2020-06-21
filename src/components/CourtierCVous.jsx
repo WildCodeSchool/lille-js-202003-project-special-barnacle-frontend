@@ -8,18 +8,22 @@ const Wrapper = styled.section`
   }
 
   .card {
-    padding: 4vw;
+    padding-bottom: 6vw;
     background-color: #2b95ad;
     border-radius: 30px;
+    width: 95vw;
+    padding: 2vw;
   }
+
   ul {
     list-style-image: url('img/star.png');
     list-style-position: inside;
-    margin: 0vh 5vw;
-    text-align: justify;
+    margin-top: 2vh;
   }
+
   li {
     margin-top: 2vh;
+    text-align: justify;
   }
 
   button {
@@ -43,17 +47,21 @@ const Wrapper = styled.section`
     text-align: center;
   }
 
-  button {
-    margin: 40px 20px;
+  .cameleonHp {
+    display: block;
   }
 
-  @media screen and (min-width: 640px) {
+  @media screen and (min-width: 1171px) {
     .card {
       background-color: #fff;
       border: 0;
       background-image: url(img/rectangle.png);
       background-repeat: no-repeat;
       background-position-x: center;
+      background-position-y: center;
+      padding-top: 6vh;
+      padding-bottom: 6vh;
+      border: 1px yellow magenta;
     }
 
     h1 {
@@ -62,6 +70,16 @@ const Wrapper = styled.section`
 
     button {
       width: 15vw;
+      margin: 40px 20px;
+    }
+
+    .cameleonHp {
+      display: none;
+    }
+
+    li {
+      margin-left: 16vw;
+      width: 50vw;
     }
   }
 `;
@@ -71,9 +89,11 @@ function CourtierCVous() {
     <Wrapper>
       <div className="container-fluid">
         <div className="row">
-          <div className="card col-12 mx-1vw">
-            <h1 className="text-center mx-auto">Le courtier c’est vous !</h1>
-            <ul className="mx-auto">
+          <div className="card mx-auto">
+            <h1 className="text-center mx-auto mt-5">
+              Le courtier c’est vous !
+            </h1>
+            <ul className="">
               <li>
                 Les meilleures conditions du marché : Un accès libre à toutes
                 les banques que vous souhaitez mettre en concurrence.
@@ -97,7 +117,7 @@ function CourtierCVous() {
               src="img/courtiercestvous.png"
               alt="courtier list"
               width="250px"
-              className="ml-auto mr-auto mt-4"
+              className="cameleonHp ml-auto mr-auto mt-4"
             />
           </div>
         </div>
