@@ -81,11 +81,14 @@ const Header = () => {
             </NavLink>
           </nav>
           <div className="offset-1 offset-lg-0" />
-          <Link href="/" className="col-2 col-sm-2 col-lg-1 mt-2">
+          <Link
+            href="/"
+            className="col-2 col-sm-2 col-lg-1 d-flex align-items-center"
+          >
             <img
               className="login"
               src="./img/user.png"
-              width="40px"
+              height="40px"
               alt="connexion"
             />
           </Link>

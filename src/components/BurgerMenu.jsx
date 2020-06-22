@@ -4,9 +4,6 @@ import PropTypes from 'prop-types';
 
 const StyledBurger = styled.button`
   position: absolute;
-
-  /* top: 4%;
-  left: 2rem; */
   display: flex;
 
   @media (min-width: 1200px) {
@@ -32,7 +29,7 @@ const StyledBurger = styled.button`
     background: ${({ open }) => (open ? '#76d03a' : '#0099b2')};
     border-radius: 10px;
     transition: all 0.3s linear;
-    /*position: relative;*/
+    position: relative;
     transform-origin: 1px;
 
     :first-child {
