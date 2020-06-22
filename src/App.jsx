@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
+import EspaceClient from './components/EspaceClient';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">Hello React World</header>
+      <EspaceClient />
     </div>
   );
 }
