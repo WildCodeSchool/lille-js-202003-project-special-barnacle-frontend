@@ -49,7 +49,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <Router>
-        <div className="footer">
+        <div className="footer container-fluid">
           <LogoNegodiBottom />
           <div className="row row-cols-1 row-cols-lg-2 mb-5">
             <div className="offset-2" />
