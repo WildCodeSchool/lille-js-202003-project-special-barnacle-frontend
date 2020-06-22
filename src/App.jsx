@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Apropos from './components/Apropos';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
-import Apropos from './components/Apropos';
 
 function App() {
   return (
