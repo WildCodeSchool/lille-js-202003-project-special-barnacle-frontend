@@ -1,11 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 import { BrowserRouter as Router } from 'react-router-dom';
-
-import DecouvrezNegodi from './footer-compo/DecouvrezNegodi';
-import MentionsNegodi from './footer-compo/MentionsNegodi';
+import styled from 'styled-components';
 import ContactezNegodi from './footer-compo/ContactezNegodi ';
+import DecouvrezNegodi from './footer-compo/DecouvrezNegodi';
 import LogoNegodiBottom from './footer-compo/LogoNegodiBottom';
+import MentionsNegodi from './footer-compo/MentionsNegodi';
 
 const StyledFooter = styled.footer`
   a {

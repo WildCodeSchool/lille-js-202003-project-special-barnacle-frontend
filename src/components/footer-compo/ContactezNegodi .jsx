@@ -1,7 +1,7 @@
-import React from 'react';
-import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 import { Link } from 'react-router-dom';
+import PhoneIcon from '@material-ui/icons/Phone';
+import React from 'react';
 
 const ContactezNegodi = () => {
   return (
