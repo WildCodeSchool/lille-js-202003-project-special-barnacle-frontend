@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import ClearIcon from '@material-ui/icons/Clear';
 import CheckIcon from '@material-ui/icons/Check';
-import red from '@material-ui/core/colors/red';
 import green from '@material-ui/core/colors/green';
+import red from '@material-ui/core/colors/red';
 
 const StyledApropos = styled.section`
   h1 {
