@@ -1,9 +1,10 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Apropos from './components/Apropos';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
+import './App.css';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" component={() => <div>contact</div>} />
           <Route path="/user/:id" component={() => <div>user</div>} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
