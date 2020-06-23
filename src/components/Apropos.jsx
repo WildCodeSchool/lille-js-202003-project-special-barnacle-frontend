@@ -61,10 +61,18 @@ const StyledApropos = styled.section`
     color: #dc143c;
   }
 
+  ol li {
+    list-style-type: decimal;
+  }
+
   @media screen and (max-width: 640px) {
     th,
     td {
       font-size: 12px;
+    }
+
+    h2 {
+      text-align: center;
     }
   }
 `;
