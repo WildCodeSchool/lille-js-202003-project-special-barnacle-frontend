@@ -1,23 +1,26 @@
 import React from 'react';
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
+import {
+  Avatar,
+  Box,
+  Button,
+  Checkbox,
+  Container,
+  CssBaseline,
+  FormControlLabel,
+  Grid,
+  Link,
+  makeStyles,
+  TextField,
+  Typography,
+} from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// TODO mettre le caméléon avec un left à 70% pour le positionné à droite du formulaire grace au position-absolute
-// const Cameleon = styled.h1`
-//   margin-left: 50px;
-// `;
+const Cameleon = styled.div`
+  position: absolute;
+  left: 65%;
+`;
 
 function Copyright() {
   return (
@@ -120,12 +123,14 @@ export default function SignIn() {
           </Box>
         </div>
       </Container>
-      <img
-        src="../1_login-removebg-preview.png"
-        alt="login"
-        className="d-none d-lg-block align-items-center position-absolute"
-        style={{ height: 300 }}
-      />
+      <Cameleon>
+        <img
+          src="../1_login-removebg-preview.png"
+          alt="login"
+          className="d-none d-lg-block"
+          style={{ height: 300 }}
+        />
+      </Cameleon>
     </div>
   );
 }
