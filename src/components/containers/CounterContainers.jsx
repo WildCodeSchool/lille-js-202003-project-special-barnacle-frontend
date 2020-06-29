@@ -1,11 +1,13 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-const counterContainers = () => {
+const CounterContainers = () => {
   const counter = useSelector((state) => {
     return state.counter.count;
   });
   const dispatch = useDispatch();
+
+  // This container is for testing purpose only.
 
   return (
     <div>
@@ -30,4 +32,4 @@ const counterContainers = () => {
   );
 };
 
-export default counterContainers;
+export default CounterContainers;
