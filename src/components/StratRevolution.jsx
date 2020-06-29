@@ -53,7 +53,7 @@ function StratRevolution() {
 
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg col-12">
+          <div className="col-lg col-12 my-5">
             <h5 className="title my-4">Formule « Conseil »</h5>
             <p className="mx-3 px-2">
               Sollicitez à tout moment notre expertise pour vous accompagner
@@ -61,7 +61,7 @@ function StratRevolution() {
               et personnalisé
             </p>
           </div>
-          <div className="col-lg col-12">
+          <div className="col-lg col-12 my-5">
             <h5 className="title my-4">Formule « Privilège »</h5>
             <p className="mx-3 px-2">
               Profitez des avantages combinés des formules « Liberté » et «
@@ -69,7 +69,7 @@ function StratRevolution() {
               tarifs précédents.
             </p>
           </div>
-          <div className="col-lg col-12 mb-5">
+          <div className="col-lg col-12 my-5">
             <h5 className="title my-4">Formule « Liberté »</h5>
             <p className="mx-3 px-2">
               Sélectionnez autant de banques que vous le souhaitez ! Tarif : 50€
