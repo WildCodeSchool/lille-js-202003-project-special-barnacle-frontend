@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Liberte from './Liberte';
 import Efficiency from './Efficacite';
+import Liberte from './Liberte';
 import Transparence from './Transparence';
 
 const Pourquoi = styled.h4`

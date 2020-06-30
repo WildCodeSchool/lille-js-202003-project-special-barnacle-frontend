@@ -93,7 +93,8 @@ function CourtierCVous() {
             <h1 className="text-center mx-auto mt-5">
               Le courtier c’est vous !
             </h1>
-            <ul className="">
+
+            <ul>
               <li>
                 Les meilleures conditions du marché : Un accès libre à toutes
                 les banques que vous souhaitez mettre en concurrence.
