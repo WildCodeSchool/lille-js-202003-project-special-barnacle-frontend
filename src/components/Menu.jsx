@@ -26,7 +26,6 @@ const StyledMenu = styled.nav`
     color: #0099b2;
     text-decoration: none;
     transition: color 0.3s linear;
-
     font-size: 1rem;
     text-align: center;
     width: 100vw;

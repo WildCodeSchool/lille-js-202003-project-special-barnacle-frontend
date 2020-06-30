@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
+import Homepage from './components/Homepage';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -17,8 +18,9 @@ function App() {
           <Route path="/contact" component={() => <div>contact</div>} />
           <Route path="/user/:id" component={() => <div>user</div>} />
         </Switch>
+        <Homepage />
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 }
