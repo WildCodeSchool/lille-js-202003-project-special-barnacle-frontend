@@ -30,12 +30,12 @@ function StratRevolution() {
         <div className="d-none d-sm-block col-sm-2 offset-sm-1">
           <img
             width="250px"
-            src="img/magicien_fini_2-removebg-preview.png"
+            src="img/strategie-revolution.png"
             alt="magicien"
           />
         </div>
         <div>
-          <h4 className="col-sm-8 offset-sm-2 text-center px-5 my-5">
+          <h4 className="col-sm-8 offset-sm-2 text-center px-5 my-5 font-weight-bold">
             Une stratégie révolutionaire !
           </h4>
           <p className="col-sm-8 offset-sm-2 px-5 mb-5">
@@ -56,7 +56,7 @@ function StratRevolution() {
       <div className="container-fluid">
         <div className="row d-flex justify-content-around my-5">
           <div className="col-12 col-lg-3 py-5 vignettes">
-            <h5 className="title my-4">Formule « Conseil »</h5>
+            <h5 className="title my-4 font-weight-bold">Formule « Conseil »</h5>
             <p className="mx-3 px-2">
               Sollicitez à tout moment notre expertise pour vous accompagner
               tout au long de votre projet ! Tarif : 300€ pour un conseil global
@@ -64,7 +64,9 @@ function StratRevolution() {
             </p>
           </div>
           <div className="col-12 col-lg-3 py-5 vignettes">
-            <h5 className="title my-4">Formule « Privilège »</h5>
+            <h5 className="title my-4 font-weight-bold">
+              Formule « Privilège »
+            </h5>
             <p className="mx-3 px-2">
               Profitez des avantages combinés des formules « Liberté » et «
               Conseil » Vous profitez d’emblée d’une réduction de 50€ sur les
@@ -72,7 +74,7 @@ function StratRevolution() {
             </p>
           </div>
           <div className="col-12 col-lg-3 py-5 vignettes">
-            <h5 className="title my-4">Formule « Liberté »</h5>
+            <h5 className="title my-4 font-weight-bold">Formule « Liberté »</h5>
             <p className="mx-3 px-2">
               Sélectionnez autant de banques que vous le souhaitez ! Tarif : 50€
               par banque sélectionnée
