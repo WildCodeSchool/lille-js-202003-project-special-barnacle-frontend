@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
 import Footer from './components/Footer';
+import Question1 from './components/form/projet/Question1';
 import './App.css';
 
 function App() {
@@ -11,14 +12,19 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
           <Route path="/about" component={() => <div>about</div>} />
           <Route path="/offer" component={() => <div>offer</div>} />
-          <Route exact path="/" component={() => <div />} />
           <Route path="/project" component={() => <div>Votre projet</div>} />
           <Route path="/contact" component={() => <div>contact</div>} />
           <Route path="/user/:id" component={() => <div>user</div>} />
+          <Route path="/Question1">
+            <Question1 />
+          </Route>
         </Switch>
-        <Homepage />
+
         <Footer />
       </div>
     </Router>
