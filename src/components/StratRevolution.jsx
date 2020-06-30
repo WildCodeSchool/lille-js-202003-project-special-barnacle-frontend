@@ -16,8 +16,10 @@ const Strategie = styled.h4`
     font-size: 1rem;
     text-align: justify;
   }
-  .magicien {
-    width: 100px;
+  .vignettes {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px lightgray;
   }
 `;
 
@@ -52,8 +54,8 @@ function StratRevolution() {
       </div>
 
       <div className="container-fluid">
-        <div className="row">
-          <div className="col-lg col-12 my-5">
+        <div className="row d-flex justify-content-around my-5">
+          <div className="col-12 col-lg-3 py-5 vignettes">
             <h5 className="title my-4">Formule « Conseil »</h5>
             <p className="mx-3 px-2">
               Sollicitez à tout moment notre expertise pour vous accompagner
@@ -61,7 +63,7 @@ function StratRevolution() {
               et personnalisé
             </p>
           </div>
-          <div className="col-lg col-12 my-5">
+          <div className="col-12 col-lg-3 py-5 vignettes">
             <h5 className="title my-4">Formule « Privilège »</h5>
             <p className="mx-3 px-2">
               Profitez des avantages combinés des formules « Liberté » et «
@@ -69,7 +71,7 @@ function StratRevolution() {
               tarifs précédents.
             </p>
           </div>
-          <div className="col-lg col-12 my-5">
+          <div className="col-12 col-lg-3 py-5 vignettes">
             <h5 className="title my-4">Formule « Liberté »</h5>
             <p className="mx-3 px-2">
               Sélectionnez autant de banques que vous le souhaitez ! Tarif : 50€
