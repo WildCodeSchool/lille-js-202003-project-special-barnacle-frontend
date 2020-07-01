@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Homepage from './components/Homepage';
 import Footer from './components/Footer';
 import Question1 from './components/form/projet/Question1';
+import Question2 from './components/form/projet/Question2';
 import './App.css';
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
           <Route path="/user/:id" component={() => <div>user</div>} />
           <Route path="/question1">
             <Question1 />
+          </Route>
+          <Route path="/question2">
+            <Question2 />
           </Route>
         </Switch>
 
