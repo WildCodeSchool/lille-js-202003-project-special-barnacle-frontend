@@ -20,7 +20,7 @@ function App() {
           <Route path="/project" component={() => <div>Votre projet</div>} />
           <Route path="/contact" component={() => <div>contact</div>} />
           <Route path="/user/:id" component={() => <div>user</div>} />
-          <Route path="/Question1">
+          <Route path="/question1">
             <Question1 />
           </Route>
         </Switch>

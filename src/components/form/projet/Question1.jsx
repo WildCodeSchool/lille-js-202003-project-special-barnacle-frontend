@@ -10,18 +10,26 @@ const StyledForm = styled.section`
     background-color: #edf1f5;
   }
 
-  img {
-    margin: 0 30px;
-    width: 250px;
+  .formCard {
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 70px -26px rgba(0, 0, 0, 0.54);
     -moz-box-shadow: 0px 0px 70px -26px rgba(0, 0, 0, 0.54);
     box-shadow: 0px 0px 70px -26px rgba(0, 0, 0, 0.54);
     transition: all 300ms;
+    background-color: #173753;
   }
 
-  img:hover {
-    transform: scale(1.05);
+  .formCard:hover {
+    transform: translate(0%, -1%);
+  }
+
+  img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  p {
+    color: #fff;
+    font-weight: 700;
   }
 `;
 
@@ -32,25 +40,47 @@ function Question1() {
         <div className="row-cols-12 p-5 text-center">
           <h1>Quel est votre projet ?</h1>
         </div>
-
-        <div className="row-cols-12 p-5 text-center">
-          <img
-            src="img/form/question1/acheterunbien.png"
-            alt="acheter un bien"
-          />
-          <img
-            src="img/form/question1/faireconstruire.png"
-            alt="acheter un bien"
-          />
-          <img
-            src="img/form/question1/fairedestravaux.png"
-            alt="acheter un bien"
-          />
-          <img src="img/form/question1/renegocier.png" alt="acheter un bien" />
-          <img
-            src="img/form/question1/autresprojets.jpg"
-            alt="acheter un bien"
-          />
+        <div className="row text-center">
+          <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
+            <img
+              className="col-12 p-0"
+              src="img/form/question1/acheterunbien.png"
+              alt="acheter un bien"
+            />
+            <p className="my-auto py-2">Acheter un bien</p>
+          </div>
+          <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
+            <img
+              className="col-12 p-0"
+              src="img/form/question1/faireconstruire.png"
+              alt="faire construire"
+            />
+            <p className="my-auto py-2">Faire construire</p>
+          </div>
+          <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
+            <img
+              className="col-12 p-0"
+              src="img/form/question1/fairedestravaux.png"
+              alt="faire des travaux"
+            />
+            <p className="my-auto py-2">Faire des travaux</p>
+          </div>
+          <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
+            <img
+              className="col-12 p-0"
+              src="img/form/question1/renegocier.png"
+              alt="renegocier"
+            />
+            <p className="my-auto py-2">Renégocier</p>
+          </div>
+          <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
+            <img
+              className="col-12 p-0"
+              src="img/form/question1/autresprojets.jpg"
+              alt="autres projets"
+            />
+            <p className="my-auto py-2">Autres projets</p>
+          </div>
         </div>
       </div>
     </StyledForm>
