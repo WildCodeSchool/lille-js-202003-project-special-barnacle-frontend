@@ -21,19 +21,13 @@ const StyledForm = styled.section`
   }
 
   .formCard:hover {
-    transform: translate(0%, -1%);
+    transform: translate(0%, -3%);
   }
 
   p {
     color: #000;
     font-weight: 700;
     font-size: 1em;
-  }
-
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    p {
-      font-size: 1em;
-    }
   }
 `;
 

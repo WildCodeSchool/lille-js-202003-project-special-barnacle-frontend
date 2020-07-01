@@ -5,6 +5,7 @@ import Homepage from './components/Homepage';
 import Footer from './components/Footer';
 import Question1 from './components/form/projet/Question1';
 import Question2 from './components/form/projet/Question2';
+import Form from './components/form/Form';
 import './App.css';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
           <Route path="/project" component={() => <div>Votre projet</div>} />
           <Route path="/contact" component={() => <div>contact</div>} />
           <Route path="/user/:id" component={() => <div>user</div>} />
+          <Route path="/form">
+            <Form />
+          </Route>
           <Route path="/question1">
             <Question1 />
           </Route>
