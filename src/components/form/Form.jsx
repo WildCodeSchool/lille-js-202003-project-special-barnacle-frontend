@@ -26,8 +26,10 @@
 //   };
 
 //   // Handle fields change
-//   const handleChange = (input) => (e) => {
+//   const handleChange = (e, input) => {
+//     console.log(e.target);
 //     setData({ ...data, [input]: e.target.value });
+//     // setData({ ...data, step: step + 1, [input]: e.target.value });
 //   };
 
 //   const { step } = data;

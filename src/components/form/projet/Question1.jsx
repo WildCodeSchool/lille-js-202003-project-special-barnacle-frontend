@@ -31,74 +31,76 @@
 //     color: #fff;
 //     font-weight: 700;
 //   }
-
-//   button {
-//     background-color: transparent;
-//     border: 0;
-//   }
 // `;
 
 // function Question1({ values, handleChange, nextStep }) {
 //   return (
 //     <StyledForm>
-//       <form></form>
-//       <div className="form container-fluid pb-5">
-//         <div className="row-cols-12 p-5 text-center">
-//           <h1>Quel est votre projet ?</h1>
-//         </div>
-//         <div className="row text-center">
-//           <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
-//             <option
-//               type="submit"
-//               value="goooo"
-//               onClick={handleChange('question1')}
-//             >
-//               <button>
+//       <form
+//         onClick={(e) => {
+//           e.preventDefault();
+//         }}
+//       >
+//         <div className="form container-fluid pb-5">
+//           <div className="row-cols-12 p-5 text-center">
+//             <h1>Quel est votre projet ?</h1>
+//           </div>
+//           <div className="row text-center">
+//             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
+//               <button
+//                 type="button"
+//                 value="goooo"
+//                 onClick={(e) => {
+//                   console.log('tututut');
+//                   handleChange(e, 'question1');
+//                 }}
+//               >
 //                 <img
 //                   className="col-12 p-0"
 //                   src="img/form/question1/acheterunbien.png"
 //                   alt="acheter un bien"
+//                   value="goooo"
 //                 />
-
-//                 <p className="my-auto py-2">Acheter un bien</p>
 //               </button>
-//             </option>
-//           </div>
 
-//           <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
-//             <img
-//               className="col-12 p-0"
-//               src="img/form/question1/faireconstruire.png"
-//               alt="faire construire"
-//             />
-//             <p className="my-auto py-2">Faire construire</p>
-//           </div>
-//           <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
-//             <img
-//               className="col-12 p-0"
-//               src="img/form/question1/fairedestravaux.png"
-//               alt="faire des travaux"
-//             />
-//             <p className="my-auto py-2">Faire des travaux</p>
-//           </div>
-//           <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
-//             <img
-//               className="col-12 p-0"
-//               src="img/form/question1/renegocier.png"
-//               alt="renegocier"
-//             />
-//             <p className="my-auto py-2">Renégocier</p>
-//           </div>
-//           <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
-//             <img
-//               className="col-12 p-0"
-//               src="img/form/question1/autresprojets.jpg"
-//               alt="autres projets"
-//             />
-//             <p className="my-auto py-2">Autres projets</p>
+//               <p className="my-auto py-2">Acheter un bien</p>
+//             </div>
+
+//             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
+//               <img
+//                 className="col-12 p-0"
+//                 src="img/form/question1/faireconstruire.png"
+//                 alt="faire construire"
+//               />
+//               <p className="my-auto py-2">Faire construire</p>
+//             </div>
+//             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
+//               <img
+//                 className="col-12 p-0"
+//                 src="img/form/question1/fairedestravaux.png"
+//                 alt="faire des travaux"
+//               />
+//               <p className="my-auto py-2">Faire des travaux</p>
+//             </div>
+//             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
+//               <img
+//                 className="col-12 p-0"
+//                 src="img/form/question1/renegocier.png"
+//                 alt="renegocier"
+//               />
+//               <p className="my-auto py-2">Renégocier</p>
+//             </div>
+//             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
+//               <img
+//                 className="col-12 p-0"
+//                 src="img/form/question1/autresprojets.jpg"
+//                 alt="autres projets"
+//               />
+//               <p className="my-auto py-2">Autres projets</p>
+//             </div>
 //           </div>
 //         </div>
-//       </div>
+//       </form>
 //     </StyledForm>
 //   );
 // }
