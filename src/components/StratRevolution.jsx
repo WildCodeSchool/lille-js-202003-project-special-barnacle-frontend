@@ -18,7 +18,7 @@ const Strategie = styled.h4`
   }
   .vignettes {
     border: 1px solid lightgray;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 10px 5px 5px lightgray;
   }
 `;
