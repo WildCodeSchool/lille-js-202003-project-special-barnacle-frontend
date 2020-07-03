@@ -38,16 +38,19 @@ function Question2() {
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
           <h1>Quelle est votre situation actuelle ?</h1>
         </div>
-        <div className="row">
-          <div className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between">
-            <p className="col-10 col-sm-11 my-auto py-2">Propriétaire</p>
-            <img
-              className="col-2 col-sm-1 my-auto p-1"
-              src="img/arrow.png"
-              alt="fleche"
-            />
+        <button type="button">
+          <div className="row">
+            <div className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between">
+              <p className="col-10 col-sm-11 my-auto py-2">Propriétaire</p>
+              <img
+                className="col-2 col-sm-1 my-auto p-1"
+                src="img/arrow.png"
+                alt="fleche"
+              />
+            </div>
           </div>
-        </div>
+        </button>
+
         <div className="row">
           <div className="col-10 col-sm-6 px-0 py-4 px-3 px-lg-5 formCard mb-5 mx-auto d-flex justify-content-between">
             <p className="col-10 col-sm-11 my-auto py-2">

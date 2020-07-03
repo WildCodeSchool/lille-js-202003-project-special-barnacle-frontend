@@ -28,9 +28,10 @@ const StyledForm = styled.section`
     border-radius: 10px 10px 0 0;
   }
 
-  /* #image:target {
-    border: 1px solid red;
-  } */
+  input:focus {
+    border: 2px solid #173753;
+    background-color: #173753;
+  }
 
   color: #fff;
     font-weight: 700;
@@ -55,11 +56,9 @@ function Question1({ handleChange, nextStep }) {
                 src="img/form/question1/acheterunbien.png"
                 width="100%"
                 onClick={(e) => {
-                  // handleClick();
                   handleChange(e, 'question1');
                 }}
               />
-
               <p className="my-auto py-2">Acheter un bien</p>
             </div>
 

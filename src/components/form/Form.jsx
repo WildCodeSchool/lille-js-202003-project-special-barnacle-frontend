@@ -10,32 +10,17 @@ const Form = () => {
 
   const [step, setStep] = useState(1);
 
-  // const [isClick, setIsClick] = useState(false)
-
   // // Proceed to next step
   const nextStep = (e) => {
     e.preventDefault();
     setStep(step + 1);
   };
 
-  // Go back to prev step
-  // const prevStep = () => {
-  //   setData({
-  //     // ...data,
-  //     step: -1,
-  //   });
-  // };
-
   // Handle fields change
   const handleChange = (e, input) => {
     e.preventDefault();
     setData({ ...data, [input]: e.target.value });
   };
-
-  // const handleClick = () => {
-  //   const isClick = !isClick
-  //   setIsClick( isClick ? )
-  // }
 
   // const { step } = step;
   const { firstName, lastName, email, occupation, city, bio } = data;
@@ -58,7 +43,6 @@ const Form = () => {
         <div>
           <Question2
             nextStep={nextStep}
-            // prevStep={prevStep}
             handleChange={handleChange}
             values={values}
             step={step}
