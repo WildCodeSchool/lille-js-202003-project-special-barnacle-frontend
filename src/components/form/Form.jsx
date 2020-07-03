@@ -4,33 +4,40 @@ import Question2 from './projet/Question2';
 
 const Form = () => {
   const [data, setData] = useState({
-    step: 1,
     question1: '',
     question2: '',
   });
 
-  // Proceed to next step
-  const nextStep = () => {
-    setData({
-      ...data,
-      step: +1,
-    });
+  const [step, setStep] = useState(1);
+
+  // const [isClick, setIsClick] = useState(false)
+
+  // // Proceed to next step
+  const nextStep = (e) => {
+    e.preventDefault();
+    setStep(step + 1);
   };
 
   // Go back to prev step
-  const prevStep = () => {
-    setData({
-      ...data,
-      step: -1,
-    });
-  };
+  // const prevStep = () => {
+  //   setData({
+  //     // ...data,
+  //     step: -1,
+  //   });
+  // };
 
   // Handle fields change
   const handleChange = (e, input) => {
-    setData({ ...data, step: +1, [input]: e.target.value });
+    e.preventDefault();
+    setData({ ...data, [input]: e.target.value });
   };
 
-  const { step } = data;
+  // const handleClick = () => {
+  //   const isClick = !isClick
+  //   setIsClick( isClick ? )
+  // }
+
+  // const { step } = step;
   const { firstName, lastName, email, occupation, city, bio } = data;
   const values = { firstName, lastName, email, occupation, city, bio };
 
@@ -39,9 +46,10 @@ const Form = () => {
       return (
         <div>
           <Question1
-            nextStep={nextStep}
-            handleChange={handleChange}
             values={values}
+            step={step}
+            handleChange={handleChange}
+            nextStep={nextStep}
           />
         </div>
       );
@@ -50,9 +58,10 @@ const Form = () => {
         <div>
           <Question2
             nextStep={nextStep}
-            prevStep={prevStep}
+            // prevStep={prevStep}
             handleChange={handleChange}
             values={values}
+            step={step}
           />
         </div>
       );

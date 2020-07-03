@@ -24,17 +24,20 @@ const StyledForm = styled.section`
     transform: translate(0%, -1%);
   }
 
-  img {
+  input {
     border-radius: 10px 10px 0 0;
   }
 
-  p {
-    color: #fff;
+  /* #image:target {
+    border: 1px solid red;
+  } */
+
+  color: #fff;
     font-weight: 700;
   }
 `;
 
-function Question1({ handleChange }) {
+function Question1({ handleChange, nextStep }) {
   return (
     <StyledForm>
       <form>
@@ -46,12 +49,13 @@ function Question1({ handleChange }) {
             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
               <input
                 id="image"
-                value="goooo"
+                value="Acheter un bien"
                 type="image"
-                alt="Login"
+                alt="faire construire"
                 src="img/form/question1/acheterunbien.png"
                 width="100%"
                 onClick={(e) => {
+                  // handleClick();
                   handleChange(e, 'question1');
                 }}
               />
@@ -60,37 +64,73 @@ function Question1({ handleChange }) {
             </div>
 
             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
-              <img
-                className="col-12 p-0"
-                src="img/form/question1/faireconstruire.png"
+              <input
+                id="image"
+                value="Faire construire"
+                type="image"
                 alt="faire construire"
+                src="img/form/question1/faireconstruire.png"
+                width="100%"
+                onClick={(e) => {
+                  handleChange(e, 'question1');
+                }}
               />
               <p className="my-auto py-2">Faire construire</p>
             </div>
             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
-              <img
-                className="col-12 p-0"
+              <input
+                id="image"
+                value="Faire des travaux"
+                type="image"
+                alt="Faire des travaux"
                 src="img/form/question1/fairedestravaux.png"
-                alt="faire des travaux"
+                width="100%"
+                onClick={(e) => {
+                  handleChange(e, 'question1');
+                }}
               />
+
               <p className="my-auto py-2">Faire des travaux</p>
             </div>
             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
-              <img
-                className="col-12 p-0"
+              <input
+                id="image"
+                value="Renégocier"
+                type="image"
+                alt="Renégocier"
                 src="img/form/question1/renegocier.png"
-                alt="renegocier"
+                width="100%"
+                onClick={(e) => {
+                  handleChange(e, 'question1');
+                }}
               />
+
               <p className="my-auto py-2">Renégocier</p>
             </div>
             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
-              <img
-                className="col-12 p-0"
+              <input
+                id="image"
+                value="Autres projets"
+                type="image"
+                alt="Autres projets"
                 src="img/form/question1/autresprojets.jpg"
-                alt="autres projets"
+                width="100%"
+                onClick={(e) => {
+                  handleChange(e, 'question1');
+                }}
               />
               <p className="my-auto py-2">Autres projets</p>
             </div>
+          </div>
+          <div>
+            <button
+              type="button"
+              onClick={(e) => {
+                nextStep(e);
+              }}
+            >
+              NEXT
+            </button>
           </div>
         </div>
       </form>
@@ -100,6 +140,7 @@ function Question1({ handleChange }) {
 
 Question1.propTypes = {
   handleChange: PropTypes.string.isRequired,
+  nextStep: PropTypes.number.isRequired,
 };
 
 export default Question1;
