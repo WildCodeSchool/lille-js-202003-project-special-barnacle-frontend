@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Question1 from './components/form/projet/Question1';
 import Question2 from './components/form/projet/Question2';
 import Form from './components/form/Form';
+
 import './App.css';
 
 function App() {
@@ -32,7 +33,6 @@ function App() {
             <Question2 />
           </Route>
         </Switch>
-
         <Footer />
       </div>
     </Router>

@@ -32,10 +32,6 @@ const StyledForm = styled.section`
     border: 2px solid #173753;
     background-color: #173753;
   }
-
-  color: #fff;
-    font-weight: 700;
-  }
 `;
 
 function Question1({ handleChange, nextStep }) {
