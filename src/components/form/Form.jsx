@@ -10,10 +10,16 @@ const Form = () => {
 
   const [step, setStep] = useState(1);
 
-  // // Proceed to next step
+  // Proceed to next step
   const nextStep = (e) => {
     e.preventDefault();
     setStep(step + 1);
+  };
+
+  // Proceed to next step
+  const prevStep = (e) => {
+    e.preventDefault();
+    setStep(step - 1);
   };
 
   // Handle fields change
@@ -43,6 +49,7 @@ const Form = () => {
         <div>
           <Question2
             nextStep={nextStep}
+            prevStep={prevStep}
             handleChange={handleChange}
             values={values}
             step={step}
