@@ -7,6 +7,11 @@ const StyledForm = styled.section`
     color: #2a96af;
   }
 
+  p {
+    color: #fff;
+    font-weight: 700;
+  }
+
   .form {
     background-color: #edf1f5;
   }

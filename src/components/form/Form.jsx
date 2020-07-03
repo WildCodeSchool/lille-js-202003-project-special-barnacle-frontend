@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Stepper from './Stepper';
 import Question1 from './projet/Question1';
 import Question2 from './projet/Question2';
 
@@ -35,14 +36,19 @@ const Form = () => {
   switch (step) {
     case 1:
       return (
-        <div>
-          <Question1
-            values={values}
-            step={step}
-            handleChange={handleChange}
-            nextStep={nextStep}
-          />
-        </div>
+        <>
+          <div>
+            <Stepper />
+          </div>
+          <div>
+            <Question1
+              values={values}
+              step={step}
+              handleChange={handleChange}
+              nextStep={nextStep}
+            />
+          </div>
+        </>
       );
     case 2:
       return (

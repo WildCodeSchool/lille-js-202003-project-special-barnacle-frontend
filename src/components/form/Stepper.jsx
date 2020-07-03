@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    background: 'background',
     width: '100%',
   },
   button: {
@@ -68,7 +69,7 @@ export default function HorizontalLinearStepper() {
 
   return (
     <div className={classes.root}>
-      <Stepper activeStep={activeStep}>
+      <Stepper activeStep={activeStep} className={classes.root}>
         {/* ESlint refuse le passage de props alors on les a retiré et on a gardé le code d'origin en comm au cas où.
          {steps.map((label, index) => {
           const stepProps = {};
