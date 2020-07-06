@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import counterReducer from './components/reducers/counterReducer';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
+import App from './App';
+import counterReducer from './components/reducers/counterReducer';
 import './index.css';
 
 const rootReducer = combineReducers({
