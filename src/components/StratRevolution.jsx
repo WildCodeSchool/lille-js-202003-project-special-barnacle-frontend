@@ -16,17 +16,29 @@ const Strategie = styled.h4`
     font-size: 1rem;
     text-align: justify;
   }
+  .vignettes {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px lightgray;
+  }
 `;
 
 function StratRevolution() {
   return (
     <Strategie>
-      <div className="container-fluid">
-        <div className="row mx-4 mb-5">
-          <h4 className="col-12 text-center my-5">
+      <div className="d-flex bg-light">
+        <div className="d-none d-sm-block col-sm-2 offset-sm-1">
+          <img
+            width="250px"
+            src="img/strategie-revolution.png"
+            alt="magicien"
+          />
+        </div>
+        <div>
+          <h4 className="col-sm-8 offset-sm-2 text-center px-5 my-5 font-weight-bold">
             Une stratégie révolutionaire !
           </h4>
-          <p className="px-1">
+          <p className="col-sm-8 offset-sm-2 px-5 mb-5">
             Actuellement, le courtier en prêt immobilier touche en moyenne 1% de
             la banque et 1% de frais de courtage qu’il vous facture sur le
             montant de l’emprunt immobilier. Afin de trouver une alternative au
@@ -39,26 +51,30 @@ function StratRevolution() {
             faire appel aux conseils d’un courtier.
           </p>
         </div>
+      </div>
 
-        <div className="row">
-          <div className="col-lg col-12">
-            <h5 className="title my-4">Formule « Conseil »</h5>
+      <div className="container-fluid">
+        <div className="row d-flex justify-content-around my-5">
+          <div className="col-12 col-lg-3 py-5 vignettes">
+            <h5 className="title my-4 font-weight-bold">Formule « Conseil »</h5>
             <p className="mx-3 px-2">
               Sollicitez à tout moment notre expertise pour vous accompagner
               tout au long de votre projet ! Tarif : 300€ pour un conseil global
               et personnalisé
             </p>
           </div>
-          <div className="col-lg col-12">
-            <h5 className="title my-4">Formule « Privilège »</h5>
+          <div className="col-12 col-lg-3 py-5 vignettes">
+            <h5 className="title my-4 font-weight-bold">
+              Formule « Privilège »
+            </h5>
             <p className="mx-3 px-2">
               Profitez des avantages combinés des formules « Liberté » et «
               Conseil » Vous profitez d’emblée d’une réduction de 50€ sur les
               tarifs précédents.
             </p>
           </div>
-          <div className="col-lg col-12 mb-5">
-            <h5 className="title my-4">Formule « Liberté »</h5>
+          <div className="col-12 col-lg-3 py-5 vignettes">
+            <h5 className="title my-4 font-weight-bold">Formule « Liberté »</h5>
             <p className="mx-3 px-2">
               Sélectionnez autant de banques que vous le souhaitez ! Tarif : 50€
               par banque sélectionnée

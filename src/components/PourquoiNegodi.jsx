@@ -18,13 +18,13 @@ function PourquoiNegodi() {
           <h4 className="col-12 text-center my-5">Pourquoi Choisir Negodi ?</h4>
         </div>
         <div className="row">
-          <div className="col">
+          <div className="col-12 col-lg-4">
             <Liberte />
           </div>
-          <div className="col">
+          <div className="col-12 col-lg-4">
             <Efficiency />
           </div>
-          <div className="col">
+          <div className="col-12 col-lg-4">
             <Transparence />
           </div>
         </div>
