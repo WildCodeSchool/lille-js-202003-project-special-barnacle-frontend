@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const StyledBurger = styled.button`
   position: absolute;
   display: flex;
+
   @media (min-width: 1200px) {
     display: none;
   }
