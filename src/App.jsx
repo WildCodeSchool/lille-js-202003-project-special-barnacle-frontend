@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Question1 from './components/form/Question1';
 import Question2 from './components/form/Question2';
 import Question3 from './components/form/Question3';
+import Question3a from './components/form/Question3a';
 import Form from './components/form/Form';
 
 import './App.css';
@@ -27,14 +28,17 @@ function App() {
           <Route path="/form">
             <Form />
           </Route>
-          <Route path="/question1">
+          <Route exact path="/question1">
             <Question1 />
           </Route>
-          <Route path="/question2">
+          <Route exact path="/question2">
             <Question2 />
           </Route>
-          <Route path="/question3">
+          <Route exact path="/question3">
             <Question3 />
+          </Route>
+          <Route exact path="/question3a">
+            <Question3a />
           </Route>
         </Switch>
         <Footer />

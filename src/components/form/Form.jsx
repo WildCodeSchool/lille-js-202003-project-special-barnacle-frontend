@@ -3,11 +3,14 @@ import Stepper from './Stepper';
 import Question1 from './Question1';
 import Question2 from './Question2';
 import Question3 from './Question3';
+import Question3a from './Question3a';
 
 const Form = () => {
   const [data, setData] = useState({
     question1: '',
     question2: '',
+    question3: '',
+    question3a: '',
   });
 
   const [step, setStep] = useState(1);
@@ -31,8 +34,8 @@ const Form = () => {
   };
 
   // const { step } = step;
-  const { firstName, lastName, email, occupation, city, bio } = data;
-  const values = { firstName, lastName, email, occupation, city, bio };
+  const { question3a } = data;
+  const values = { question3a };
 
   switch (step) {
     case 1:
@@ -76,7 +79,17 @@ const Form = () => {
         </div>
       );
     case 4:
-      return null;
+      return (
+        <div>
+          <Question3a
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChange={handleChange}
+            values={values}
+            step={step}
+          />
+        </div>
+      );
     default:
       return null;
   }

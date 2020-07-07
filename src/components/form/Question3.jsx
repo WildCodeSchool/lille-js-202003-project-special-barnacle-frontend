@@ -14,7 +14,7 @@ function Question3({ handleChange, nextStep, prevStep }) {
           <button
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
-            value="Propriétaire"
+            value="oui"
             onClick={(e) => {
               handleChange(e, 'question3');
             }}
@@ -33,9 +33,9 @@ function Question3({ handleChange, nextStep, prevStep }) {
           <button
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
-            value="Hébergé à titre gratuit"
+            value="non"
             onClick={(e) => {
-              handleChange(e, 'question2');
+              handleChange(e, 'question3');
             }}
           >
             <p className="my-auto">Non</p>
