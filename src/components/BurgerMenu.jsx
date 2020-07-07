@@ -5,6 +5,10 @@ import PropTypes from 'prop-types';
 const StyledBurger = styled.button`
   position: absolute;
   display: flex;
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
   flex-direction: column;
   justify-content: space-around;
   width: 2rem;
