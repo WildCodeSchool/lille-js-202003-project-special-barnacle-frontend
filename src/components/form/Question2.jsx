@@ -1,50 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-
-const StyledForm = styled.section`
-  h1 {
-    color: #2a96af;
-    font-size: 2em;
-  }
-
-  .form {
-    background-color: #edf1f5;
-  }
-
-  .formCard {
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 70px -26px rgba(0, 0, 0, 0.54);
-    -moz-box-shadow: 0px 0px 70px -26px rgba(0, 0, 0, 0.54);
-    box-shadow: 0px 0px 70px -26px rgba(0, 0, 0, 0.54);
-    transition: all 300ms;
-    background-color: #fff;
-  }
-
-  .formCard:hover {
-    transform: translate(0%, -3%);
-  }
-
-  p {
-    color: #000;
-    font-weight: 700;
-    font-size: 1em;
-  }
-
-  button {
-    background-color: transparent;
-    border: 0;
-    border-style: none;
-  }
-
-  button:focus {
-    border: 1px solid #173753;
-  }
-`;
+import './styleForm.css';
 
 function Question2({ handleChange, nextStep, prevStep }) {
   return (
-    <StyledForm>
+    <div className="questionTxt">
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
           <h1>Quelle est votre situation actuelle ?</h1>
@@ -125,7 +85,7 @@ function Question2({ handleChange, nextStep, prevStep }) {
           NEXT
         </button>
       </div>
-    </StyledForm>
+    </div>
   );
 }
 
