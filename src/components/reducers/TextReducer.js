@@ -1,5 +1,3 @@
-// This reducer is for template purpose only
-
 const TextReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_HOW':

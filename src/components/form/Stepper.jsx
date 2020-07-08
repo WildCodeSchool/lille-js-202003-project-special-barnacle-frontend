@@ -70,16 +70,8 @@ export default function HorizontalLinearStepper() {
   return (
     <div className={classes.root}>
       <Stepper activeStep={activeStep} className={classes.root}>
-        {/* ESlint refuse le passage de props alors on les a retiré et on a gardé le code d'origin en comm au cas où.
-         {steps.map((label, index) => {
-          const stepProps = {};
-          const labelProps = {}; */}
         {steps.map((label) => {
           return (
-            // ESlint refuse le passage de props alors on les a retiré et on a gardé le code d'origin en comm au cas où.
-            // <Step key={label} {...stepProps}>
-            //   <StepLabel {...labelProps}>{label}</StepLabel>
-            // </Step>
             <Step key={label}>
               <StepLabel>{label}</StepLabel>
             </Step>

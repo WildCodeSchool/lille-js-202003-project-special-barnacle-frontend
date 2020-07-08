@@ -41,11 +41,8 @@ const Form = () => {
   };
 
   const handleSubmit = (e) => {
-    // console.log('Un essai a été envoyé : ' + data.value);
     e.preventDefault();
   };
-
-  // const { step } = step;
 
   switch (step) {
     case 1:

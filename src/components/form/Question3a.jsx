@@ -11,16 +11,6 @@ function Question3a({ values, handleChange, nextStep, prevStep }) {
           <h1>Merci d`&apos;`indiquer le montant</h1>
         </div>
         <form>
-          <div className="row">
-            {/* <input
-              className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
-              placeholder="Montant des travaux"
-              // type="text"
-              onChange={handleChange('question3a')}
-              defaultValue={values.question3a}
-            /> */}
-          </div>
-
           <TextField
             placeholder="Enter Your Occupation"
             label="question3a"

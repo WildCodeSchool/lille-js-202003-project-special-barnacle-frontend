@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './styleForm.css';
 
 function Question3({ handleChange, nextStep, prevStep }) {
   return (
