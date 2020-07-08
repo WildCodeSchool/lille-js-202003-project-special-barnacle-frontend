@@ -13,6 +13,9 @@ const Form = () => {
     question3a: '',
   });
 
+  const { question3a } = data;
+  const values = question3a;
+
   const [step, setStep] = useState(1);
 
   // Proceed to next step
@@ -33,9 +36,17 @@ const Form = () => {
     setData({ ...data, [input]: e.target.value });
   };
 
+  const handleChangeTest = (e, input) => {
+    // e.preventDefault();
+    setData({ ...data, [input]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    // console.log('Un essai a été envoyé : ' + data.value);
+    e.preventDefault();
+  };
+
   // const { step } = step;
-  const { question3a } = data;
-  const values = { question3a };
 
   switch (step) {
     case 1:
@@ -84,9 +95,10 @@ const Form = () => {
           <Question3a
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChange={handleChange}
+            handleChangeTest={handleChangeTest}
             values={values}
             step={step}
+            handleSubmit={handleSubmit}
           />
         </div>
       );
