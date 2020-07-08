@@ -27,3 +27,8 @@ export const reset = (count) => ({
   type: 'RESET',
   count,
 });
+
+export const textField = (text) => ({
+  type: 'ADDTEXT',
+  text,
+});

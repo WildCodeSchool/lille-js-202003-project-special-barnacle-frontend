@@ -6,6 +6,7 @@ import { createStore, combineReducers } from 'redux';
 
 import App from './App';
 import counterReducer from './components/reducers/counterReducer';
+import TextReducer from './components/reducers/TextReducer';
 import './index.css';
 
 const theme = createMuiTheme({
@@ -18,10 +19,12 @@ const theme = createMuiTheme({
 
 const rootReducer = combineReducers({
   counter: counterReducer,
+  question: TextReducer,
 });
 
 const initialState = {
   counter: { count: 0 },
+  question: { question1: '' },
 };
 
 /* eslint-disable no-underscore-dangle */

@@ -1,9 +1,9 @@
 const TextReducer = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_HOW':
+    case 'ADDTEXT':
       return {
         ...state,
-        text: action.text,
+        question1: action.text,
       };
 
     default:
