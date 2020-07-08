@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
-import counterReducer from './components/reducers/counterReducer';
 
-import './index.css';
 import App from './App';
+import counterReducer from './components/reducers/counterReducer';
+import './index.css';
 
 const theme = createMuiTheme({
   palette: {

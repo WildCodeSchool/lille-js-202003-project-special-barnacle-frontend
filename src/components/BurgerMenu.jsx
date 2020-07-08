@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const StyledBurger = styled.button`
   position: absolute;
@@ -29,6 +29,7 @@ const StyledBurger = styled.button`
     background: ${({ open }) => (open ? '#76d03a' : '#0099b2')};
     border-radius: 10px;
     transition: all 0.3s linear;
+    position: relative;
     transform-origin: 1px;
 
     :first-child {
