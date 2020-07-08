@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, combineReducers } from 'redux';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Provider } from 'react-redux';
+import { createStore, combineReducers } from 'redux';
+
 import App from './App';
 import counterReducer from './components/reducers/counterReducer';
 import './index.css';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: '#2a96b0' },
+    secondary: { main: '#91ba1e' },
+    background: { main: '#edf1f5' },
+  },
+});
 
 const rootReducer = combineReducers({
   counter: counterReducer,
@@ -24,9 +34,12 @@ const store = createStore(
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <MuiThemeProvider theme={theme}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </MuiThemeProvider>
   </React.StrictMode>,
+
   document.getElementById('root')
 );

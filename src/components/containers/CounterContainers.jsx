@@ -7,8 +7,6 @@ const CounterContainers = () => {
   });
   const dispatch = useDispatch();
 
-  // This container is for testing purpose only.
-
   return (
     <div>
       <p>{counter}</p>
