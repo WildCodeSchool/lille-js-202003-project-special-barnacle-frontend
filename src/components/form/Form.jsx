@@ -10,7 +10,6 @@ const Form = () => {
     question1: '',
     question2: '',
     question3: '',
-    question3a: '',
   });
 
   const { question3a } = data;
