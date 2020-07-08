@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Stepper from './Stepper';
-import Question1 from './projet/Question1';
-import Question2 from './projet/Question2';
+import Question1 from './Question1';
+import Question2 from './Question2';
+import Question3 from './Question3';
 
 const Form = () => {
   const [data, setData] = useState({
@@ -64,7 +65,17 @@ const Form = () => {
         </div>
       );
     case 3:
-      return null;
+      return (
+        <div>
+          <Question3
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChange={handleChange}
+            values={values}
+            step={step}
+          />
+        </div>
+      );
     case 4:
       return null;
     default:
