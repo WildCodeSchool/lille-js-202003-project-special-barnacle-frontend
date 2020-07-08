@@ -1,7 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 
 const StyledMenu = styled.nav`
   display: flex;
@@ -16,11 +16,6 @@ const StyledMenu = styled.nav`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
-  z-index: 2;
-
-  @media (max-width: 576px) {
-    width: 100%;
-  }
 
   a {
     font-size: 30px;
@@ -31,12 +26,9 @@ const StyledMenu = styled.nav`
     color: #0099b2;
     text-decoration: none;
     transition: color 0.3s linear;
-
-    @media (max-width: 576px) {
-      font-size: 1rem;
-      text-align: center;
-      width: 100vw;
-    }
+    font-size: 1rem;
+    text-align: center;
+    width: 100vw;
 
     &:hover {
       color: #343078;

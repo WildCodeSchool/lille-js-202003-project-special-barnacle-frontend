@@ -24,7 +24,6 @@ function App() {
           <Route path="/contact" component={() => <div>contact</div>} />
           <Route path="/user/:id" component={() => <div>user</div>} />
         </Switch>
-
         <Footer />
       </div>
     </Router>
