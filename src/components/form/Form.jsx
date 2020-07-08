@@ -8,6 +8,7 @@ const Form = () => {
   const [data, setData] = useState({
     question1: '',
     question2: '',
+    question3: '',
   });
 
   const [step, setStep] = useState(1);
