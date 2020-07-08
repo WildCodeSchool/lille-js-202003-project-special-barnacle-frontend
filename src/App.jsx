@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Apropos from './components/Apropos';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
 import Footer from './components/Footer';
@@ -20,7 +21,9 @@ function App() {
           <Route exact path="/">
             <Homepage />
           </Route>
-          <Route path="/about" component={() => <div>about</div>} />
+          <Route path="/about">
+            <Apropos />
+          </Route>
           <Route path="/offer" component={() => <div>offer</div>} />
           <Route path="/project" component={() => <div>Votre projet</div>} />
           <Route path="/contact" component={() => <div>contact</div>} />
