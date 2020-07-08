@@ -1,17 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './styleForm.css';
 import TextField from '@material-ui/core/TextField';
 
-import { useDispatch } from 'react-redux';
-
-function Question3a({ nextStep, prevStep }) {
-  const [name, setName] = useState('');
-  const dispatch = useDispatch();
-
-  const handleNameChange = (e) => setName(e.target.value);
-  dispatch({ type: 'ADDTEXT', text: name });
-
+function Question3a({ values, handleChange, nextStep, prevStep }) {
   return (
     <div className="questionEnter">
       <div className="form container-fluid pb-5">
@@ -22,8 +14,10 @@ function Question3a({ nextStep, prevStep }) {
           <TextField
             placeholder="Enter Your Occupation"
             label="question3a"
-            onChange={handleNameChange}
-            value={name}
+            onChange={(e) => {
+              handleChange(e, 'question3a');
+            }}
+            defaultValue={values.question3a}
           />
         </form>
       </div>
@@ -51,6 +45,8 @@ function Question3a({ nextStep, prevStep }) {
 }
 
 Question3a.propTypes = {
+  values: PropTypes.string.isRequired,
+  handleChange: PropTypes.string.isRequired,
   nextStep: PropTypes.number.isRequired,
   prevStep: PropTypes.number.isRequired,
 };
