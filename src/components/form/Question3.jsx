@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 
-function Question3({ handleChange, nextStep, prevStep }) {
+function Question3({ prevStep }) {
+  const [bool1, setBool1] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const handleNameBoolTrue = () => setBool1(true);
+  dispatch({ type: 'BOOL_TRAVAUX', bool: bool1 });
+
+  const handleNameBoolFalse = () => setBool1(false);
+  dispatch({ type: 'BOOL_TRAVAUX', bool: bool1 });
+
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
@@ -14,9 +25,7 @@ function Question3({ handleChange, nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="oui"
-            onClick={(e) => {
-              handleChange(e, 'question3');
-            }}
+            onClick={handleNameBoolTrue}
           >
             <p className="my-auto">Oui</p>
 
@@ -33,9 +42,7 @@ function Question3({ handleChange, nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="non"
-            onClick={(e) => {
-              handleChange(e, 'question3');
-            }}
+            onClick={handleNameBoolFalse}
           >
             <p className="my-auto">Non</p>
             <img
@@ -55,12 +62,7 @@ function Question3({ handleChange, nextStep, prevStep }) {
         >
           PREV
         </button>
-        <button
-          type="button"
-          onClick={(e) => {
-            nextStep(e);
-          }}
-        >
+        <button type="button" onClick={() => {}}>
           NEXT
         </button>
       </div>
@@ -69,8 +71,6 @@ function Question3({ handleChange, nextStep, prevStep }) {
 }
 
 Question3.propTypes = {
-  handleChange: PropTypes.string.isRequired,
-  nextStep: PropTypes.number.isRequired,
   prevStep: PropTypes.number.isRequired,
 };
 

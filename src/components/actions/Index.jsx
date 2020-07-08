@@ -32,3 +32,8 @@ export const textField = (text) => ({
   type: 'ADDTEXT',
   text,
 });
+
+export const addBool = (bool) => ({
+  type: 'BOOL_TRAVAUX',
+  bool,
+});
