@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import './styleForm.css';
 import { Link } from 'react-router-dom';
 
-function Question3({ prevStep }) {
+function Question3() {
   const [bool1, setBool1] = useState('');
 
   const dispatch = useDispatch();
@@ -54,29 +53,10 @@ function Question3({ prevStep }) {
         </div>
       </div>
       <div>
-        <button
-          type="button"
-          onClick={(e) => {
-            prevStep(e);
-          }}
-        >
-          PREV
-        </button>
-        {bool1 ? (
-          <Link to="/about">Travaux</Link>
-        ) : (
-          <Link to="/">PasTravaux</Link>
-        )}
-        <button type="button" onClick={() => {}}>
-          NEXT
-        </button>
+        {bool1 ? <Link to="/about">Next</Link> : <Link to="/">Next</Link>}
       </div>
     </div>
   );
 }
-
-Question3.propTypes = {
-  prevStep: PropTypes.number.isRequired,
-};
 
 export default Question3;

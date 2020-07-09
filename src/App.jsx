@@ -24,10 +24,6 @@ function App() {
           <Route path="/about">
             <Apropos />
           </Route>
-          <Route path="/offer" component={() => <div>offer</div>} />
-          <Route path="/project" component={() => <div>Votre projet</div>} />
-          <Route path="/contact" component={() => <div>contact</div>} />
-          <Route path="/user/:id" component={() => <div>user</div>} />
           <Route path="/form">
             <Form />
           </Route>
