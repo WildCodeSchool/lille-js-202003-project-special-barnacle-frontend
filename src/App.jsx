@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import Question1 from './components/form/question/1';
 import Question2 from './components/form/question/2';
 import Question3 from './components/form/question/3';
+import Question4 from './components/form/question/4';
+import Question4a from './components/form/question/4a';
 import Question5 from './components/form/question/5';
 import Question5a from './components/form/question/5a';
 import Question5b from './components/form/question/5b';
@@ -44,6 +46,12 @@ function App() {
           </Route>
           <Route exact path="/question3">
             <Question3 />
+          </Route>
+          <Route exact path="/question4">
+            <Question4 />
+          </Route>
+          <Route exact path="/question4a">
+            <Question4a />
           </Route>
           <Route exact path="/QuestionExemple3">
             <QuestionExemple3 />

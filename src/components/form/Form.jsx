@@ -3,6 +3,8 @@ import Stepper from './Stepper';
 import Question1 from './question/1';
 import Question2 from './question/2';
 import Question3 from './question/3';
+import Question4 from './question/4';
+import Question4a from './question/4a';
 import Question5 from './question/5';
 import Question5a from './question/5a';
 import Question5b from './question/5b';
@@ -86,7 +88,7 @@ const Form = () => {
     case 4:
       return (
         <div>
-          <Question3
+          <Question4
             nextStep={nextStep}
             prevStep={prevStep}
             handleChange={handleChange}
@@ -97,7 +99,7 @@ const Form = () => {
     case 5:
       return (
         <div>
-          <Question3
+          <Question4a
             nextStep={nextStep}
             prevStep={prevStep}
             handleChange={handleChange}
