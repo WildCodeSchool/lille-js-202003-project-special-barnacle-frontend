@@ -4,7 +4,7 @@ import './styleForm.css';
 
 import { useDispatch } from 'react-redux';
 
-function Question3a({ nextStep, prevStep }) {
+function QuestionExemple3a({ nextStep, prevStep }) {
   const [name, setName] = useState('');
   const dispatch = useDispatch();
 
@@ -51,9 +51,9 @@ function Question3a({ nextStep, prevStep }) {
   );
 }
 
-Question3a.propTypes = {
+QuestionExemple3a.propTypes = {
   nextStep: PropTypes.number.isRequired,
   prevStep: PropTypes.number.isRequired,
 };
 
-export default Question3a;
+export default QuestionExemple3a;

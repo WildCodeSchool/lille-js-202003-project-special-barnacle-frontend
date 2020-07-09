@@ -4,10 +4,15 @@ import Apropos from './components/Apropos';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
 import Footer from './components/Footer';
-import Question1 from './components/form/Question1';
-import Question2 from './components/form/Question2';
-import Question3 from './components/form/Question3';
-import Question3a from './components/form/Question3a';
+import Question1 from './components/form/question/1';
+import Question2 from './components/form/question/2';
+import Question3 from './components/form/question/3';
+import Question5 from './components/form/question/5';
+import Question5a from './components/form/question/5a';
+import Question5b from './components/form/question/5b';
+import Question6 from './components/form/question/6';
+import QuestionExemple3 from './components/form/question/exemple3';
+import QuestionExemple3a from './components/form/question/exemple3a';
 import Form from './components/form/Form';
 
 import './App.css';
@@ -40,8 +45,23 @@ function App() {
           <Route exact path="/question3">
             <Question3 />
           </Route>
-          <Route exact path="/question3a">
-            <Question3a />
+          <Route exact path="/QuestionExemple3">
+            <QuestionExemple3 />
+          </Route>
+          <Route exact path="/QuestionExemple3a">
+            <QuestionExemple3a />
+          </Route>
+          <Route exact path="/question5">
+            <Question5 />
+          </Route>
+          <Route exact path="/question5a">
+            <Question5a />
+          </Route>
+          <Route exact path="/question5b">
+            <Question5b />
+          </Route>
+          <Route exact path="/question6">
+            <Question6 />
           </Route>
         </Switch>
         <Footer />
