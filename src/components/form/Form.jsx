@@ -12,6 +12,10 @@ import Question6 from './question/6';
 import Question7 from './question/7';
 import Question7a from './question/7a';
 import Question7b from './question/7b';
+import Question10 from './question/10';
+import Question10a from './question/10a';
+import Question10b from './question/10b';
+import Question11 from './question/11';
 
 const Form = () => {
   const [data, setData] = useState({
@@ -27,6 +31,10 @@ const Form = () => {
     question7: '',
     question7a: '',
     question7b: '',
+    question10: '',
+    question10a: '',
+    question10b: '',
+    question11: '',
   });
 
   const [step, setStep] = useState(1);
@@ -183,6 +191,50 @@ const Form = () => {
       return (
         <div>
           <Question7b
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 13:
+      return (
+        <div>
+          <Question10
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 14:
+      return (
+        <div>
+          <Question10a
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 15:
+      return (
+        <div>
+          <Question10b
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 16:
+      return (
+        <div>
+          <Question11
             nextStep={nextStep}
             prevStep={prevStep}
             step={step}
