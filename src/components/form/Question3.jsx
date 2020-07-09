@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import './styleForm.css';
+import { BrowserRouter as Link } from 'react-router-dom';
+import Question1 from './Question1';
 
 function Question3({ prevStep }) {
   const [bool1, setBool1] = useState(false);
@@ -55,6 +57,8 @@ function Question3({ prevStep }) {
         </div>
       </div>
       <div>
+        {bool1 ? <Link to="/" /> : <Question1 />}
+
         <button
           type="button"
           onClick={(e) => {
