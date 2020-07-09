@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import './styleForm.css';
 
 function Question3({ prevStep }) {
   const [bool1, setBool1] = useState(false);

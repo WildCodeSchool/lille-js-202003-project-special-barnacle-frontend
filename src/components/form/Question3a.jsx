@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './styleForm.css';
-import TextField from '@material-ui/core/TextField';
 
 import { useDispatch } from 'react-redux';
 
@@ -13,14 +12,16 @@ function Question3a({ nextStep, prevStep }) {
   dispatch({ type: 'ADDTEXT', text: name });
 
   return (
-    <div className="questionEnter">
+    <div>
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Merci d`&apos;`indiquer le montant</h1>
+          <h1>Merci d&apos;indiquer le montant</h1>
         </div>
-        <form>
-          <TextField
-            placeholder="Enter Your Occupation"
+        <form className="">
+          <input
+            className="questionEnter col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
+            type="text"
+            placeholder="Montant des travaux"
             label="question3a"
             onChange={handleNameChange}
             value={name}
