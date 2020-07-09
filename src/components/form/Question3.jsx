@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import './styleForm.css';
-import { BrowserRouter as Link } from 'react-router-dom';
-import Question1 from './Question1';
+import { Link } from 'react-router-dom';
 
 function Question3({ prevStep }) {
-  const [bool1, setBool1] = useState(false);
+  const [bool1, setBool1] = useState('');
 
   const dispatch = useDispatch();
 
@@ -22,7 +21,6 @@ function Question3({ prevStep }) {
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
           <h1>Souhaitez-vous faire des travaux ?</h1>
         </div>
-
         <div className="row">
           <button
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
@@ -38,8 +36,7 @@ function Question3({ prevStep }) {
               alt="fleche"
             />
           </button>
-        </div>
-
+        </div>{' '}
         <div className="row">
           <button
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
@@ -57,8 +54,6 @@ function Question3({ prevStep }) {
         </div>
       </div>
       <div>
-        {bool1 ? <Link to="/" /> : <Question1 />}
-
         <button
           type="button"
           onClick={(e) => {
@@ -67,6 +62,11 @@ function Question3({ prevStep }) {
         >
           PREV
         </button>
+        {bool1 ? (
+          <Link to="/about">Travaux</Link>
+        ) : (
+          <Link to="/">PasTravaux</Link>
+        )}
         <button type="button" onClick={() => {}}>
           NEXT
         </button>

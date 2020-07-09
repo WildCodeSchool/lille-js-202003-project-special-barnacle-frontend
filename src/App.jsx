@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import Apropos from './components/Apropos';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
@@ -18,7 +13,6 @@ import Form from './components/form/Form';
 import './App.css';
 
 function App() {
-  const bool1 = useSelector((state) => state.bool.bool1);
   return (
     <Router>
       <div className="App">
@@ -36,7 +30,6 @@ function App() {
           <Route path="/user/:id" component={() => <div>user</div>} />
           <Route path="/form">
             <Form />
-            {bool1 ? <Redirect to="/" /> : <Homepage />}
           </Route>
           <Route exact path="/question1">
             <Question1 />
