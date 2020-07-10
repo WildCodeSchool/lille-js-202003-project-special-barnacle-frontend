@@ -17,7 +17,7 @@ function Question5({ handleChange, nextStep }) {
                 value="Résidence principale"
                 type="image"
                 alt="Résidence principale"
-                src="img/form/question5/residencerincipale.jpg"
+                src="img/form/question5/residenceprincipale.jpg"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question5');
