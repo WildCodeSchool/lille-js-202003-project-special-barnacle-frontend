@@ -17,7 +17,7 @@ function Question3({ handleChange, nextStep }) {
                 value="Ancien"
                 type="image"
                 alt="Ancien"
-                src="img/form/question3/acheterunbien.png"
+                src="img/form/question3/Ancien.jpg"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question3');
@@ -32,7 +32,7 @@ function Question3({ handleChange, nextStep }) {
                 value="Neuf"
                 type="image"
                 alt="Neuf"
-                src="img/form/question3/faireconstruire.png"
+                src="img/form/question3/Neuf.jpg"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question3');
@@ -47,7 +47,7 @@ function Question3({ handleChange, nextStep }) {
                 value="En état futur d'achèvement"
                 type="image"
                 alt="En état futur d'achèvement"
-                src="img/form/question3/fairedestravaux.png"
+                src="img/form/question3/VEFA.jpg"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question3');

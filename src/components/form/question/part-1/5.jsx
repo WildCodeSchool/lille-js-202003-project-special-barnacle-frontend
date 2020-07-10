@@ -17,7 +17,7 @@ function Question5({ handleChange, nextStep }) {
                 value="Résidence principale"
                 type="image"
                 alt="Résidence principale"
-                src="img/form/question5/acheterunbien.png"
+                src="img/form/question5/résidencePrincipale.jpg"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question5');
@@ -32,7 +32,7 @@ function Question5({ handleChange, nextStep }) {
                 value="Résidence locative"
                 type="image"
                 alt="Résidence locative"
-                src="img/form/question5/faireconstruire.png"
+                src="img/form/question5/résidenceLocative.jpg"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question5');
@@ -47,7 +47,7 @@ function Question5({ handleChange, nextStep }) {
                 value="Résidence secondaire"
                 type="image"
                 alt="Résidence secondaire"
-                src="img/form/question5/fairedestravaux.png"
+                src="img/form/question5/résidenceSecondaire.jpg"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question5');
@@ -62,13 +62,12 @@ function Question5({ handleChange, nextStep }) {
                 value="Autre"
                 type="image"
                 alt="Autre"
-                src="img/form/question5/renegocier.png"
+                src="img/form/question1/autresprojets.jpg"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question5');
                 }}
               />
-
               <p className="my-auto py-2">Autre</p>
             </div>
           </div>

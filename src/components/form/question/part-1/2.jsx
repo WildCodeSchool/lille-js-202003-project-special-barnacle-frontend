@@ -19,6 +19,7 @@ function Question2({ handleChange, nextStep }) {
                 alt="maison"
                 src="img/form/question2/Maison.jpg"
                 width="100%"
+                height="88%"
                 onClick={(e) => {
                   handleChange(e, 'question2');
                 }}
@@ -34,6 +35,7 @@ function Question2({ handleChange, nextStep }) {
                 alt="Un appartement"
                 src="img/form/question2/Appartement.jpg"
                 width="100%"
+                height="88%"
                 onClick={(e) => {
                   handleChange(e, 'question2');
                 }}
@@ -49,6 +51,7 @@ function Question2({ handleChange, nextStep }) {
                 alt="Un terrein seul"
                 src="img/form/question2/Terrain.jpg"
                 width="100%"
+                height="88%"
                 onClick={(e) => {
                   handleChange(e, 'question2');
                 }}
@@ -62,7 +65,7 @@ function Question2({ handleChange, nextStep }) {
                 value="Autre"
                 type="image"
                 alt="Autre"
-                src="img/form/question1/autresprojets.jpg"
+                src="img/form/question2/autresprojets2.jpg"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question2');
