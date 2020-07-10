@@ -8,7 +8,7 @@ function Question5({ handleChange, nextStep }) {
       <form>
         <div className="form container-fluid pb-5">
           <div className="row-cols-12 p-5 text-center">
-            <h1>Quel est l&aposusage du bien ?</h1>
+            <h1>Quel est l&apos;usage du bien ?</h1>
           </div>
           <div className="row text-center">
             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
