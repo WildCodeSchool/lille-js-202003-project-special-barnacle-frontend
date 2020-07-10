@@ -16,6 +16,9 @@ import Question6 from './components/form/question/6';
 import Question7 from './components/form/question/7';
 import Question7a from './components/form/question/7a';
 import Question7b from './components/form/question/7b';
+import Question8 from './components/form/question/8';
+import Question8a from './components/form/question/8a';
+import Question9 from './components/form/question/9';
 import Question10 from './components/form/question/10';
 import Question10a from './components/form/question/10a';
 import Question10b from './components/form/question/10b';
@@ -86,6 +89,15 @@ function App() {
           </Route>
           <Route exact path="/question7b">
             <Question7b />
+          </Route>
+          <Route exact path="/question8">
+            <Question8 />
+          </Route>
+          <Route exact path="/question8a">
+            <Question8a />
+          </Route>
+          <Route exact path="/question9">
+            <Question9 />
           </Route>
           <Route exact path="/question10">
             <Question10 />
