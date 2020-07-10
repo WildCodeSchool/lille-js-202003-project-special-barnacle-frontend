@@ -53,7 +53,18 @@ function Question3() {
         </div>
       </div>
       <div>
-        {bool1 ? <Link to="/about">Next</Link> : <Link to="/">Next</Link>}
+        <Link className="next" to="/question2">
+          Prev
+        </Link>
+        {bool1 ? (
+          <Link className="next" to="/about">
+            Next
+          </Link>
+        ) : (
+          <Link className="next" to="/">
+            Next
+          </Link>
+        )}
       </div>
     </div>
   );

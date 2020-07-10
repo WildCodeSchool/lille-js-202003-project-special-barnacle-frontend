@@ -57,10 +57,13 @@ input {
   font-weight: 700;
   font-size: 1em;
 }
-button {
+button,
+.next {
   background-color: transparent;
   border: 0;
   border-style: none;
+  color: inherit;
+  margin: 1rem;
 }
 button:focus {
   border: 1px solid #173753;
