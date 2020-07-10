@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
 import Stepper from './Stepper';
-import Question1 from './question/1';
-import Question2 from './question/2';
-import Question3 from './question/3';
-import Question4 from './question/4';
-import Question4a from './question/4a';
-import Question5 from './question/5';
-import Question5a from './question/5a';
-import Question5b from './question/5b';
-import Question6 from './question/6';
-import Question7 from './question/7';
-import Question7a from './question/7a';
-import Question7b from './question/7b';
-import Question8 from './question/8';
-import Question8a from './question/8a';
-import Question9 from './question/9';
-import Question10 from './question/10';
-import Question10a from './question/10a';
-import Question10b from './question/10b';
-import Question11 from './question/11';
+import Question1 from './question/part-1/1';
+import Question2 from './question/part-1/2';
+import Question3 from './question/part-1/3';
+import Question4 from './question/part-1/4';
+import Question4a from './question/part-1/4a';
+import Question5 from './question/part-1/5';
+import Question5a from './question/part-1/5a';
+import Question5b from './question/part-1/5b';
+import Question6 from './question/part-1/6';
+import Question7 from './question/part-1/7';
+import Question7a from './question/part-1/7a';
+import Question7b from './question/part-1/7b';
+import Question8 from './question/part-1/8';
+import Question8a from './question/part-1/8a';
+import Question9 from './question/part-1/9';
+import Question10 from './question/part-1/10';
+import Question10a from './question/part-1/10a';
+import Question10b from './question/part-1/10b';
+import Question11 from './question/part-1/11';
+import Question12 from './question/part-1/12';
+import Question14 from './question/part-1/14';
 
 const Form = () => {
   const [data, setData] = useState({
@@ -41,6 +43,8 @@ const Form = () => {
     question10a: '',
     question10b: '',
     question11: '',
+    question12: '',
+    question14: '',
   });
 
   const [step, setStep] = useState(1);
@@ -274,6 +278,28 @@ const Form = () => {
       return (
         <div>
           <Question11
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 20:
+      return (
+        <div>
+          <Question12
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 21:
+      return (
+        <div>
+          <Question14
             nextStep={nextStep}
             prevStep={prevStep}
             step={step}

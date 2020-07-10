@@ -1,25 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './styleForm.css';
+import { useDispatch } from 'react-redux';
+import '../styleForm.css';
 
-function Question11({ handleChange, nextStep, prevStep }) {
+function Question4({ nextStep, prevStep }) {
+  const [bool1, setBool1] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const handleNameBoolTrue = () => setBool1(true);
+  dispatch({ type: 'BOOL_TRAVAUX', bool: bool1 });
+
+  const handleNameBoolFalse = () => setBool1(false);
+  dispatch({ type: 'BOOL_TRAVAUX', bool: bool1 });
+
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Où en êtes-vous dans la recherche de votre terrain ?</h1>
+          <h1>Souhaitez-vous faire des travaux ?</h1>
         </div>
 
         <div className="row">
           <button
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
-            value="Je recherche un terrain"
-            onClick={(e) => {
-              handleChange(e, 'question11');
-            }}
+            value="oui"
+            onClick={handleNameBoolTrue}
           >
-            <p className="my-auto">Je recherche un terrain</p>
+            <p className="my-auto">Oui</p>
 
             <img
               className="col-2 col-sm-1 my-auto p-1"
@@ -33,12 +42,10 @@ function Question11({ handleChange, nextStep, prevStep }) {
           <button
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
-            value="J’ai signé un compromis de vente"
-            onClick={(e) => {
-              handleChange(e, 'question11');
-            }}
+            value="non"
+            onClick={handleNameBoolFalse}
           >
-            <p className="my-auto">J’ai signé un compromis de vente</p>
+            <p className="my-auto">Non</p>
             <img
               className="col-2 col-sm-1 my-auto p-1"
               src="img/arrow.png"
@@ -69,10 +76,9 @@ function Question11({ handleChange, nextStep, prevStep }) {
   );
 }
 
-Question11.propTypes = {
-  handleChange: PropTypes.string.isRequired,
-  nextStep: PropTypes.number.isRequired,
+Question4.propTypes = {
   prevStep: PropTypes.number.isRequired,
+  nextStep: PropTypes.number.isRequired,
 };
 
-export default Question11;
+export default Question4;

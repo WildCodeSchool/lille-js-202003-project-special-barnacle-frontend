@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './styleForm.css';
+import '../styleForm.css';
 
 import { useDispatch } from 'react-redux';
 
-function Question4a({ nextStep, prevStep }) {
+function Question5b({ nextStep, prevStep }) {
   const [name, setName] = useState('');
   const dispatch = useDispatch();
 
@@ -21,8 +21,8 @@ function Question4a({ nextStep, prevStep }) {
           <input
             className="questionEnter col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="text"
-            placeholder="Montant des travaux"
-            label="question4a"
+            placeholder="Montant"
+            label="question5b"
             onChange={handleNameChange}
             value={name}
           />
@@ -51,9 +51,9 @@ function Question4a({ nextStep, prevStep }) {
   );
 }
 
-Question4a.propTypes = {
+Question5b.propTypes = {
   nextStep: PropTypes.number.isRequired,
   prevStep: PropTypes.number.isRequired,
 };
 
-export default Question4a;
+export default Question5b;

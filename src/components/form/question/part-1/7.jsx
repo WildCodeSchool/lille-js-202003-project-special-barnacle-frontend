@@ -1,25 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styleForm.css';
+import '../styleForm.css';
 
-function Question2({ handleChange, nextStep, prevStep }) {
+function Question7({ handleChange, nextStep, prevStep }) {
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Vous souhaitez acheter:</h1>
+          <h1>Où souhaitez-vous acheter ?</h1>
         </div>
 
         <div className="row">
           <button
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
-            value="Une maison"
+            value="En France"
             onClick={(e) => {
-              handleChange(e, 'question2');
+              handleChange(e, 'question7');
             }}
           >
-            <p className="my-auto">Une maison</p>
+            <p className="my-auto">En France</p>
 
             <img
               className="col-2 col-sm-1 my-auto p-1"
@@ -33,48 +33,12 @@ function Question2({ handleChange, nextStep, prevStep }) {
           <button
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
-            value="Un appartement"
+            value="A l’étranger >"
             onClick={(e) => {
-              handleChange(e, 'question2');
+              handleChange(e, 'question7');
             }}
           >
-            <p className="my-auto">Un appartement</p>
-            <img
-              className="col-2 col-sm-1 my-auto p-1"
-              src="img/arrow.png"
-              alt="fleche"
-            />
-          </button>
-        </div>
-
-        <div className="row">
-          <button
-            className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
-            type="button"
-            value="Un terrain seul"
-            onClick={(e) => {
-              handleChange(e, 'question2');
-            }}
-          >
-            <p className="my-auto">Un terrain seul</p>
-            <img
-              className="col-2 col-sm-1 my-auto p-1"
-              src="img/arrow.png"
-              alt="fleche"
-            />
-          </button>
-        </div>
-
-        <div className="row">
-          <button
-            className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
-            type="button"
-            value="Autre"
-            onClick={(e) => {
-              handleChange(e, 'question2');
-            }}
-          >
-            <p className="my-auto">Autre</p>
+            <p className="my-auto">A l’étranger</p>
             <img
               className="col-2 col-sm-1 my-auto p-1"
               src="img/arrow.png"
@@ -105,10 +69,10 @@ function Question2({ handleChange, nextStep, prevStep }) {
   );
 }
 
-Question2.propTypes = {
+Question7.propTypes = {
   handleChange: PropTypes.string.isRequired,
   nextStep: PropTypes.number.isRequired,
   prevStep: PropTypes.number.isRequired,
 };
 
-export default Question2;
+export default Question7;

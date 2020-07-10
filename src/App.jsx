@@ -4,25 +4,27 @@ import Apropos from './components/Apropos';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
 import Footer from './components/Footer';
-import Question1 from './components/form/question/1';
-import Question2 from './components/form/question/2';
-import Question3 from './components/form/question/3';
-import Question4 from './components/form/question/4';
-import Question4a from './components/form/question/4a';
-import Question5 from './components/form/question/5';
-import Question5a from './components/form/question/5a';
-import Question5b from './components/form/question/5b';
-import Question6 from './components/form/question/6';
-import Question7 from './components/form/question/7';
-import Question7a from './components/form/question/7a';
-import Question7b from './components/form/question/7b';
-import Question8 from './components/form/question/8';
-import Question8a from './components/form/question/8a';
-import Question9 from './components/form/question/9';
-import Question10 from './components/form/question/10';
-import Question10a from './components/form/question/10a';
-import Question10b from './components/form/question/10b';
-import Question11 from './components/form/question/11';
+import Question1 from './components/form/question/part-1/1';
+import Question2 from './components/form/question/part-1/2';
+import Question3 from './components/form/question/part-1/3';
+import Question4 from './components/form/question/part-1/4';
+import Question4a from './components/form/question/part-1/4a';
+import Question5 from './components/form/question/part-1/5';
+import Question5a from './components/form/question/part-1/5a';
+import Question5b from './components/form/question/part-1/5b';
+import Question6 from './components/form/question/part-1/6';
+import Question7 from './components/form/question/part-1/7';
+import Question7a from './components/form/question/part-1/7a';
+import Question7b from './components/form/question/part-1/7b';
+import Question8 from './components/form/question/part-1/8';
+import Question8a from './components/form/question/part-1/8a';
+import Question9 from './components/form/question/part-1/9';
+import Question10 from './components/form/question/part-1/10';
+import Question10a from './components/form/question/part-1/10a';
+import Question10b from './components/form/question/part-1/10b';
+import Question11 from './components/form/question/part-1/11';
+import Question12 from './components/form/question/part-1/12';
+import Question14 from './components/form/question/part-1/14';
 import QuestionExemple3 from './components/form/question/exemple3';
 import QuestionExemple3a from './components/form/question/exemple3a';
 import Form from './components/form/Form';
@@ -110,6 +112,12 @@ function App() {
           </Route>
           <Route exact path="/question11">
             <Question11 />
+          </Route>
+          <Route exact path="/question12">
+            <Question12 />
+          </Route>
+          <Route exact path="/question14">
+            <Question14 />
           </Route>
         </Switch>
         <Footer />
