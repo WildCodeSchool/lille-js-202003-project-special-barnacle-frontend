@@ -17,7 +17,7 @@ function Question5({ handleChange, nextStep }) {
                 value="Résidence principale"
                 type="image"
                 alt="Résidence principale"
-                src="img/form/question5/résidencePrincipale.jpg"
+                src="img/form/question5/residencerincipale.jpg"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question5');
@@ -32,7 +32,7 @@ function Question5({ handleChange, nextStep }) {
                 value="Résidence locative"
                 type="image"
                 alt="Résidence locative"
-                src="img/form/question5/résidenceLocative.jpg"
+                src="img/form/question5/residencelocative.jpg"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question5');
@@ -47,15 +47,15 @@ function Question5({ handleChange, nextStep }) {
                 value="Résidence secondaire"
                 type="image"
                 alt="Résidence secondaire"
-                src="img/form/question5/résidenceSecondaire.jpg"
+                src="img/form/question5/residencesecondaire.jpg"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question5');
                 }}
               />
-
               <p className="my-auto py-2">Résidence secondaire</p>
             </div>
+
             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
               <input
                 id="image"
