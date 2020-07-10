@@ -42,6 +42,7 @@ const initialState = {
     bool1: false,
     bool2: '',
     bool3: '',
+    choice: '',
   },
 };
 

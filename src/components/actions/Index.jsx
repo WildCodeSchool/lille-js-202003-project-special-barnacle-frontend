@@ -33,7 +33,7 @@ export const textField = (text) => ({
   text,
 });
 
-export const addBool = (bool) => ({
-  type: 'BOOL_TRAVAUX',
-  bool,
+export const initChoice = (choice) => ({
+  type: 'INITIAL_CHOICE',
+  choice,
 });
