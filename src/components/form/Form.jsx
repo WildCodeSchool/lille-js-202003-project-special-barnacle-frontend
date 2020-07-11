@@ -26,6 +26,8 @@ import Question16 from './question/part-1/16';
 import Question16a from './question/part-1/16a';
 import Question16b from './question/part-1/16b';
 import Question17 from './question/part-1/17';
+import Question18 from './question/part-1/18';
+import Question18a from './question/part-1/18a';
 
 const Form = () => {
   const [data, setData] = useState({
@@ -55,6 +57,8 @@ const Form = () => {
     question16a: '',
     question16b: '',
     question17: '',
+    question18: '',
+    question18a: '',
   });
 
   const [step, setStep] = useState(1);
@@ -365,6 +369,28 @@ const Form = () => {
       return (
         <div>
           <Question17
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 27:
+      return (
+        <div>
+          <Question18
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 28:
+      return (
+        <div>
+          <Question18a
             nextStep={nextStep}
             prevStep={prevStep}
             step={step}
