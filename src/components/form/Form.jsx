@@ -21,6 +21,11 @@ import Question10b from './question/part-1/10b';
 import Question11 from './question/part-1/11';
 import Question12 from './question/part-1/12';
 import Question14 from './question/part-1/14';
+import Question15 from './question/part-1/15';
+import Question16 from './question/part-1/16';
+import Question16a from './question/part-1/16a';
+import Question16b from './question/part-1/16b';
+import Question17 from './question/part-1/17';
 
 const Form = () => {
   const [data, setData] = useState({
@@ -45,6 +50,11 @@ const Form = () => {
     question11: '',
     question12: '',
     question14: '',
+    question15: '',
+    question16: '',
+    question16a: '',
+    question16b: '',
+    question17: '',
   });
 
   const [step, setStep] = useState(1);
@@ -300,6 +310,61 @@ const Form = () => {
       return (
         <div>
           <Question14
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 22:
+      return (
+        <div>
+          <Question15
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 23:
+      return (
+        <div>
+          <Question16
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 24:
+      return (
+        <div>
+          <Question16a
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 25:
+      return (
+        <div>
+          <Question16b
+            nextStep={nextStep}
+            prevStep={prevStep}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 26:
+      return (
+        <div>
+          <Question17
             nextStep={nextStep}
             prevStep={prevStep}
             step={step}
