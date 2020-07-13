@@ -33,6 +33,8 @@ import Question27b3 from './components/form/question/part-2/27b3';
 import Question27b4 from './components/form/question/part-2/27b4';
 import Question27b5 from './components/form/question/part-2/27b5';
 import Question27b6 from './components/form/question/part-2/27b6';
+import Question28 from './components/form/question/part-2/28';
+import Question28a from './components/form/question/part-2/28a';
 import Form from './components/form/Form';
 
 import './App.css';
@@ -142,6 +144,12 @@ function App() {
           </Route>
           <Route exact path="/question27b6">
             <Question27b6 />
+          </Route>
+          <Route exact path="/question28">
+            <Question28 />
+          </Route>
+          <Route exact path="/question28a">
+            <Question28a />
           </Route>
         </Switch>
         <Footer />
