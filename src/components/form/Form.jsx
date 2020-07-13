@@ -1,9 +1,4 @@
 import React, { useState } from 'react';
-import Stepper from './Stepper';
-import Question1 from './Question1';
-import Question2 from './Question2';
-import Question3 from './Question3';
-import Question3a from './Question3a';
 import Question19a from './question/part-2/19a';
 import Question19b from './question/part-2/19b';
 import Question20a from './question/part-2/20a';
@@ -99,76 +94,18 @@ const Form = () => {
     setData({ ...data, [input]: e.target.value });
   };
 
-  const handleChangeTest = (e, input) => {
-    // e.preventDefault();
-    setData({ ...data, [input]: e.target.value });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
   switch (step) {
-    case 1:
-      return (
-        <>
-          <div>
-            <Stepper />
-          </div>
-          <div>
-            <Question1
-              values={values}
-              step={step}
-              handleChange={handleChange}
-              nextStep={nextStep}
-            />
-          </div>
-        </>
-      );
-    case 2:
-      return (
-        <div>
-          <Question2
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChange={handleChange}
-            values={values}
-            step={step}
-          />
-        </div>
-      );
-    case 3:
-      return (
-        <div>
-          <Question3
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChange={handleChange}
-            values={values}
-            step={step}
-          />
-        </div>
-      );
-    case 4:
-      return (
-        <div>
-          <Question3a
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
     case 30:
       return (
         <div>
           <Question19a
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -181,7 +118,7 @@ const Form = () => {
           <Question19b
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -194,7 +131,7 @@ const Form = () => {
           <Question20a
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -207,7 +144,7 @@ const Form = () => {
           <Question20b
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -220,7 +157,7 @@ const Form = () => {
           <Question20c
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -233,7 +170,7 @@ const Form = () => {
           <Question20d
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -246,7 +183,7 @@ const Form = () => {
           <Question21
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -259,7 +196,7 @@ const Form = () => {
           <Question21a
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -272,7 +209,7 @@ const Form = () => {
           <Question22
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -285,7 +222,7 @@ const Form = () => {
           <Question22a
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -298,7 +235,7 @@ const Form = () => {
           <Question22b
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -311,7 +248,7 @@ const Form = () => {
           <Question22c
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -324,7 +261,7 @@ const Form = () => {
           <Question23a
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -337,7 +274,7 @@ const Form = () => {
           <Question23b
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -350,7 +287,7 @@ const Form = () => {
           <Question24
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -363,7 +300,7 @@ const Form = () => {
           <Question25
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -376,7 +313,7 @@ const Form = () => {
           <Question26
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -389,7 +326,7 @@ const Form = () => {
           <Question34
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -402,7 +339,7 @@ const Form = () => {
           <Question35
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -415,7 +352,7 @@ const Form = () => {
           <Question36
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -428,7 +365,7 @@ const Form = () => {
           <Question37
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -441,7 +378,7 @@ const Form = () => {
           <Question38a
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -454,7 +391,7 @@ const Form = () => {
           <Question38b
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -467,7 +404,7 @@ const Form = () => {
           <Question38c
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -480,7 +417,7 @@ const Form = () => {
           <Question39a
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -493,7 +430,7 @@ const Form = () => {
           <Question39b
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -506,7 +443,7 @@ const Form = () => {
           <Question40
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -519,7 +456,7 @@ const Form = () => {
           <Question40a
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -532,7 +469,7 @@ const Form = () => {
           <Question41
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -545,7 +482,7 @@ const Form = () => {
           <Question42
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -558,7 +495,7 @@ const Form = () => {
           <Question43
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -571,7 +508,7 @@ const Form = () => {
           <Question431
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
@@ -584,7 +521,7 @@ const Form = () => {
           <Question432
             nextStep={nextStep}
             prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
+            handleChangeTest={handleChange}
             values={values}
             step={step}
             handleSubmit={handleSubmit}
