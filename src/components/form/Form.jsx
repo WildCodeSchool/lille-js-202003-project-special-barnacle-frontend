@@ -4,12 +4,14 @@ import Question1 from './Question1';
 import Question2 from './Question2';
 import Question3 from './Question3';
 import Question3a from './Question3a';
+import Question44 from './question/part-4/44';
 
 const Form = () => {
   const [data, setData] = useState({
     question1: '',
     question2: '',
     question3: '',
+    questio44: '',
   });
 
   const { question3a } = data;
@@ -89,6 +91,19 @@ const Form = () => {
       return (
         <div>
           <Question3a
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChangeTest={handleChangeTest}
+            values={values}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 87:
+      return (
+        <div>
+          <Question44
             nextStep={nextStep}
             prevStep={prevStep}
             handleChangeTest={handleChangeTest}

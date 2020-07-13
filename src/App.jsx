@@ -8,6 +8,7 @@ import Question1 from './components/form/Question1';
 import Question2 from './components/form/Question2';
 import Question3 from './components/form/Question3';
 import Question3a from './components/form/Question3a';
+import Question44 from './components/form/question/part-4/44';
 import Form from './components/form/Form';
 
 import './App.css';
@@ -42,6 +43,9 @@ function App() {
           </Route>
           <Route exact path="/question3a">
             <Question3a />
+          </Route>
+          <Route exact path="/question44">
+            <Question44 />
           </Route>
         </Switch>
         <Footer />
