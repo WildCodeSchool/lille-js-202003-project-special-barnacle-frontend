@@ -25,8 +25,23 @@ import Question23b from './components/form/question/part-2/23b';
 import Question24 from './components/form/question/part-2/24';
 import Question25 from './components/form/question/part-2/25';
 import Question26 from './components/form/question/part-2/26';
+import Question34 from './components/form/question/part-3/34';
+import Question35 from './components/form/question/part-3/35';
+import Question36 from './components/form/question/part-3/36';
+import Question37 from './components/form/question/part-3/37';
+import Question38a from './components/form/question/part-3/38a';
+import Question38b from './components/form/question/part-3/38b';
+import Question38c from './components/form/question/part-3/38c';
+import Question39a from './components/form/question/part-3/39a';
+import Question39b from './components/form/question/part-3/39b';
+import Question40 from './components/form/question/part-3/40';
+import Question40a from './components/form/question/part-3/40a';
+import Question41 from './components/form/question/part-3/41';
+import Question42 from './components/form/question/part-3/42';
+import Question43 from './components/form/question/part-3/43';
+import Question431 from './components/form/question/part-3/431';
+import Question432 from './components/form/question/part-3/432';
 import Form from './components/form/Form';
-
 import './App.css';
 
 function App() {
@@ -110,6 +125,54 @@ function App() {
           </Route>
           <Route exact path="/question26">
             <Question26 />
+          </Route>
+          <Route exact path="/question34">
+            <Question34 />
+          </Route>
+          <Route exact path="/question35">
+            <Question35 />
+          </Route>
+          <Route exact path="/question36">
+            <Question36 />
+          </Route>
+          <Route exact path="/question37">
+            <Question37 />
+          </Route>
+          <Route exact path="/question38a">
+            <Question38a />
+          </Route>
+          <Route exact path="/question38b">
+            <Question38b />
+          </Route>
+          <Route exact path="/question38c">
+            <Question38c />
+          </Route>
+          <Route exact path="/question39a">
+            <Question39a />
+          </Route>
+          <Route exact path="/question39b">
+            <Question39b />
+          </Route>
+          <Route exact path="/question40">
+            <Question40 />
+          </Route>
+          <Route exact path="/question40a">
+            <Question40a />
+          </Route>
+          <Route exact path="/question41">
+            <Question41 />
+          </Route>
+          <Route exact path="/question42">
+            <Question42 />
+          </Route>
+          <Route exact path="/question43">
+            <Question43 />
+          </Route>
+          <Route exact path="/question431">
+            <Question431 />
+          </Route>
+          <Route exact path="/question432">
+            <Question432 />
           </Route>
         </Switch>
         <Footer />
