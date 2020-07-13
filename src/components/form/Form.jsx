@@ -11,6 +11,13 @@ import Question20b from './question/part-2/20b';
 import Question20c from './question/part-2/20c';
 import Question20d from './question/part-2/20d';
 import Question21 from './question/part-2/21';
+import Question21a from './question/part-2/21a';
+import Question22 from './question/part-2/22';
+import Question22a from './question/part-2/22a';
+import Question22b from './question/part-2/22b';
+import Question22c from './question/part-2/22c';
+import Question23a from './question/part-2/23a';
+import Question23b from './question/part-2/23b';
 
 const Form = () => {
   const [data, setData] = useState({
@@ -24,6 +31,13 @@ const Form = () => {
     question20c: '',
     question20d: '',
     question21: '',
+    question21a: '',
+    question22: '',
+    question22a: '',
+    question22b: '',
+    question22c: '',
+    question23a: '',
+    question23b: '',
   });
 
   const { question3a } = data;
@@ -194,6 +208,97 @@ const Form = () => {
       return (
         <div>
           <Question21
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChangeTest={handleChangeTest}
+            values={values}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 37:
+      return (
+        <div>
+          <Question21a
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChangeTest={handleChangeTest}
+            values={values}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 38:
+      return (
+        <div>
+          <Question22
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChangeTest={handleChangeTest}
+            values={values}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 39:
+      return (
+        <div>
+          <Question22a
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChangeTest={handleChangeTest}
+            values={values}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 40:
+      return (
+        <div>
+          <Question22b
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChangeTest={handleChangeTest}
+            values={values}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 41:
+      return (
+        <div>
+          <Question22c
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChangeTest={handleChangeTest}
+            values={values}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 42:
+      return (
+        <div>
+          <Question23a
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChangeTest={handleChangeTest}
+            values={values}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 43:
+      return (
+        <div>
+          <Question23b
             nextStep={nextStep}
             prevStep={prevStep}
             handleChangeTest={handleChangeTest}

@@ -15,6 +15,13 @@ import Question20b from './components/form/question/part-2/20b';
 import Question20c from './components/form/question/part-2/20c';
 import Question20d from './components/form/question/part-2/20d';
 import Question21 from './components/form/question/part-2/21';
+import Question21a from './components/form/question/part-2/21a';
+import Question22 from './components/form/question/part-2/22';
+import Question22a from './components/form/question/part-2/22a';
+import Question22b from './components/form/question/part-2/22b';
+import Question22c from './components/form/question/part-2/22c';
+import Question23a from './components/form/question/part-2/23a';
+import Question23b from './components/form/question/part-2/23b';
 import Form from './components/form/Form';
 
 import './App.css';
@@ -70,6 +77,27 @@ function App() {
           </Route>
           <Route exact path="/question21">
             <Question21 />
+          </Route>
+          <Route exact path="/question21a">
+            <Question21a />
+          </Route>
+          <Route exact path="/question22">
+            <Question22 />
+          </Route>
+          <Route exact path="/question22a">
+            <Question22a />
+          </Route>
+          <Route exact path="/question22b">
+            <Question22b />
+          </Route>
+          <Route exact path="/question22c">
+            <Question22c />
+          </Route>
+          <Route exact path="/question23a">
+            <Question23a />
+          </Route>
+          <Route exact path="/question23b">
+            <Question23b />
           </Route>
         </Switch>
         <Footer />
