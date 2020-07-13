@@ -5,6 +5,7 @@ const Wrapper = styled.section`
   color: #fff;
   h1 {
     margin: 20px;
+    color: #fff;
   }
 
   .card {
