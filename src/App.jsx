@@ -8,6 +8,13 @@ import Question1 from './components/form/Question1';
 import Question2 from './components/form/Question2';
 import Question3 from './components/form/Question3';
 import Question3a from './components/form/Question3a';
+import Question19a from './components/form/question/part-2/19a';
+import Question19b from './components/form/question/part-2/19b';
+import Question20a from './components/form/question/part-2/20a';
+import Question20b from './components/form/question/part-2/20b';
+import Question20c from './components/form/question/part-2/20c';
+import Question20d from './components/form/question/part-2/20d';
+import Question21 from './components/form/question/part-2/21';
 import Form from './components/form/Form';
 
 import './App.css';
@@ -42,6 +49,27 @@ function App() {
           </Route>
           <Route exact path="/question3a">
             <Question3a />
+          </Route>
+          <Route exact path="/question19a">
+            <Question19a />
+          </Route>
+          <Route exact path="/question19b">
+            <Question19b />
+          </Route>
+          <Route exact path="/question20a">
+            <Question20a />
+          </Route>
+          <Route exact path="/question20b">
+            <Question20b />
+          </Route>
+          <Route exact path="/question20c">
+            <Question20c />
+          </Route>
+          <Route exact path="/question20d">
+            <Question20d />
+          </Route>
+          <Route exact path="/question21">
+            <Question21 />
           </Route>
         </Switch>
         <Footer />
