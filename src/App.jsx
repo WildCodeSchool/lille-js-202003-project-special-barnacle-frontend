@@ -22,6 +22,9 @@ import Question22b from './components/form/question/part-2/22b';
 import Question22c from './components/form/question/part-2/22c';
 import Question23a from './components/form/question/part-2/23a';
 import Question23b from './components/form/question/part-2/23b';
+import Question24 from './components/form/question/part-2/24';
+import Question25 from './components/form/question/part-2/25';
+import Question26 from './components/form/question/part-2/26';
 import Form from './components/form/Form';
 
 import './App.css';
@@ -98,6 +101,15 @@ function App() {
           </Route>
           <Route exact path="/question23b">
             <Question23b />
+          </Route>
+          <Route exact path="/question24">
+            <Question24 />
+          </Route>
+          <Route exact path="/question25">
+            <Question25 />
+          </Route>
+          <Route exact path="/question26">
+            <Question26 />
           </Route>
         </Switch>
         <Footer />

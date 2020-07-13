@@ -18,6 +18,9 @@ import Question22b from './question/part-2/22b';
 import Question22c from './question/part-2/22c';
 import Question23a from './question/part-2/23a';
 import Question23b from './question/part-2/23b';
+import Question24 from './question/part-2/24';
+import Question25 from './question/part-2/25';
+import Question26 from './question/part-2/26';
 
 const Form = () => {
   const [data, setData] = useState({
@@ -38,6 +41,9 @@ const Form = () => {
     question22c: '',
     question23a: '',
     question23b: '',
+    question24: '',
+    question25: '',
+    question26: '',
   });
 
   const { question3a } = data;
@@ -299,6 +305,45 @@ const Form = () => {
       return (
         <div>
           <Question23b
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChangeTest={handleChangeTest}
+            values={values}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 44:
+      return (
+        <div>
+          <Question24
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChangeTest={handleChangeTest}
+            values={values}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 45:
+      return (
+        <div>
+          <Question25
+            nextStep={nextStep}
+            prevStep={prevStep}
+            handleChangeTest={handleChangeTest}
+            values={values}
+            step={step}
+            handleSubmit={handleSubmit}
+          />
+        </div>
+      );
+    case 46:
+      return (
+        <div>
+          <Question26
             nextStep={nextStep}
             prevStep={prevStep}
             handleChangeTest={handleChangeTest}
