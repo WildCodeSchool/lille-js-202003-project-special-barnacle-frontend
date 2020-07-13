@@ -17,8 +17,8 @@ function Question27b4({ nextStep, prevStep }) {
         <form className="">
           <input
             className="questionEnter col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
-            type="text"
-            placeholder="frais d’agence, expertise, autres"
+            type="date"
+            placeholder="Date"
             label="question27b4"
             onChange={handleNameChange}
             value={name}

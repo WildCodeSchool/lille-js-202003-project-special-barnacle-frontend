@@ -18,7 +18,7 @@ function Question27b5({ nextStep, prevStep }) {
           <input
             className="questionEnter col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="text"
-            placeholder="frais d’agence, expertise, autres"
+            placeholder="Durée de l'emprunt"
             label="question27b5"
             onChange={handleNameChange}
             value={name}

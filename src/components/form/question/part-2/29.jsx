@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import '../../styleForm.css';
 import { useDispatch } from 'react-redux';
 
-function Question20b({ nextStep, prevStep }) {
+function Question29({ nextStep, prevStep }) {
   const [name, setName] = useState('');
   const dispatch = useDispatch();
   const handleNameChange = (e) => setName(e.target.value);
@@ -12,14 +12,14 @@ function Question20b({ nextStep, prevStep }) {
     <div>
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Montant des frais annexes:</h1>
+          <h1>Combien de crédits immobilier souhaitez vous racheter ?</h1>
         </div>
         <form className="">
           <input
             className="questionEnter col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="text"
-            placeholder="Frais d’agence, expertise, autres"
-            label="question20b"
+            placeholder="Nombre de crédits"
+            label="question29"
             onChange={handleNameChange}
             value={name}
           />
@@ -46,8 +46,8 @@ function Question20b({ nextStep, prevStep }) {
     </div>
   );
 }
-Question20b.propTypes = {
+Question29.propTypes = {
   nextStep: PropTypes.number.isRequired,
   prevStep: PropTypes.number.isRequired,
 };
-export default Question20b;
+export default Question29;
