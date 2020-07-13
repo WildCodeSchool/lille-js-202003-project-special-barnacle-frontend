@@ -32,8 +32,6 @@ import Question16b from './components/form/question/part-1/16b';
 import Question17 from './components/form/question/part-1/17';
 import Question18 from './components/form/question/part-1/18';
 import Question18a from './components/form/question/part-1/18a';
-import QuestionExemple3 from './components/form/question/exemple3';
-import QuestionExemple3a from './components/form/question/exemple3a';
 import Form from './components/form/Form';
 
 import './App.css';
@@ -71,12 +69,6 @@ function App() {
           </Route>
           <Route exact path="/question4a">
             <Question4a />
-          </Route>
-          <Route exact path="/QuestionExemple3">
-            <QuestionExemple3 />
-          </Route>
-          <Route exact path="/QuestionExemple3a">
-            <QuestionExemple3a />
           </Route>
           <Route exact path="/question5">
             <Question5 />
