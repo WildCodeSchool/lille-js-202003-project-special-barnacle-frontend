@@ -54,7 +54,7 @@ function Question44({ handleChange, nextStep }) {
                 value="Homme"
                 type="image"
                 alt="Un homme"
-                src="img/form/question1/acheterunbien.png"
+                src="img/form/question44/homme.png"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question44');
@@ -69,7 +69,7 @@ function Question44({ handleChange, nextStep }) {
                 value="Femme"
                 type="image"
                 alt="Une femme"
-                src="img/form/question1/faireconstruire.png"
+                src="img/form/question44/femme.png"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question44');
@@ -83,7 +83,7 @@ function Question44({ handleChange, nextStep }) {
                 value="Société"
                 type="image"
                 alt="Une société"
-                src="img/form/question1/fairedestravaux.png"
+                src="img/form/question44/societe.png"
                 width="100%"
                 onClick={(e) => {
                   handleChange(e, 'question44');
