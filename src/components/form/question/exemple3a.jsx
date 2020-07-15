@@ -23,8 +23,10 @@ function QuestionExemple3a({ nextStep, prevStep }) {
             type="text"
             placeholder="Montant des travaux"
             label="question3a"
-            onChange={handleNameChange}
-            value={name}
+            onChange={(e) => {
+              handleNameChange(e, 'question3a');
+            }}
+            defaultValue={name}
           />
         </form>
       </div>
