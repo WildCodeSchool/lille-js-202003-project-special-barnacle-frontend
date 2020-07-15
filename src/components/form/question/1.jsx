@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import './styleForm.css';
 
@@ -8,8 +8,8 @@ const Question1 = () => {
   const dispatch = useDispatch();
 
   const handleAchat = () => {
-    setChoice('achat');
     dispatch({ type: 'INITIAL_CHOICE', choice });
+    setChoice('achat');
   };
 
   const handleConstruire = () => {
@@ -32,9 +32,13 @@ const Question1 = () => {
     dispatch({ type: 'INITIAL_CHOICE', choice });
   };
 
+  useEffect(() => {
+    dispatch({ type: 'INITIAL_CHOICE', choice });
+  }, [choice]);
+
   return (
     <div className="questionImg">
-      <form
+      <div
         onSubmit={(e) => {
           e.preventDefault();
         }}
@@ -109,7 +113,7 @@ const Question1 = () => {
             </div>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 };
