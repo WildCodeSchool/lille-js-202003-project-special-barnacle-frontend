@@ -1,8 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
-function Question2({ handleChange, nextStep }) {
+function Question2() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({ type: 'SETSTEP', value: 2 });
+  }, [dispatch]);
   return (
     <div className="questionImg">
       <form>
@@ -19,9 +24,6 @@ function Question2({ handleChange, nextStep }) {
                 alt="maison"
                 src="img/form/question2/maison.jpg"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question2');
-                }}
               />
               <p className="my-auto py-2">Une maison</p>
             </div>
@@ -34,9 +36,6 @@ function Question2({ handleChange, nextStep }) {
                 alt="Un appartement"
                 src="img/form/question2/appartement.jpg"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question2');
-                }}
               />
               <p className="my-auto py-2">Un appartement</p>
             </div>
@@ -49,9 +48,6 @@ function Question2({ handleChange, nextStep }) {
                 alt="Un terrain seul"
                 src="img/form/question2/terrain.jpg"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question2');
-                }}
               />
 
               <p className="my-auto py-2">Un terrain seul</p>
@@ -64,33 +60,15 @@ function Question2({ handleChange, nextStep }) {
                 alt="Autre"
                 src="img/form/question2/autresprojets2.jpg"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question2');
-                }}
               />
 
               <p className="my-auto py-2">Autre</p>
             </div>
-          </div>
-          <div>
-            <button
-              type="button"
-              onClick={(e) => {
-                nextStep(e);
-              }}
-            >
-              NEXT
-            </button>
           </div>
         </div>
       </form>
     </div>
   );
 }
-
-Question2.propTypes = {
-  handleChange: PropTypes.string.isRequired,
-  nextStep: PropTypes.number.isRequired,
-};
 
 export default Question2;

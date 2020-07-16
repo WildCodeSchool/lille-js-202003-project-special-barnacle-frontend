@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import '../styleForm.css';
 
-function Question10({ handleChange, nextStep, prevStep }) {
+const Question10 = () => {
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
@@ -15,9 +14,6 @@ function Question10({ handleChange, nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Personnel"
-            onClick={(e) => {
-              handleChange(e, 'question10');
-            }}
           >
             <p className="my-auto">Personnel</p>
 
@@ -34,9 +30,6 @@ function Question10({ handleChange, nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Locatif"
-            onClick={(e) => {
-              handleChange(e, 'question10');
-            }}
           >
             <p className="my-auto">Locatif</p>
             <img
@@ -52,9 +45,6 @@ function Question10({ handleChange, nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Mixte"
-            onClick={(e) => {
-              handleChange(e, 'question10');
-            }}
           >
             <p className="my-auto">Mixte</p>
             <img
@@ -65,32 +55,8 @@ function Question10({ handleChange, nextStep, prevStep }) {
           </button>
         </div>
       </div>
-      <div>
-        <button
-          type="button"
-          onClick={(e) => {
-            prevStep(e);
-          }}
-        >
-          PREV
-        </button>
-        <button
-          type="button"
-          onClick={(e) => {
-            nextStep(e);
-          }}
-        >
-          NEXT
-        </button>
-      </div>
     </div>
   );
-}
-
-Question10.propTypes = {
-  handleChange: PropTypes.string.isRequired,
-  nextStep: PropTypes.number.isRequired,
-  prevStep: PropTypes.number.isRequired,
 };
 
 export default Question10;

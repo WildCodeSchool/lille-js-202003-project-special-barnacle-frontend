@@ -1,11 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
-function Question1({ handleChange, nextStep }) {
+const Question1 = () => {
+  const text = '';
+
+  const dispatch = useDispatch();
+
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question1', text: va });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER', text });
+  }, [text]);
+
   return (
     <div className="questionImg">
-      <form>
+      <div
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
         <div className="form container-fluid pb-5">
           <div className="row-cols-12 p-5 text-center">
             <h1>Quel est votre projet ?</h1>
@@ -16,11 +32,11 @@ function Question1({ handleChange, nextStep }) {
                 id="image"
                 value="Acheter un bien"
                 type="image"
-                alt="faire construire"
+                alt="Acheter un bien"
                 src="img/form/question1/acheterunbien.png"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question1');
+                onClick={() => {
+                  handleAnswer('Acheter un bien');
                 }}
               />
               <p className="my-auto py-2">Acheter un bien</p>
@@ -34,8 +50,8 @@ function Question1({ handleChange, nextStep }) {
                 alt="faire construire"
                 src="img/form/question1/faireconstruire.png"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question1');
+                onClick={() => {
+                  handleAnswer('construire');
                 }}
               />
               <p className="my-auto py-2">Faire construire</p>
@@ -48,8 +64,8 @@ function Question1({ handleChange, nextStep }) {
                 alt="Faire des travaux"
                 src="img/form/question1/fairedestravaux.png"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question1');
+                onClick={() => {
+                  handleAnswer('travaux');
                 }}
               />
 
@@ -63,8 +79,8 @@ function Question1({ handleChange, nextStep }) {
                 alt="Renégocier"
                 src="img/form/question1/renegocier.png"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question1');
+                onClick={() => {
+                  handleAnswer('renegocier');
                 }}
               />
 
@@ -78,32 +94,17 @@ function Question1({ handleChange, nextStep }) {
                 alt="Autres projets"
                 src="img/form/question1/autresprojets.jpg"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question1');
+                onClick={() => {
+                  handleAnswer('autre');
                 }}
               />
               <p className="my-auto py-2">Autres projets</p>
             </div>
           </div>
-          <div>
-            <button
-              type="button"
-              onClick={(e) => {
-                nextStep(e);
-              }}
-            >
-              NEXT
-            </button>
-          </div>
         </div>
-      </form>
+      </div>
     </div>
   );
-}
-
-Question1.propTypes = {
-  handleChange: PropTypes.string.isRequired,
-  nextStep: PropTypes.number.isRequired,
 };
 
 export default Question1;

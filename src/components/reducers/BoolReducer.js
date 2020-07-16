@@ -1,7 +1,7 @@
 const BoolReducer = (state = [], action) => {
   switch (action.type) {
-    case 'BOOL_TRAVAUX':
-      return { ...state, bool1: action.bool };
+    case 'INITIAL_CHOICE':
+      return { ...state, choice: action.choice };
     default:
       return state;
   }

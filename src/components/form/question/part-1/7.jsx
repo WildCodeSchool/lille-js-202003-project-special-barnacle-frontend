@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import '../styleForm.css';
 
-function Question7({ handleChange, nextStep, prevStep }) {
+const Question7 = () => {
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
@@ -15,9 +14,6 @@ function Question7({ handleChange, nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="En France"
-            onClick={(e) => {
-              handleChange(e, 'question7');
-            }}
           >
             <p className="my-auto">En France</p>
 
@@ -34,9 +30,6 @@ function Question7({ handleChange, nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="A l’étranger >"
-            onClick={(e) => {
-              handleChange(e, 'question7');
-            }}
           >
             <p className="my-auto">A l’étranger</p>
             <img
@@ -47,32 +40,8 @@ function Question7({ handleChange, nextStep, prevStep }) {
           </button>
         </div>
       </div>
-      <div>
-        <button
-          type="button"
-          onClick={(e) => {
-            prevStep(e);
-          }}
-        >
-          PREV
-        </button>
-        <button
-          type="button"
-          onClick={(e) => {
-            nextStep(e);
-          }}
-        >
-          NEXT
-        </button>
-      </div>
     </div>
   );
-}
-
-Question7.propTypes = {
-  handleChange: PropTypes.string.isRequired,
-  nextStep: PropTypes.number.isRequired,
-  prevStep: PropTypes.number.isRequired,
 };
 
 export default Question7;

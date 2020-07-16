@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import '../styleForm.css';
 
-function Question8({ handleChange, nextStep, prevStep }) {
+const Question8 = () => {
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
@@ -15,9 +15,6 @@ function Question8({ handleChange, nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Locataire"
-            onClick={(e) => {
-              handleChange(e, 'question8');
-            }}
           >
             <p className="my-auto">Locataire</p>
 
@@ -34,9 +31,6 @@ function Question8({ handleChange, nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Propriétaire"
-            onClick={(e) => {
-              handleChange(e, 'question8');
-            }}
           >
             <p className="my-auto">Propriétaire</p>
             <img
@@ -52,9 +46,6 @@ function Question8({ handleChange, nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Bénéficiaire d’un logement de fonction"
-            onClick={(e) => {
-              handleChange(e, 'question8');
-            }}
           >
             <p className="my-auto">Bénéficiaire d’un logement de fonction</p>
             <img
@@ -70,9 +61,6 @@ function Question8({ handleChange, nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Hébergé à titre gratuit"
-            onClick={(e) => {
-              handleChange(e, 'question5');
-            }}
           >
             <p className="my-auto">Hébergé à titre gratuit</p>
             <img
@@ -83,32 +71,7 @@ function Question8({ handleChange, nextStep, prevStep }) {
           </button>
         </div>
       </div>
-      <div>
-        <button
-          type="button"
-          onClick={(e) => {
-            prevStep(e);
-          }}
-        >
-          PREV
-        </button>
-        <button
-          type="button"
-          onClick={(e) => {
-            nextStep(e);
-          }}
-        >
-          NEXT
-        </button>
-      </div>
     </div>
   );
-}
-
-Question8.propTypes = {
-  handleChange: PropTypes.string.isRequired,
-  nextStep: PropTypes.number.isRequired,
-  prevStep: PropTypes.number.isRequired,
 };
-
 export default Question8;
