@@ -8,7 +8,9 @@ const Question1 = () => {
   const dispatch = useDispatch();
 
   const handleAchat = () => {
-    dispatch({ type: 'INITIAL_CHOICE', choice });
+    dispatch({ type: 'INITIAL_CHOICE', payload: choice });
+    dispatch({ type: 'ADD1' });
+
     setChoice('achat');
   };
 

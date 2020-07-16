@@ -25,7 +25,7 @@ const rootReducer = combineReducers({
 });
 
 const initialState = {
-  counter: { count: 0 },
+  counter: { count: 0, activeStep: 0 },
   question: {
     question1: '',
     question2: '',

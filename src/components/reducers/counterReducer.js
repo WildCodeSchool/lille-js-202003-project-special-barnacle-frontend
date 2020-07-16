@@ -1,17 +1,12 @@
 const counterReducer = (state = {}, action) => {
   switch (action.type) {
     case 'ADD1':
-      return { count: state.count + 1 };
+      return { ...state, activeStep: +1 };
     case 'REMOVE1':
-      return { count: state.count - 1 };
-    case 'ADD10':
-      return { count: state.count + 10 };
-    case 'REMOVE10':
-      return { count: state.count - 10 };
-    case 'ADD30':
-      return { count: state.count + 30 };
+      return { ...state, activeStep: -1 };
+
     case 'RESET':
-      return { count: 0 };
+      return { ...state, count: 3 };
     default:
       return state;
   }
