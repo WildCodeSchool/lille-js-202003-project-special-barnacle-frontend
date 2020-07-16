@@ -1,16 +1,34 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+// import { useHistory, useParams } from 'react-router-dom';
 import '../styleForm.css';
 
 function Question2() {
+  const text = '';
   const dispatch = useDispatch();
 
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question2', text: va });
+  };
+
   useEffect(() => {
+    dispatch({ type: 'ANSWER', text });
     dispatch({ type: 'SETSTEP', value: 2 });
-  }, [dispatch]);
+  }, [text, dispatch]);
+
+  // const prevQuestion = prev.type.name;
+
+  // const handleClick = () => {
+  //   console.log(prevQuestion);
+  // };
+
   return (
     <div className="questionImg">
-      <form>
+      <div
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
         <div className="form container-fluid pb-5">
           <div className="row-cols-12 p-5 text-center">
             <h1>Vous souhaitez acheter :</h1>
@@ -24,6 +42,9 @@ function Question2() {
                 alt="maison"
                 src="img/form/question2/maison.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('question2 - Une maison');
+                }}
               />
               <p className="my-auto py-2">Une maison</p>
             </div>
@@ -36,6 +57,9 @@ function Question2() {
                 alt="Un appartement"
                 src="img/form/question2/appartement.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('question2 - Un appartement');
+                }}
               />
               <p className="my-auto py-2">Un appartement</p>
             </div>
@@ -48,6 +72,9 @@ function Question2() {
                 alt="Un terrain seul"
                 src="img/form/question2/terrain.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('Un terrain seul');
+                }}
               />
 
               <p className="my-auto py-2">Un terrain seul</p>
@@ -60,13 +87,17 @@ function Question2() {
                 alt="Autre"
                 src="img/form/question2/autresprojets2.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('Autre');
+                }}
               />
 
               <p className="my-auto py-2">Autre</p>
             </div>
           </div>
+          {/* <button onClick={handleClick}>LAAAAA</button> */}
         </div>
-      </form>
+      </div>
     </div>
   );
 }

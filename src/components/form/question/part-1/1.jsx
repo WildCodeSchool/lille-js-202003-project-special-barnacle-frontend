@@ -4,7 +4,6 @@ import '../styleForm.css';
 
 const Question1 = () => {
   const text = '';
-
   const dispatch = useDispatch();
 
   const handleAnswer = (va) => {
@@ -36,7 +35,7 @@ const Question1 = () => {
                 src="img/form/question1/acheterunbien.png"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('Acheter un bien');
+                  handleAnswer('question1 - Acheter un bien');
                 }}
               />
               <p className="my-auto py-2">Acheter un bien</p>
@@ -51,7 +50,7 @@ const Question1 = () => {
                 src="img/form/question1/faireconstruire.png"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('construire');
+                  handleAnswer('question1 - Faire construire');
                 }}
               />
               <p className="my-auto py-2">Faire construire</p>
@@ -65,7 +64,7 @@ const Question1 = () => {
                 src="img/form/question1/fairedestravaux.png"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('travaux');
+                  handleAnswer('question1 - Faire des travaux');
                 }}
               />
 
@@ -80,7 +79,7 @@ const Question1 = () => {
                 src="img/form/question1/renegocier.png"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('renegocier');
+                  handleAnswer('question1 - Renégocier');
                 }}
               />
 
@@ -95,7 +94,7 @@ const Question1 = () => {
                 src="img/form/question1/autresprojets.jpg"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('autre');
+                  handleAnswer('question1 - Autres projets');
                 }}
               />
               <p className="my-auto py-2">Autres projets</p>

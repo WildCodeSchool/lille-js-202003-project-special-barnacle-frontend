@@ -33,6 +33,7 @@ import Question17 from './components/form/question/part-1/17';
 import Question18 from './components/form/question/part-1/18';
 import Question18a from './components/form/question/part-1/18a';
 import Form from './components/form/Form';
+import Contact from './components/form/Contact';
 
 import './App.css';
 
@@ -134,6 +135,9 @@ function App() {
           </Route>
           <Route exact path="/question18a">
             <Question18a />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
           </Route>
         </Switch>
         <Footer />
