@@ -1,40 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import './styleForm.css';
 
 const Question1 = () => {
-  const [choice, setChoice] = useState('');
+  const text = '';
 
   const dispatch = useDispatch();
 
-  const handleAchat = () => {
-    dispatch({ type: 'INITIAL_CHOICE', choice });
-    setChoice('achat');
-  };
-
-  const handleConstruire = () => {
-    setChoice('construire');
-    dispatch({ type: 'INITIAL_CHOICE', choice });
-  };
-
-  const handleTravaux = () => {
-    setChoice('travaux');
-    dispatch({ type: 'INITIAL_CHOICE', choice });
-  };
-
-  const handleRenegocier = () => {
-    setChoice('renegocier');
-    dispatch({ type: 'INITIAL_CHOICE', choice });
-  };
-
-  const handleAutreProjet = () => {
-    setChoice('autreProjet');
-    dispatch({ type: 'INITIAL_CHOICE', choice });
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question1', text: va });
   };
 
   useEffect(() => {
-    dispatch({ type: 'INITIAL_CHOICE', choice });
-  }, [choice]);
+    dispatch({ type: 'ANSWER', text });
+  }, [text]);
 
   return (
     <div className="questionImg">
@@ -53,10 +32,12 @@ const Question1 = () => {
                 id="image"
                 value="Acheter un bien"
                 type="image"
-                alt="faire construire"
+                alt="Acheter un bien"
                 src="img/form/question1/acheterunbien.png"
                 width="100%"
-                onClick={handleAchat}
+                onClick={() => {
+                  handleAnswer('Acheter un bien');
+                }}
               />
               <p className="my-auto py-2">Acheter un bien</p>
             </div>
@@ -69,7 +50,9 @@ const Question1 = () => {
                 alt="faire construire"
                 src="img/form/question1/faireconstruire.png"
                 width="100%"
-                onClick={handleConstruire}
+                onClick={() => {
+                  handleAnswer('construire');
+                }}
               />
               <p className="my-auto py-2">Faire construire</p>
             </div>
@@ -81,7 +64,9 @@ const Question1 = () => {
                 alt="Faire des travaux"
                 src="img/form/question1/fairedestravaux.png"
                 width="100%"
-                onClick={handleTravaux}
+                onClick={() => {
+                  handleAnswer('travaux');
+                }}
               />
 
               <p className="my-auto py-2">Faire des travaux</p>
@@ -94,7 +79,9 @@ const Question1 = () => {
                 alt="Renégocier"
                 src="img/form/question1/renegocier.png"
                 width="100%"
-                onClick={handleRenegocier}
+                onClick={() => {
+                  handleAnswer('renegocier');
+                }}
               />
 
               <p className="my-auto py-2">Renégocier</p>
@@ -107,7 +94,9 @@ const Question1 = () => {
                 alt="Autres projets"
                 src="img/form/question1/autresprojets.jpg"
                 width="100%"
-                onClick={handleAutreProjet}
+                onClick={() => {
+                  handleAnswer('autre');
+                }}
               />
               <p className="my-auto py-2">Autres projets</p>
             </div>

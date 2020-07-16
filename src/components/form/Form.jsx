@@ -1,31 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Stepper from './Stepper';
 import Question1 from './question/1';
-
 import Question2 from './question/2';
 import Question3 from './question/3';
 
 const Form = () => {
-  const choice = useSelector((state) => state.bool.choice);
+  const text = useSelector((state) => state.question.question1);
+  const [question, setQuestion] = useState(<Question1 />);
 
-  function render() {
-    if (choice === '') {
+  function switchQuestion() {
+    if (text === '') {
       return <Question1 />;
     }
-
-    if (choice === 'achat') {
+    if (text === 'Acheter un bien') {
       return <Question2 />;
     }
-    if (choice === 'construire') {
+    if (text === 'construire') {
       return <Question3 />;
     }
     return <Question1 />;
   }
 
   useEffect(() => {
-    render();
-  }, [choice, render]);
+    setQuestion(switchQuestion());
+  }, [text]);
 
   return (
     <>
@@ -33,7 +32,7 @@ const Form = () => {
         <Stepper />
       </div>
 
-      <div>{render()}</div>
+      <div>{question}</div>
     </>
   );
 };

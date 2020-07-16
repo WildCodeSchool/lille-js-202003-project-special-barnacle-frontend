@@ -33,17 +33,17 @@ function getSteps() {
 
 function getStepContent(step) {
   switch (step) {
-    case 0:
-      return 'Formulaire Projet';
     case 1:
-      return 'Formulaire Financement';
+      return 'Formulaire Projet';
     case 2:
-      return 'Formulaire Situation Pro';
+      return 'Formulaire Financement';
     case 3:
-      return 'Formulaire idéntité';
+      return 'Formulaire Situation Pro';
     case 4:
-      return 'Résumé des réponses';
+      return 'Formulaire idéntité';
     case 5:
+      return 'Résumé des réponses';
+    case 6:
       return 'Merci, le formulaire est bien envoyé!';
     default:
       return 'Unknown step';

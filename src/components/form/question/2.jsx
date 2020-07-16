@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import './styleForm.css';
 
 function Question2({ handleChange, nextStep, prevStep }) {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({ type: 'SETSTEP', value: 2 });
+  }, [dispatch]);
+
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
