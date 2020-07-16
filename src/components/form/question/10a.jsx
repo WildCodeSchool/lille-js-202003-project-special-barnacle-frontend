@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+
 import './styleForm.css';
 
 import { useDispatch } from 'react-redux';
 
-function Question10a({ nextStep, prevStep }) {
+const Question10a = () => {
   const [name, setName] = useState('');
   const dispatch = useDispatch();
 
@@ -28,32 +28,8 @@ function Question10a({ nextStep, prevStep }) {
           />
         </form>
       </div>
-
-      <div>
-        <button
-          type="button"
-          onClick={(e) => {
-            prevStep(e);
-          }}
-        >
-          PREV
-        </button>
-        <button
-          type="button"
-          onClick={(e) => {
-            nextStep(e);
-          }}
-        >
-          NEXT
-        </button>
-      </div>
     </div>
   );
-}
-
-Question10a.propTypes = {
-  nextStep: PropTypes.number.isRequired,
-  prevStep: PropTypes.number.isRequired,
 };
 
 export default Question10a;

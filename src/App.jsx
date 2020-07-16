@@ -20,8 +20,7 @@ import Question10 from './components/form/question/10';
 import Question10a from './components/form/question/10a';
 import Question10b from './components/form/question/10b';
 import Question11 from './components/form/question/11';
-import QuestionExemple3 from './components/form/question/exemple3';
-import QuestionExemple3a from './components/form/question/exemple3a';
+
 import Form from './components/form/Form';
 
 import './App.css';
@@ -59,12 +58,6 @@ function App() {
           </Route>
           <Route exact path="/question4a">
             <Question4a />
-          </Route>
-          <Route exact path="/QuestionExemple3">
-            <QuestionExemple3 />
-          </Route>
-          <Route exact path="/QuestionExemple3a">
-            <QuestionExemple3a />
           </Route>
           <Route exact path="/question5">
             <Question5 />
