@@ -1,19 +1,8 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import React from 'react';
+
 import '../../styleForm.css';
 
-function Question25({ nextStep, prevStep }) {
-  const [bool2, setBool2] = useState(false);
-
-  const dispatch = useDispatch();
-
-  const handleNameBoolTrue = () => setBool2(true);
-  dispatch({ type: 'BOOL_APPORT', bool: bool2 });
-
-  const handleNameBoolFalse = () => setBool2(false);
-  dispatch({ type: 'BOOL_APPORT', bool: bool2 });
-
+function Question25() {
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
@@ -26,7 +15,6 @@ function Question25({ nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="oui"
-            onClick={handleNameBoolTrue}
           >
             <p className="my-auto">Oui</p>
 
@@ -43,7 +31,6 @@ function Question25({ nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="non"
-            onClick={handleNameBoolFalse}
           >
             <p className="my-auto">Non</p>
             <img
@@ -54,31 +41,8 @@ function Question25({ nextStep, prevStep }) {
           </button>
         </div>
       </div>
-      <div>
-        <button
-          type="button"
-          onClick={(e) => {
-            prevStep(e);
-          }}
-        >
-          PREV
-        </button>
-        <button
-          type="button"
-          onClick={(e) => {
-            nextStep(e);
-          }}
-        >
-          NEXT
-        </button>
-      </div>
     </div>
   );
 }
-
-Question25.propTypes = {
-  prevStep: PropTypes.number.isRequired,
-  nextStep: PropTypes.number.isRequired,
-};
 
 export default Question25;

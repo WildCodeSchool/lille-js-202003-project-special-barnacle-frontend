@@ -1,19 +1,13 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import '../../styleForm.css';
-import { useDispatch } from 'react-redux';
 
-function Question28a({ nextStep, prevStep }) {
-  const [name, setName] = useState('');
-  const dispatch = useDispatch();
-  const handleNameChange = (e) => setName(e.target.value);
-  dispatch({ type: 'ADDTEXT', text: name });
+function Question28a() {
   return (
     <div>
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
           <h1>
-            Montant total des pensions alimentaires du ou des emprunteurs:{' '}
+            Montant total des pensions alimentaires du ou des emprunteurs:
           </h1>
         </div>
         <form className="">
@@ -22,34 +16,10 @@ function Question28a({ nextStep, prevStep }) {
             type="text"
             placeholder="Total des pensions"
             label="question28a"
-            onChange={handleNameChange}
-            value={name}
           />
         </form>
-      </div>
-      <div>
-        <button
-          type="button"
-          onClick={(e) => {
-            prevStep(e);
-          }}
-        >
-          PREV
-        </button>
-        <button
-          type="button"
-          onClick={(e) => {
-            nextStep(e);
-          }}
-        >
-          NEXT
-        </button>
       </div>
     </div>
   );
 }
-Question28a.propTypes = {
-  nextStep: PropTypes.number.isRequired,
-  prevStep: PropTypes.number.isRequired,
-};
 export default Question28a;
