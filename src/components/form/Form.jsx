@@ -35,7 +35,6 @@ import BackButton from './BackButton';
 const Form = () => {
   const text = useSelector((state) => state.question.question1);
   const [question, setQuestion] = useState(<Question1 />);
-  // const [prev] = useState(<Question1 />);
 
   function switchQuestion() {
     if (text === '') {

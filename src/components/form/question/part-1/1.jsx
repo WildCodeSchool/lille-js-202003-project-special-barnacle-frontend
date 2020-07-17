@@ -1,19 +1,7 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import React from 'react';
 import '../styleForm.css';
 
 const Question1 = () => {
-  const text = '';
-  const dispatch = useDispatch();
-
-  const handleAnswer = (va) => {
-    dispatch({ type: 'ANSWER', question: 'question1', text: va });
-  };
-
-  useEffect(() => {
-    dispatch({ type: 'ANSWER', text });
-  }, [text]);
-
   return (
     <div className="questionImg">
       <div
@@ -34,9 +22,6 @@ const Question1 = () => {
                 alt="Acheter un bien"
                 src="img/form/question1/acheterunbien.png"
                 width="100%"
-                onClick={() => {
-                  handleAnswer('question1 - Acheter un bien');
-                }}
               />
               <p className="my-auto py-2">Acheter un bien</p>
             </div>
@@ -49,9 +34,6 @@ const Question1 = () => {
                 alt="faire construire"
                 src="img/form/question1/faireconstruire.png"
                 width="100%"
-                onClick={() => {
-                  handleAnswer('question1 - Faire construire');
-                }}
               />
               <p className="my-auto py-2">Faire construire</p>
             </div>
@@ -63,9 +45,6 @@ const Question1 = () => {
                 alt="Faire des travaux"
                 src="img/form/question1/fairedestravaux.png"
                 width="100%"
-                onClick={() => {
-                  handleAnswer('question1 - Faire des travaux');
-                }}
               />
 
               <p className="my-auto py-2">Faire des travaux</p>
@@ -78,9 +57,6 @@ const Question1 = () => {
                 alt="Renégocier"
                 src="img/form/question1/renegocier.png"
                 width="100%"
-                onClick={() => {
-                  handleAnswer('question1 - Renégocier');
-                }}
               />
 
               <p className="my-auto py-2">Renégocier</p>
@@ -93,9 +69,6 @@ const Question1 = () => {
                 alt="Autres projets"
                 src="img/form/question1/autresprojets.jpg"
                 width="100%"
-                onClick={() => {
-                  handleAnswer('question1 - Autres projets');
-                }}
               />
               <p className="my-auto py-2">Autres projets</p>
             </div>

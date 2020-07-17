@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import '../styleForm.css';
 
-function Question15({ handleChange, nextStep }) {
+function Question15() {
   return (
     <div className="questionImg">
       <form>
@@ -19,9 +18,6 @@ function Question15({ handleChange, nextStep }) {
                 alt="maison"
                 src="img/form/question2/Maison.jpg"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question15');
-                }}
               />
               <p className="my-auto py-2">Une maison</p>
             </div>
@@ -34,9 +30,6 @@ function Question15({ handleChange, nextStep }) {
                 alt="Un appartement"
                 src="img/form/question2/Appartement.jpg"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question15');
-                }}
               />
               <p className="my-auto py-2">Un appartement</p>
             </div>
@@ -49,9 +42,6 @@ function Question15({ handleChange, nextStep }) {
                 alt="Un terrein"
                 src="img/form/question2/Terrain.jpg"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question15');
-                }}
               />
 
               <p className="my-auto py-2">Un terrein</p>
@@ -64,33 +54,15 @@ function Question15({ handleChange, nextStep }) {
                 alt="Autre"
                 src="img/form/question1/autresprojets.jpg"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question15');
-                }}
               />
 
               <p className="my-auto py-2">Autre</p>
             </div>
-          </div>
-          <div>
-            <button
-              type="button"
-              onClick={(e) => {
-                nextStep(e);
-              }}
-            >
-              NEXT
-            </button>
           </div>
         </div>
       </form>
     </div>
   );
 }
-
-Question15.propTypes = {
-  handleChange: PropTypes.string.isRequired,
-  nextStep: PropTypes.number.isRequired,
-};
 
 export default Question15;

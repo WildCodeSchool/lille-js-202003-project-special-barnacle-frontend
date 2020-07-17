@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import '../styleForm.css';
 
-function Question6({ handleChange, nextStep }) {
+function Question6() {
   return (
     <div className="questionImg">
       <form>
@@ -19,9 +18,6 @@ function Question6({ handleChange, nextStep }) {
                 alt="Je fais des simulations"
                 src="img/form/question6/jeFaisDesSimulations.jpg"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question6');
-                }}
               />
               <p className="my-auto py-2">Je fais des simulations</p>
             </div>
@@ -34,34 +30,16 @@ function Question6({ handleChange, nextStep }) {
                 alt="J'ai signé un compromis de vente"
                 src="img/form/question6/jaiSigneUnCompromisDeVente.jpg"
                 width="100%"
-                onClick={(e) => {
-                  handleChange(e, 'question6');
-                }}
               />
               <p className="my-auto py-2">
                 J&apos;ai signé un compromis de vente
               </p>
             </div>
           </div>
-          <div>
-            <button
-              type="button"
-              onClick={(e) => {
-                nextStep(e);
-              }}
-            >
-              NEXT
-            </button>
-          </div>
         </div>
       </form>
     </div>
   );
 }
-
-Question6.propTypes = {
-  handleChange: PropTypes.string.isRequired,
-  nextStep: PropTypes.number.isRequired,
-};
 
 export default Question6;

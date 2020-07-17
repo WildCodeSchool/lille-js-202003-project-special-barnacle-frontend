@@ -1,16 +1,7 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import '../styleForm.css';
 
-import { useDispatch } from 'react-redux';
-
-function Question8a({ nextStep, prevStep }) {
-  const [name, setName] = useState('');
-  const dispatch = useDispatch();
-
-  const handleNameChange = (e) => setName(e.target.value);
-  dispatch({ type: 'ADDTEXT', text: name });
-
+function Question8a() {
   return (
     <div>
       <div className="form container-fluid pb-5">
@@ -23,37 +14,11 @@ function Question8a({ nextStep, prevStep }) {
             type="text"
             placeholder="Montant"
             label="question8a"
-            onChange={handleNameChange}
-            value={name}
           />
         </form>
-      </div>
-
-      <div>
-        <button
-          type="button"
-          onClick={(e) => {
-            prevStep(e);
-          }}
-        >
-          PREV
-        </button>
-        <button
-          type="button"
-          onClick={(e) => {
-            nextStep(e);
-          }}
-        >
-          NEXT
-        </button>
       </div>
     </div>
   );
 }
-
-Question8a.propTypes = {
-  nextStep: PropTypes.number.isRequired,
-  prevStep: PropTypes.number.isRequired,
-};
 
 export default Question8a;

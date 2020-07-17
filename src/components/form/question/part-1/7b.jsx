@@ -1,16 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import '../styleForm.css';
 
-import { useDispatch } from 'react-redux';
-
 const Question7b = () => {
-  const [name, setName] = useState('');
-  const dispatch = useDispatch();
-
-  const handleNameChange = (e) => setName(e.target.value);
-  dispatch({ type: 'ADDTEXT', text: name });
-
   return (
     <div>
       <div className="form container-fluid pb-5">
@@ -23,8 +15,6 @@ const Question7b = () => {
             type="text"
             placeholder="Ville"
             label="question7b"
-            onChange={handleNameChange}
-            value={name}
           />
         </form>
       </div>

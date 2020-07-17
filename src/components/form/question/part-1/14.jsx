@@ -1,14 +1,7 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import React from 'react';
 import '../styleForm.css';
 
 function Question14() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch({ type: 'SETSTEP', value: 2 });
-  }, [dispatch]);
-
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
@@ -54,21 +47,6 @@ function Question14() {
             value="Un terrain seul"
           >
             <p className="my-auto">Un terrain seul</p>
-            <img
-              className="col-2 col-sm-1 my-auto p-1"
-              src="img/arrow.png"
-              alt="fleche"
-            />
-          </button>
-        </div>
-
-        <div className="row">
-          <button
-            className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
-            type="button"
-            value="Autre"
-          >
-            <p className="my-auto">Autre</p>
             <img
               className="col-2 col-sm-1 my-auto p-1"
               src="img/arrow.png"

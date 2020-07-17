@@ -1,19 +1,7 @@
-import React, { useState } from 'react';
-
-import { useDispatch } from 'react-redux';
+import React from 'react';
 import '../styleForm.css';
 
 const Question4 = () => {
-  const [bool1, setBool1] = useState(false);
-
-  const dispatch = useDispatch();
-
-  const handleNameBoolTrue = () => setBool1(true);
-  dispatch({ type: 'BOOL_TRAVAUX', bool: bool1 });
-
-  const handleNameBoolFalse = () => setBool1(false);
-  dispatch({ type: 'BOOL_TRAVAUX', bool: bool1 });
-
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
@@ -26,7 +14,6 @@ const Question4 = () => {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="oui"
-            onClick={handleNameBoolTrue}
           >
             <p className="my-auto">Oui</p>
 
@@ -43,7 +30,6 @@ const Question4 = () => {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="non"
-            onClick={handleNameBoolFalse}
           >
             <p className="my-auto">Non</p>
             <img
