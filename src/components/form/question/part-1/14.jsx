@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
 function Question14() {
+  const text = '';
+
+  const dispatch = useDispatch();
+
+  const handleAnswer = (va, step) => {
+    dispatch({ type: 'ANSWER', question: 'question2', text: va });
+    dispatch({ type: 'SETSTEP', question: 'curSteps', value: step });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER', text });
+  }, [text, dispatch]);
+
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
@@ -14,6 +28,9 @@ function Question14() {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Une maison"
+            onClick={() => {
+              handleAnswer('une maison', 2);
+            }}
           >
             <p className="my-auto">Maison</p>
 
@@ -30,6 +47,9 @@ function Question14() {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Un appartement"
+            onClick={() => {
+              handleAnswer('un appartement', 2);
+            }}
           >
             <p className="my-auto">Un appartement</p>
             <img
@@ -45,6 +65,9 @@ function Question14() {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Un terrain seul"
+            onClick={() => {
+              handleAnswer('un terrain seul', 2);
+            }}
           >
             <p className="my-auto">Un terrain seul</p>
             <img
