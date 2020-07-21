@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
-
 import App from './App';
-import counterReducer from './components/reducers/counterReducer';
+import Reducer from './components/reducers/Reducer';
 import './index.css';
 
 const theme = createMuiTheme({
@@ -17,17 +16,12 @@ const theme = createMuiTheme({
 });
 
 const rootReducer = combineReducers({
-  counter: counterReducer,
+  question: Reducer,
 });
-
-const initialState = {
-  counter: { count: 0 },
-};
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
   rootReducer,
-  initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 /* eslint-enable no-underscore-dangle */
