@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
 const Question16 = () => {
+  const text = '';
+
+  const dispatch = useDispatch();
+
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question16', text: va });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER', text });
+  }, [text]);
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
@@ -14,6 +26,9 @@ const Question16 = () => {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="En France"
+            onClick={() => {
+              handleAnswer('question16 - En France');
+            }}
           >
             <p className="my-auto">En France</p>
 
@@ -30,6 +45,9 @@ const Question16 = () => {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="A l’étranger"
+            onClick={() => {
+              handleAnswer('question16 - A l étranger');
+            }}
           >
             <p className="my-auto">A l’étranger</p>
             <img

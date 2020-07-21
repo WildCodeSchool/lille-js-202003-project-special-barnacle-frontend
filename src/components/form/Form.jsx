@@ -23,8 +23,10 @@ import Question11 from './question/part-1/11';
 import Question12 from './question/part-1/12';
 import Question14 from './question/part-1/14';
 import Question15 from './question/part-1/15';
+// import Question16 from './question/part-1/16';
 import Question16a from './question/part-1/16a';
 import Question16b from './question/part-1/16b';
+// import Question17 from './question/part-1/17';
 import Question18 from './question/part-1/18';
 import Question18a from './question/part-1/18a';
 import Contact from './Contact';
@@ -38,17 +40,36 @@ const Form = () => {
       return <Question8 />;
     }
     if (answers.question18 === 'question18 - oui') {
+      /* TODO ------------------------------------------ SAME --------- */
       return <Question18a />;
     }
     if (answers.question17 === 'question17') {
+      /* TODO ------------------------------------------ SAME --------- */
       return <Question18 />;
     }
     if (answers.question16 === 'question16 - A l étranger') {
+      /* TODO ------------------------------------------ SAME --------- */
       return <Question16b />;
     }
     if (answers.question16 === 'question16 - En France') {
+      /* TODO ------------------------------------------ SAME --------- */
       return <Question16a />;
     }
+    // if (text === 'question5bis - Résidence mixte') {
+    /* TODO ------------------------------------------ SAME --------- */
+    /* return <Question5bisb />; */
+    // }
+    // if (text === 'question5bis - Résidence secondaire') {
+    //   return <Question16 />;
+    // }
+    // if (text === 'question5bis - Résidence locative') {
+    /* TODO ------------------------------------------ SAME --------- */
+    // return <Question5bisa />;
+    // }
+    /* TODO ------------------------------------------ ATTENTION? NOUVELLE QUESTION 5, CREER LA 5BIS !!!! --------- */
+    // if (text === 'question5bis - Résidence principale') {
+    //   return <Question16 />;
+    // }
     if (answers.question14 === 'question14 - Autre') {
       return <Question5 />;
     }
@@ -72,9 +93,11 @@ const Form = () => {
     ) {
       return <Question7 />;
     }
+    /* TODO ------------------------------------------ SAME --------- */
     if (answers.question11 === 'question11 - Je recherche un terrain') {
       return <Question7 />;
     }
+    /* TODO ------------------------------------------ SAME --------- */
     if (answers.question10 === 'question10 - Mixte') {
       return <Question10b />;
     }
@@ -87,6 +110,14 @@ const Form = () => {
     if (answers.question9 === 'question9 - A plus de deux') {
       return <Contact />;
     }
+    if (answers.question9 === 'question9 - A deux') {
+      /* TODO ------------------------------------------ IMPORTER QUESTION DS PART 2 --------- */
+      // return <Question19 />;
+    }
+    if (answers.question9 === 'question9 - Seul') {
+      /* TODO ------------------------------------------ IMPORTER QUESTION DS PART 2 --------- */
+      // return <Question19 />;
+    }
     if (answers.question8 === 'question8 - Hébergé à titre gratuit') {
       return <Question9 />;
     }
@@ -95,9 +126,11 @@ const Form = () => {
     ) {
       return <Question9 />;
     }
+    /* TODO ------------------------------------------ SAME --------- */
     if (answers.question8 === 'question8 - Propriétaire') {
       return <Question9 />;
     }
+    /* TODO ------------------------------------------ SAME --------- */
     if (answers.question8 === 'question8 - Locataire') {
       return <Question8a />;
     }
@@ -116,6 +149,7 @@ const Form = () => {
     if (answers.question6 === 'question6 - J ai signé un compromis de vente') {
       return <Question7 />;
     }
+    /* TODO ------------------------------------------ SAME --------- */
     if (answers.question6 === 'question6 - Je fais des simulations') {
       return <Question7 />;
     }
