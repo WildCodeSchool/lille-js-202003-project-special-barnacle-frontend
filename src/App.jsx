@@ -1,14 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Apropos from './components/Apropos';
+import Contact from './components/form/Contact';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
-import NosOffres from './components/NosOffres';
-import Contact from './components/form/Contact';
 import Footer from './components/Footer';
 import Form from './components/form/Form';
-import Header from './components/Header';
-import Homepage from './components/Homepage';
+import NosOffres from './components/NosOffres';
 import './App.css';
 
 function App() {
