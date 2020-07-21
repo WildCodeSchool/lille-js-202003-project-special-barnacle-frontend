@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
-const Question9 = () => {
+function Question9() {
+  const text = '';
+
+  const dispatch = useDispatch();
+
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question5', text: va });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER', text });
+  }, [text]);
+
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
@@ -11,6 +24,9 @@ const Question9 = () => {
 
         <div className="row">
           <button
+            onClick={() => {
+              handleAnswer('question9 - Seul');
+            }}
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Seul"
@@ -27,6 +43,9 @@ const Question9 = () => {
 
         <div className="row">
           <button
+            onClick={() => {
+              handleAnswer('question9 - A deux');
+            }}
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="A deux"
@@ -42,6 +61,9 @@ const Question9 = () => {
 
         <div className="row">
           <button
+            onClick={() => {
+              handleAnswer('question9 - A plus de deux');
+            }}
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="A plus de deux"
@@ -57,6 +79,6 @@ const Question9 = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Question9;

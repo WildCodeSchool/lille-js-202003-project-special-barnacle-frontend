@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
 function Question8a() {
+  const text = '';
+
+  const dispatch = useDispatch();
+
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question8', text: va });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER', text });
+  }, [text]);
+
   return (
     <div>
       <div className="form container-fluid pb-5">
@@ -14,6 +27,9 @@ function Question8a() {
             type="text"
             placeholder="Montant"
             label="question8a"
+            onClick={() => {
+              handleAnswer('question8 - Propriétaire');
+            }}
           />
         </form>
       </div>

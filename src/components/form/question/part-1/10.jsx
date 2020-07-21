@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
 const Question10 = () => {
+  const text = '';
+
+  const dispatch = useDispatch();
+
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question10', text: va });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER', text });
+  }, [text]);
+
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
@@ -14,6 +27,9 @@ const Question10 = () => {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Personnel"
+            onClick={() => {
+              handleAnswer('question10 - Personnel');
+            }}
           >
             <p className="my-auto">Personnel</p>
 
@@ -30,6 +46,9 @@ const Question10 = () => {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Locatif"
+            onClick={() => {
+              handleAnswer('question10 - Locatif');
+            }}
           >
             <p className="my-auto">Locatif</p>
             <img
@@ -45,6 +64,9 @@ const Question10 = () => {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Mixte"
+            onClick={() => {
+              handleAnswer('question10 - Mixte');
+            }}
           >
             <p className="my-auto">Mixte</p>
             <img

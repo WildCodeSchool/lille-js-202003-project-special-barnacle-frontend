@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
 function Question5() {
+  const text = '';
+
+  const dispatch = useDispatch();
+
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question5', text: va });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER', text });
+  }, [text]);
+
   return (
     <div className="questionImg">
       <form>
@@ -18,6 +31,9 @@ function Question5() {
                 alt="Résidence principale"
                 src="img/form/question5/residenceprincipale.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('question5 - Résidence principale');
+                }}
               />
               <p className="my-auto py-2">Résidence principale</p>
             </div>
@@ -30,6 +46,9 @@ function Question5() {
                 alt="Résidence locative"
                 src="img/form/question5/residencelocative.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('question5 - Résidence locative');
+                }}
               />
               <p className="my-auto py-2">Résidence locative</p>
             </div>
@@ -42,6 +61,9 @@ function Question5() {
                 alt="Résidence secondaire"
                 src="img/form/question5/residencesecondaire.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('question5 - Résidence secondaire');
+                }}
               />
               <p className="my-auto py-2">Résidence secondaire</p>
             </div>
@@ -54,6 +76,9 @@ function Question5() {
                 alt="Autre"
                 src="img/form/question1/autresprojets.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('question5 - Résidence mixte');
+                }}
               />
               <p className="my-auto py-2">Autre</p>
             </div>
