@@ -1,106 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import Stepper from './Stepper';
-import Question1 from './Question1';
-import Question2 from './Question2';
-import Question3 from './Question3';
-import Question3a from './Question3a';
+import Question1 from './question/part-1/1';
+import Question2 from './question/part-1/2';
+import Question12 from './question/part-1/12';
+import Question14 from './question/part-1/14';
+import Question15 from './question/part-1/15';
+import Contact from './Contact';
 
 const Form = () => {
-  const [data, setData] = useState({
-    question1: '',
-    question2: '',
-    question3: '',
-  });
+  const text = useSelector((state) => state.question.question1);
+  const [question, setQuestion] = useState(<Question1 />);
 
-  const { question3a } = data;
-  const values = question3a;
-
-  const [step, setStep] = useState(1);
-
-  // Proceed to next step
-  const nextStep = (e) => {
-    e.preventDefault();
-    setStep(step + 1);
-  };
-
-  // Proceed to next step
-  const prevStep = (e) => {
-    e.preventDefault();
-    setStep(step - 1);
-  };
-
-  // Handle fields change
-  const handleChange = (e, input) => {
-    e.preventDefault();
-    setData({ ...data, [input]: e.target.value });
-  };
-
-  const handleChangeTest = (e, input) => {
-    // e.preventDefault();
-    setData({ ...data, [input]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
-  switch (step) {
-    case 1:
-      return (
-        <>
-          <div>
-            <Stepper />
-          </div>
-          <div>
-            <Question1
-              values={values}
-              step={step}
-              handleChange={handleChange}
-              nextStep={nextStep}
-            />
-          </div>
-        </>
-      );
-    case 2:
-      return (
-        <div>
-          <Question2
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChange={handleChange}
-            values={values}
-            step={step}
-          />
-        </div>
-      );
-    case 3:
-      return (
-        <div>
-          <Question3
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChange={handleChange}
-            values={values}
-            step={step}
-          />
-        </div>
-      );
-    case 4:
-      return (
-        <div>
-          <Question3a
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    default:
-      return null;
+  function switchQuestion() {
+    if (text === '') {
+      return <Question1 />;
+    }
+    if (text === 'question1 - Acheter un bien') {
+      return <Question2 />;
+    }
+    if (text === 'question1 - Faire construire') {
+      return <Question12 />;
+    }
+    if (text === 'question1 - Faire des travaux') {
+      return <Question14 />;
+    }
+    if (text === 'question1 - Renégocier') {
+      return <Question15 />;
+    }
+    if (text === 'question1 - Autres projets') {
+      return <Contact />;
+    }
+    if (text === 'question2 - Une maison') {
+      return <Contact />;
+    }
+    return <Question1 />;
   }
+
+  useEffect(() => {
+    setQuestion(switchQuestion());
+  }, [text]);
+
+  return (
+    <>
+      <Stepper />
+      <div>{question}</div>
+    </>
+  );
 };
 
 export default Form;

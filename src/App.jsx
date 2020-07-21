@@ -4,9 +4,11 @@ import Apropos from './components/Apropos';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
 import NosOffres from './components/NosOffres';
+import Contact from './components/form/Contact';
 import Footer from './components/Footer';
 import Form from './components/form/Form';
-
+import Header from './components/Header';
+import Homepage from './components/Homepage';
 import './App.css';
 
 function App() {
@@ -29,6 +31,9 @@ function App() {
           <Route path="/user/:id" component={() => <div>user</div>} />
           <Route path="/form">
             <Form />
+          </Route>
+          <Route exact path="/contact">
+            <Contact />
           </Route>
         </Switch>
         <Footer />
