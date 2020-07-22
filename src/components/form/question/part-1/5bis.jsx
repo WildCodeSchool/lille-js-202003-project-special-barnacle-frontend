@@ -76,7 +76,7 @@ function Question5bis() {
                   handleAnswer('question5bis - Résidence mixte');
                 }}
               />
-              <p className="my-auto py-2">Autre</p>
+              <p className="my-auto py-2">Résidence mixte</p>
             </div>
           </div>
         </div>

@@ -9,6 +9,9 @@ import Question4a from './question/part-1/4a';
 import Question5 from './question/part-1/5';
 import Question5a from './question/part-1/5a';
 import Question5b from './question/part-1/5b';
+import Question5bis from './question/part-1/5bis';
+import Question5bisa from './question/part-1/5bisa';
+import Question5bisb from './question/part-1/5bisb';
 import Question6 from './question/part-1/6';
 import Question7 from './question/part-1/7';
 import Question7a from './question/part-1/7a';
@@ -23,10 +26,10 @@ import Question11 from './question/part-1/11';
 import Question12 from './question/part-1/12';
 import Question14 from './question/part-1/14';
 import Question15 from './question/part-1/15';
-// import Question16 from './question/part-1/16';
+import Question16 from './question/part-1/16';
 import Question16a from './question/part-1/16a';
 import Question16b from './question/part-1/16b';
-// import Question17 from './question/part-1/17';
+import Question17 from './question/part-1/17';
 import Question18 from './question/part-1/18';
 import Question18a from './question/part-1/18a';
 import Contact from './Contact';
@@ -43,9 +46,14 @@ const Form = () => {
       /* TODO ------------------------------------------ SAME --------- */
       return <Question18a />;
     }
-    if (answers.question17 === 'question17') {
-      /* TODO ------------------------------------------ SAME --------- */
+    if (answers.question17 !== '') {
       return <Question18 />;
+    }
+    if (answers.question16a !== '') {
+      return <Question17 />;
+    }
+    if (answers.question16b !== '') {
+      return <Question17 />;
     }
     if (answers.question16 === 'question16 - A l étranger') {
       /* TODO ------------------------------------------ SAME --------- */
@@ -55,21 +63,18 @@ const Form = () => {
       /* TODO ------------------------------------------ SAME --------- */
       return <Question16a />;
     }
-    // if (text === 'question5bis - Résidence mixte') {
-    /* TODO ------------------------------------------ SAME --------- */
-    /* return <Question5bisb />; */
-    // }
-    // if (text === 'question5bis - Résidence secondaire') {
-    //   return <Question16 />;
-    // }
-    // if (text === 'question5bis - Résidence locative') {
-    /* TODO ------------------------------------------ SAME --------- */
-    // return <Question5bisa />;
-    // }
-    /* TODO ------------------------------------------ ATTENTION? NOUVELLE QUESTION 5, CREER LA 5BIS !!!! --------- */
-    // if (text === 'question5bis - Résidence principale') {
-    //   return <Question16 />;
-    // }
+    if (answers.question15 === 'question15 - Une maison') {
+      return <Question5bis />;
+    }
+    if (answers.question15 === 'question15 - Un appartement') {
+      return <Question5bis />;
+    }
+    if (answers.question15 === 'question15 - Un terrain') {
+      return <Question5bis />;
+    }
+    if (answers.question15 === 'question15 - Autre') {
+      return <Question5bis />;
+    }
     if (answers.question14 === 'question14 - Autre') {
       return <Question5 />;
     }
@@ -152,6 +157,24 @@ const Form = () => {
     /* TODO ------------------------------------------ SAME --------- */
     if (answers.question6 === 'question6 - Je fais des simulations') {
       return <Question7 />;
+    }
+    if (answers.question5bisa !== '') {
+      return <Question16 />;
+    }
+    if (answers.question5bisb !== '') {
+      return <Question16 />;
+    }
+    if (answers.question5bis === 'question5bis - Résidence mixte') {
+      return <Question5bisb />;
+    }
+    if (answers.question5bis === 'question5bis - Résidence principale') {
+      return <Question16 />;
+    }
+    if (answers.question5bis === 'question5bis - Résidence locative') {
+      return <Question5bisa />;
+    }
+    if (answers.question5bis === 'question5bis - Résidence secondaire') {
+      return <Question16 />;
     }
     if (answers.question5 === 'question5 - Résidence mixte') {
       return <Question5b />;
