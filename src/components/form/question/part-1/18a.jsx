@@ -13,7 +13,7 @@ function Question18a() {
             className="questionEnter col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="text"
             placeholder="Montant de revente"
-            label="question4a"
+            label="question18a"
           />
         </form>
       </div>

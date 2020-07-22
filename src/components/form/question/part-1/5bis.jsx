@@ -3,17 +3,13 @@ import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
 function Question5bis() {
-  const text = '';
-
   const dispatch = useDispatch();
-
   const handleAnswer = (va) => {
     dispatch({ type: 'ANSWER', question: 'question5bis', text: va });
   };
-
   useEffect(() => {
-    dispatch({ type: 'ANSWER', text });
-  }, [text]);
+    dispatch({ type: 'ANSWER' });
+  }, [dispatch]);
 
   return (
     <div className="questionImg">
