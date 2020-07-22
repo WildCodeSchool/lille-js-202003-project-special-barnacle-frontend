@@ -11,7 +11,7 @@ const Question14 = () => {
 
   useEffect(() => {
     dispatch({ type: 'ANSWER' });
-  });
+  }, [dispatch]);
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
