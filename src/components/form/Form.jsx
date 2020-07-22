@@ -39,11 +39,15 @@ const Form = () => {
   const [question, setQuestion] = useState(<Question1 />);
 
   function switchQuestion() {
+    if (answers.question18a !== '') {
+      // TODO modifier le return vers la question 19
+      return <Question18a />;
+    }
     if (answers.question18 === 'question18 - non') {
-      return <Question8 />;
+      // TODO modifier le return vers la question 19
+      return <Question18 />;
     }
     if (answers.question18 === 'question18 - oui') {
-      /* TODO ------------------------------------------ SAME --------- */
       return <Question18a />;
     }
     if (answers.question17 !== '') {
@@ -56,11 +60,9 @@ const Form = () => {
       return <Question17 />;
     }
     if (answers.question16 === 'question16 - A l étranger') {
-      /* TODO ------------------------------------------ SAME --------- */
       return <Question16b />;
     }
     if (answers.question16 === 'question16 - En France') {
-      /* TODO ------------------------------------------ SAME --------- */
       return <Question16a />;
     }
     if (answers.question15 === 'question15 - Une maison') {
@@ -98,11 +100,9 @@ const Form = () => {
     ) {
       return <Question7 />;
     }
-    /* TODO ------------------------------------------ SAME --------- */
     if (answers.question11 === 'question11 - Je recherche un terrain') {
       return <Question7 />;
     }
-    /* TODO ------------------------------------------ SAME --------- */
     if (answers.question10 === 'question10 - Mixte') {
       return <Question10b />;
     }
@@ -116,12 +116,15 @@ const Form = () => {
       return <Contact />;
     }
     if (answers.question9 === 'question9 - A deux') {
-      /* TODO ------------------------------------------ IMPORTER QUESTION DS PART 2 --------- */
-      // return <Question19 />;
+      // TODO modifier le return vers la question 19
+      return <Question9 />;
     }
     if (answers.question9 === 'question9 - Seul') {
-      /* TODO ------------------------------------------ IMPORTER QUESTION DS PART 2 --------- */
-      // return <Question19 />;
+      // TODO modifier le return vers la question 19
+      return <Question9 />;
+    }
+    if (answers.question8a !== '') {
+      return <Question9 />;
     }
     if (answers.question8 === 'question8 - Hébergé à titre gratuit') {
       return <Question9 />;
@@ -131,11 +134,9 @@ const Form = () => {
     ) {
       return <Question9 />;
     }
-    /* TODO ------------------------------------------ SAME --------- */
     if (answers.question8 === 'question8 - Propriétaire') {
       return <Question9 />;
     }
-    /* TODO ------------------------------------------ SAME --------- */
     if (answers.question8 === 'question8 - Locataire') {
       return <Question8a />;
     }
@@ -154,7 +155,6 @@ const Form = () => {
     if (answers.question6 === 'question6 - J ai signé un compromis de vente') {
       return <Question7 />;
     }
-    /* TODO ------------------------------------------ SAME --------- */
     if (answers.question6 === 'question6 - Je fais des simulations') {
       return <Question7 />;
     }
