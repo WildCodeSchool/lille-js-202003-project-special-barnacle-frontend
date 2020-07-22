@@ -3,8 +3,6 @@ import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
 const Question1 = () => {
-  const text = '';
-
   const dispatch = useDispatch();
 
   const handleAnswer = (va) => {
@@ -12,8 +10,8 @@ const Question1 = () => {
   };
 
   useEffect(() => {
-    dispatch({ type: 'ANSWER', text });
-  }, [text]);
+    dispatch({ type: 'ANSWER' });
+  }, [dispatch]);
 
   return (
     <div className="questionImg">

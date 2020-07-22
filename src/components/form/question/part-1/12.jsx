@@ -3,8 +3,6 @@ import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
 const Question12 = () => {
-  const text = '';
-
   const dispatch = useDispatch();
 
   const handleAnswer = (va) => {
@@ -12,8 +10,8 @@ const Question12 = () => {
   };
 
   useEffect(() => {
-    dispatch({ type: 'ANSWER', text });
-  }, [text]);
+    dispatch({ type: 'ANSWER' });
+  }, [dispatch]);
   return (
     <div className="question12onTxt">
       <div className="form container-fluid pb-5">

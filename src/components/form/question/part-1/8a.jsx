@@ -3,8 +3,6 @@ import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
 function Question8a() {
-  const text = '';
-
   const dispatch = useDispatch();
 
   const handleAnswer = (va) => {
@@ -12,8 +10,8 @@ function Question8a() {
   };
 
   useEffect(() => {
-    dispatch({ type: 'ANSWER', text });
-  }, [text]);
+    dispatch({ type: 'ANSWER' });
+  });
 
   return (
     <div>
