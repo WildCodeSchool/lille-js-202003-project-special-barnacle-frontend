@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
-const Question10b = () => {
+function Question5bisb() {
   const dispatch = useDispatch();
-
   const [answer, setAnswer] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch({
       type: 'ANSWER',
-      question: 'question10b',
-      text: `question10b - ${answer}`,
+      question: 'question5bisb',
+      text: `question5bisb - ${answer}`,
     });
   };
 
@@ -34,8 +33,8 @@ const Question10b = () => {
           <input
             className="questionEnter col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="text"
-            placeholder="Montant du loyer"
-            label="question10a"
+            placeholder="Montant"
+            label="question5bisb"
             value={answer}
             onChange={(e) => {
               handleChange(e.target.value);
@@ -45,6 +44,6 @@ const Question10b = () => {
       </div>
     </div>
   );
-};
+}
 
-export default Question10b;
+export default Question5bisb;

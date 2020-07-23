@@ -2,67 +2,68 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
-const Question15 = () => {
+function Question5bis() {
   const dispatch = useDispatch();
   const handleAnswer = (va) => {
-    dispatch({ type: 'ANSWER', question: 'question15', text: va });
+    dispatch({ type: 'ANSWER', question: 'question5bis', text: va });
   };
   useEffect(() => {
     dispatch({ type: 'ANSWER' });
   }, [dispatch]);
+
   return (
     <div className="questionImg">
       <form>
         <div className="form container-fluid pb-5">
           <div className="row-cols-12 p-5 text-center">
-            <h1>Quel type de bien cela concerne t-il ?</h1>
+            <h1>Quel est l&apos;usage du bien ?</h1>
           </div>
           <div className="row text-center">
             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
               <input
                 id="image"
-                value="Une maison"
+                value="Résidence principale"
                 type="image"
-                alt="maison"
-                src="img/form/question2/Maison.jpg"
+                alt="Résidence principale"
+                src="img/form/question5/residenceprincipale.jpg"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('question15 - Une maison');
+                  handleAnswer('question5bis - Résidence principale');
                 }}
               />
-              <p className="my-auto py-2">Une maison</p>
+              <p className="my-auto py-2">Résidence principale</p>
             </div>
 
             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
               <input
                 id="image"
-                value="Un appartement"
+                value="Résidence locative"
                 type="image"
-                alt="Un appartement"
-                src="img/form/question2/Appartement.jpg"
+                alt="Résidence locative"
+                src="img/form/question5/residencelocative.jpg"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('question15 - Un appartement');
+                  handleAnswer('question5bis - Résidence locative');
                 }}
               />
-              <p className="my-auto py-2">Un appartement</p>
+              <p className="my-auto py-2">Résidence locative</p>
             </div>
 
             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
               <input
                 id="image"
-                value="Un terrain"
+                value="Résidence secondaire"
                 type="image"
-                alt="Un terrain"
-                src="img/form/question2/Terrain.jpg"
+                alt="Résidence secondaire"
+                src="img/form/question5/residencesecondaire.jpg"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('question15 - Un terrain');
+                  handleAnswer('question5bis - Résidence secondaire');
                 }}
               />
-
-              <p className="my-auto py-2">Un terrain</p>
+              <p className="my-auto py-2">Résidence secondaire</p>
             </div>
+
             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
               <input
                 id="image"
@@ -72,17 +73,16 @@ const Question15 = () => {
                 src="img/form/question1/autresprojets.jpg"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('question15 - Autre');
+                  handleAnswer('question5bis - Résidence mixte');
                 }}
               />
-
-              <p className="my-auto py-2">Autre</p>
+              <p className="my-auto py-2">Résidence mixte</p>
             </div>
           </div>
         </div>
       </form>
     </div>
   );
-};
+}
 
-export default Question15;
+export default Question5bis;
