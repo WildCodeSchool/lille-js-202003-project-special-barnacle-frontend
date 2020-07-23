@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import Stepper from './Stepper';
-import Question1 from './Question1';
-import Question2 from './Question2';
-import Question3 from './Question3';
-import Question3a from './Question3a';
 import Question19a from './question/part-2/19a';
+import Question19a1 from './question/part-2/19a1';
 import Question19b from './question/part-2/19b';
 import Question20a from './question/part-2/20a';
 import Question20b from './question/part-2/20b';
@@ -22,22 +20,10 @@ import Question24 from './question/part-2/24';
 import Question25 from './question/part-2/25';
 import Question26 from './question/part-2/26';
 import Question27 from './question/part-2/27';
-import Question27a from './question/part-2/27a';
 import Question27b1 from './question/part-2/27b1';
-import Question27b2 from './question/part-2/27b2';
-import Question27b3 from './question/part-2/27b3';
-import Question27b4 from './question/part-2/27b4';
-import Question27b5 from './question/part-2/27b5';
-import Question27b6 from './question/part-2/27b6';
 import Question28 from './question/part-2/28';
 import Question28a from './question/part-2/28a';
 import Question29 from './question/part-2/29';
-import Question29a1 from './question/part-2/29a1';
-import Question29a2 from './question/part-2/29a2';
-import Question29a3 from './question/part-2/29a3';
-import Question29a4 from './question/part-2/29a4';
-import Question29a5 from './question/part-2/29a5';
-import Question29a6 from './question/part-2/29a6';
 import Question30 from './question/part-2/30';
 import Question31a from './question/part-2/31a';
 import Question31b from './question/part-2/31b';
@@ -45,677 +31,275 @@ import Question31c from './question/part-2/31c';
 import Question31d from './question/part-2/31d';
 import Question32 from './question/part-2/32';
 import Question33 from './question/part-2/33';
+import Question34 from './question/part-3/34';
+import Question35 from './question/part-3/35';
+import Question36 from './question/part-3/36';
+import Question37 from './question/part-3/37';
+import Question38a from './question/part-3/38a';
+import Question38b from './question/part-3/38b';
+import Question38bisa from './question/part-3/38bisa';
+import Question38bisb from './question/part-3/38bisb';
+import Question38bisc from './question/part-3/38bisc';
+import Question38c from './question/part-3/38c';
+import Question39a from './question/part-3/39a';
+import Question39b from './question/part-3/39b';
+import Question40 from './question/part-3/40';
+import Question40a from './question/part-3/40a';
+import Question41 from './question/part-3/41';
+import Question42 from './question/part-3/42';
+import Question42bis from './question/part-3/42bis';
+import Question43 from './question/part-3/43';
+import Question431 from './question/part-3/431';
+import Question432 from './question/part-3/432';
 
 const Form = () => {
-  const [data, setData] = useState({
-    question1: '',
-    question2: '',
-    question3: '',
-    question19a: '',
-    question19b: '',
-    question20a: '',
-    question20b: '',
-    question20c: '',
-    question20d: '',
-    question21: '',
-    question21a: '',
-    question22: '',
-    question22a: '',
-    question22b: '',
-    question22c: '',
-    question23a: '',
-    question23b: '',
-    question24: '',
-    question25: '',
-    question26: '',
-    question27: '',
-    question27a: '',
-    question27b1: '',
-    question27b2: '',
-    question27b3: '',
-    question27b4: '',
-    question27b5: '',
-    question27b6: '',
-    question28: '',
-    question28a: '',
-    question29: '',
-    question29a1: '',
-    question29a2: '',
-    question29a3: '',
-    question29a4: '',
-    question29a5: '',
-    question29a6: '',
-    question30: '',
-    question31a: '',
-    question31b: '',
-    question31c: '',
-    question31d: '',
-    question32: '',
-    question33: '',
-  });
+  const answers = useSelector((state) => state.question);
+  const [question, setQuestion] = useState(<Question19a />);
 
-  const { question3a } = data;
-  const values = question3a;
-
-  const [step, setStep] = useState(1);
-
-  // Proceed to next step
-  const nextStep = (e) => {
-    e.preventDefault();
-    setStep(step + 1);
-  };
-
-  // Proceed to next step
-  const prevStep = (e) => {
-    e.preventDefault();
-    setStep(step - 1);
-  };
-
-  // Handle fields change
-  const handleChange = (e, input) => {
-    e.preventDefault();
-    setData({ ...data, [input]: e.target.value });
-  };
-
-  const handleChangeTest = (e, input) => {
-    // e.preventDefault();
-    setData({ ...data, [input]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
-  switch (step) {
-    case 1:
-      return (
-        <>
-          <div>
-            <Stepper />
-          </div>
-          <div>
-            <Question1
-              values={values}
-              step={step}
-              handleChange={handleChange}
-              nextStep={nextStep}
-            />
-          </div>
-        </>
-      );
-    case 2:
-      return (
-        <div>
-          <Question2
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChange={handleChange}
-            values={values}
-            step={step}
-          />
-        </div>
-      );
-    case 3:
-      return (
-        <div>
-          <Question3
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChange={handleChange}
-            values={values}
-            step={step}
-          />
-        </div>
-      );
-    case 4:
-      return (
-        <div>
-          <Question3a
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 30:
-      return (
-        <div>
-          <Question19a
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 31:
-      return (
-        <div>
-          <Question19b
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 32:
-      return (
-        <div>
-          <Question20a
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 33:
-      return (
-        <div>
-          <Question20b
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 34:
-      return (
-        <div>
-          <Question20c
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 35:
-      return (
-        <div>
-          <Question20d
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 36:
-      return (
-        <div>
-          <Question21
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 37:
-      return (
-        <div>
-          <Question21a
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 38:
-      return (
-        <div>
-          <Question22
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 39:
-      return (
-        <div>
-          <Question22a
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 40:
-      return (
-        <div>
-          <Question22b
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 41:
-      return (
-        <div>
-          <Question22c
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 42:
-      return (
-        <div>
-          <Question23a
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 43:
-      return (
-        <div>
-          <Question23b
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 44:
-      return (
-        <div>
-          <Question24
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 45:
-      return (
-        <div>
-          <Question25
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 46:
-      return (
-        <div>
-          <Question26
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 47:
-      return (
-        <div>
-          <Question27
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 48:
-      return (
-        <div>
-          <Question27a
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 49:
-      return (
-        <div>
-          <Question27b1
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 50:
-      return (
-        <div>
-          <Question27b2
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 51:
-      return (
-        <div>
-          <Question27b3
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 52:
-      return (
-        <div>
-          <Question27b4
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 53:
-      return (
-        <div>
-          <Question27b5
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 54:
-      return (
-        <div>
-          <Question27b6
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 55:
-      return (
-        <div>
-          <Question28
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 56:
-      return (
-        <div>
-          <Question28a
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 57:
-      return (
-        <div>
-          <Question29
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 58:
-      return (
-        <div>
-          <Question29a1
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 59:
-      return (
-        <div>
-          <Question29a2
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 60:
-      return (
-        <div>
-          <Question29a3
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 61:
-      return (
-        <div>
-          <Question29a4
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 62:
-      return (
-        <div>
-          <Question29a5
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 63:
-      return (
-        <div>
-          <Question29a6
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 64:
-      return (
-        <div>
-          <Question30
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 65:
-      return (
-        <div>
-          <Question31a
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 66:
-      return (
-        <div>
-          <Question31b
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 67:
-      return (
-        <div>
-          <Question31c
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 68:
-      return (
-        <div>
-          <Question31d
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 69:
-      return (
-        <div>
-          <Question32
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 70:
-      return (
-        <div>
-          <Question33
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    default:
-      return null;
+  function switchQuestion() {
+    if (answers.question432 !== '') {
+      return <Question40 />;
+    }
+    if (answers.question431 !== '') {
+      return <Question432 />;
+    }
+    if (answers.question43 !== '') {
+      return <Question39a />;
+    }
+    if (answers.question42bis === 'question42bis - Public') {
+      return <Question431 />;
+    }
+    if (answers.question42bis === 'question42bis - Privé') {
+      return <Question431 />;
+    }
+    if (answers.question42 !== '') {
+      return <Question38bisa />;
+    }
+    if (answers.question41 === 'question41 - Retraité') {
+      return <Question42bis />;
+    }
+    if (answers.question41 === 'question41 - Auto-entrepreneur') {
+      return <Question42 />;
+    }
+    if (answers.question41 === 'question41 - Travailleur indépendant') {
+      return <Question42 />;
+    }
+    if (answers.question41 === 'question41 - Agriculteur') {
+      return <Question42 />;
+    }
+    if (answers.question41 === 'question41 - Artisant commerçant') {
+      return <Question42 />;
+    }
+    if (answers.question41 === 'question41 - Profession libérale') {
+      return <Question42 />;
+    }
+    if (answers.question41 === 'question41 - Chef d entreprise') {
+      return <Question42 />;
+    }
+    if (answers.question40a !== '') {
+      // TODO return 44
+      return <Question40a />;
+    }
+    if (answers.question40 === 'question40 - Non') {
+      // TODO return 44
+      return <Question40 />;
+    }
+    if (answers.question40 === 'question40 - Oui') {
+      return <Question40a />;
+    }
+    if (answers.question39b !== '') {
+      return <Question40 />;
+    }
+    if (answers.question39a !== '') {
+      return <Question39b />;
+    }
+    if (answers.question38c !== '') {
+      return <Question39a />;
+    }
+    if (answers.question38bisc !== '') {
+      return <Question43 />;
+    }
+    if (answers.question38bisb !== '') {
+      return <Question38bisc />;
+    }
+    if (answers.question38bisa !== '') {
+      return <Question38bisb />;
+    }
+    if (answers.question38b !== '') {
+      return <Question38c />;
+    }
+    if (answers.question38a !== '') {
+      return <Question38b />;
+    }
+    if (answers.question37 !== '') {
+      return <Question38a />;
+    }
+    if (answers.question36 !== '') {
+      return <Question37 />;
+    }
+    if (answers.question35 === 'question35 - Autre Contrat') {
+      return <Question36 />;
+    }
+    if (answers.question35 === 'question35 - Intermittent du spectacle') {
+      return <Question36 />;
+    }
+    if (answers.question35 === 'question35 - Stagiaire') {
+      return <Question36 />;
+    }
+    if (answers.question35 === 'question35 - Interim') {
+      return <Question36 />;
+    }
+    if (answers.question35 === 'question35 - Contractuel') {
+      return <Question36 />;
+    }
+    if (answers.question35 === 'question35 - CDD') {
+      return <Question36 />;
+    }
+    if (answers.question35 === 'question35 - Titulaire') {
+      return <Question36 />;
+    }
+    if (answers.question35 === 'question35 - CDI') {
+      return <Question36 />;
+    }
+    if (answers.question34 === 'question34 - Salarié du privé') {
+      return <Question35 />;
+    }
+    if (answers.question34 === 'question34 - Salarié du public') {
+      return <Question35 />;
+    }
+    if (answers.question34 === 'question34 - Travailleur non salarié') {
+      return <Question41 />;
+    }
+    if (answers.question34 === 'question34 - Autre') {
+      return <Question41 />;
+    }
+    if (answers.question33 !== '') {
+      return <Question34 />;
+    }
+    if (answers.question32 !== '') {
+      return <Question33 />;
+    }
+    if (answers.question31d !== '') {
+      return <Question32 />;
+    }
+    if (answers.question31c !== '') {
+      return <Question31d />;
+    }
+    if (answers.question31b !== '') {
+      return <Question31c />;
+    }
+    if (answers.question31a !== '') {
+      return <Question31b />;
+    }
+    if (answers.question30 !== '') {
+      return <Question31a />;
+    }
+    if (answers.question29 !== '') {
+      return <Question30 />;
+    }
+    if (answers.question28a !== '') {
+      return <Question29 />;
+    }
+    if (answers.question28 === 'question28 - Non') {
+      return <Question29 />;
+    }
+    if (answers.question28 === 'question28 - Oui') {
+      return <Question28a />;
+    }
+    if (answers.question27b1 !== '') {
+      return <Question28 />;
+    }
+    if (answers.question27 === 'question27 - Non') {
+      return <Question28 />;
+    }
+    if (answers.question27 === 'question27 - Oui') {
+      return <Question27b1 />;
+    }
+    if (answers.question26 === 'question26 - Non') {
+      return <Question27 />;
+    }
+    if (answers.question26 === 'question26 - Oui') {
+      return <Question27 />;
+    }
+    if (answers.question25 === 'question25 - Non') {
+      return <Question26 />;
+    }
+    if (answers.question25 === 'question25 - Oui') {
+      return <Question26 />;
+    }
+    if (answers.question24 === 'question24 - Non') {
+      return <Question25 />;
+    }
+    if (answers.question24 === 'question24 - Oui') {
+      return <Question25 />;
+    }
+    if (answers.question23b !== '') {
+      return <Question24 />;
+    }
+    if (answers.question23a !== '') {
+      return <Question23b />;
+    }
+    if (answers.question22c !== '') {
+      return <Question23a />;
+    }
+    if (answers.question22b !== '') {
+      return <Question22c />;
+    }
+    if (answers.question22a !== '') {
+      return <Question22b />;
+    }
+    if (answers.question22 === 'question22 - Non') {
+      return <Question23a />;
+    }
+    if (answers.question22 === 'question22 - Oui') {
+      return <Question22a />;
+    }
+    if (answers.question21a !== '') {
+      return <Question22 />;
+    }
+    if (answers.question21 === 'question21 - Non') {
+      return <Question22 />;
+    }
+    if (answers.question21 === 'question21 - Oui') {
+      return <Question21a />;
+    }
+    if (answers.question20d !== '') {
+      return <Question21 />;
+    }
+    if (answers.question20c !== '') {
+      return <Question20d />;
+    }
+    if (answers.question20b !== '') {
+      return <Question20c />;
+    }
+    if (answers.question20a !== '') {
+      return <Question20b />;
+    }
+    if (answers.question19b !== '') {
+      return <Question20a />;
+    }
+    if (answers.question19a1 === 'question19a1 - Non') {
+      return <Question20a />;
+    }
+    if (answers.question19a1 === 'question19a1 - Oui') {
+      return <Question19b />;
+    }
+    if (answers.question19a !== '') {
+      return <Question19a1 />;
+    }
+    return <Question19a />;
   }
-};
 
+  useEffect(() => {
+    setQuestion(switchQuestion());
+  }, [answers]);
+
+  return (
+    <>
+      <Stepper />
+
+      <div>{question}</div>
+    </>
+  );
+};
 export default Form;

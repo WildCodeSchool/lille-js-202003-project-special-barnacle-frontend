@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import '../../styleForm.css';
 import { useDispatch } from 'react-redux';
 
-function Question29a4({ nextStep, prevStep }) {
+function Question40a({ nextStep, prevStep }) {
   const [name, setName] = useState('');
   const dispatch = useDispatch();
   const handleNameChange = (e) => setName(e.target.value);
@@ -12,14 +12,17 @@ function Question29a4({ nextStep, prevStep }) {
     <div>
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Date de 1ere échéance :</h1>
+          <h1>
+            Merci de préciser (locatifs, LMNP, LMP, de placement, salarié privé,
+            salarié public, TNS, autres - indiquer le montant par catégorie)
+          </h1>
         </div>
         <form className="">
           <input
             className="questionEnter col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
-            type="date"
-            placeholder="Date"
-            label="question29a4"
+            type="text"
+            placeholder="Préciser les autres types de revenus"
+            label="question40a"
             onChange={handleNameChange}
             value={name}
           />
@@ -46,8 +49,8 @@ function Question29a4({ nextStep, prevStep }) {
     </div>
   );
 }
-Question29a4.propTypes = {
+Question40a.propTypes = {
   nextStep: PropTypes.number.isRequired,
   prevStep: PropTypes.number.isRequired,
 };
-export default Question29a4;
+export default Question40a;
