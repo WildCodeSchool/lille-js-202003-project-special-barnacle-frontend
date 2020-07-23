@@ -37,7 +37,6 @@ import Contact from './Contact';
 const Form = () => {
   const answers = useSelector((state) => state.question);
   const [question, setQuestion] = useState(<Question1 />);
-
   function switchQuestion() {
     if (answers.question18a !== '') {
       // TODO modifier le return vers la question 19
@@ -103,6 +102,12 @@ const Form = () => {
     if (answers.question11 === 'question11 - Je recherche un terrain') {
       return <Question7 />;
     }
+    if (answers.question10a !== '') {
+      return <Question11 />;
+    }
+    if (answers.question10b !== '') {
+      return <Question11 />;
+    }
     if (answers.question10 === 'question10 - Mixte') {
       return <Question10b />;
     }
@@ -116,11 +121,9 @@ const Form = () => {
       return <Contact />;
     }
     if (answers.question9 === 'question9 - A deux') {
-      // TODO modifier le return vers la question 19
       return <Question9 />;
     }
     if (answers.question9 === 'question9 - Seul') {
-      // TODO modifier le return vers la question 19
       return <Question9 />;
     }
     if (answers.question8a !== '') {
@@ -242,6 +245,7 @@ const Form = () => {
     if (answers.question1 === '') {
       return <Question1 />;
     }
+
     return <Question1 />;
   }
 

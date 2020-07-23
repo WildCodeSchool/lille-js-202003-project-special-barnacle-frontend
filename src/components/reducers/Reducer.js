@@ -8,6 +8,8 @@ const initial = {
   question5: '',
   question5a: '',
   question5b: '',
+  question5bisa: '',
+  question5bisb: '',
   question6: '',
   question7: '',
   question7a: '',
