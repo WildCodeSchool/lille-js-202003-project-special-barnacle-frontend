@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
-function Question12() {
+const Question12 = () => {
+  const dispatch = useDispatch();
+
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question12', text: va });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER' });
+  }, [dispatch]);
   return (
     <div className="question12onTxt">
       <div className="form container-fluid pb-5">
@@ -14,6 +24,9 @@ function Question12() {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Réaliser une construction seule"
+            onClick={() => {
+              handleAnswer('question12 - Réaliser une construction seule');
+            }}
           >
             <p className="my-auto">Réaliser une construction seule</p>
             <img
@@ -29,6 +42,11 @@ function Question12() {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Acquérir le terrain et construire"
+            onClick={() => {
+              handleAnswer(
+                'question12 - Acquérir le terrain et réaliser une construction'
+              );
+            }}
           >
             <p className="my-auto">Acquérir le terrain et construire</p>
             <img
@@ -41,6 +59,6 @@ function Question12() {
       </div>
     </div>
   );
-}
+};
 
 export default Question12;

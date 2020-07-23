@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
 function Question3() {
+  const dispatch = useDispatch();
+
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question3', text: va });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER' });
+  }, [dispatch]);
+
   return (
     <div className="questionImg">
       <form>
@@ -18,6 +29,9 @@ function Question3() {
                 alt="Ancien"
                 src="img/form/question3/Ancien.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('question3 - Ancien');
+                }}
               />
               <p className="my-auto py-2">Ancien</p>
             </div>
@@ -30,6 +44,9 @@ function Question3() {
                 alt="Neuf"
                 src="img/form/question3/Neuf.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('question3 - Neuf');
+                }}
               />
               <p className="my-auto py-2">Neuf</p>
             </div>
@@ -42,6 +59,9 @@ function Question3() {
                 alt="En état futur d'achèvement"
                 src="img/form/question3/VEFA.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('question3 - En état futur d achevement');
+                }}
               />
 
               <p className="my-auto py-2">En état futur d&apos;achèvement</p>

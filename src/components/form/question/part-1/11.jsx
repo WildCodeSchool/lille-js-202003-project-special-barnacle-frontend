@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
 const Question11 = () => {
+  const dispatch = useDispatch();
+
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question11', text: va });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER' });
+  }, [dispatch]);
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
@@ -14,6 +24,9 @@ const Question11 = () => {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="Je recherche un terrain"
+            onClick={() => {
+              handleAnswer('question11 - Je recherche un terrain');
+            }}
           >
             <p className="my-auto">Je recherche un terrain</p>
 
@@ -30,6 +43,9 @@ const Question11 = () => {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="J’ai signé un compromis de vente"
+            onClick={() => {
+              handleAnswer('question11 - J ai signé un compromis de vente');
+            }}
           >
             <p className="my-auto">J’ai signé un compromis de vente</p>
             <img

@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
 function Question6() {
+  const dispatch = useDispatch();
+
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question2', text: va });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER' });
+  }, [dispatch]);
+
   return (
     <div className="questionImg">
       <form>
@@ -18,6 +29,9 @@ function Question6() {
                 alt="Je fais des simulations"
                 src="img/form/question6/jeFaisDesSimulations.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('question6 - Je fais des simulations');
+                }}
               />
               <p className="my-auto py-2">Je fais des simulations</p>
             </div>
@@ -30,6 +44,9 @@ function Question6() {
                 alt="J'ai signé un compromis de vente"
                 src="img/form/question6/jaiSigneUnCompromisDeVente.jpg"
                 width="100%"
+                onClick={() => {
+                  handleAnswer('question6 - J ai signé un compromis de vente');
+                }}
               />
               <p className="my-auto py-2">
                 J&apos;ai signé un compromis de vente
