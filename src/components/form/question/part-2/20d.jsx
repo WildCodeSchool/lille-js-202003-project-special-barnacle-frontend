@@ -23,7 +23,7 @@ function Question20d() {
     <div>
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Montant des frais de dossier de la banque: </h1>
+          <h1>Montant des frais de dossier de la banque:</h1>
         </div>
         <form
           onSubmit={(e) => {

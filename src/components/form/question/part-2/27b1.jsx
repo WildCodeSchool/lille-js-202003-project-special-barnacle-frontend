@@ -50,5 +50,4 @@ function Question27b1() {
     </div>
   );
 }
-
 export default Question27b1;

@@ -23,7 +23,7 @@ function Question22c() {
     <div>
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Taux</h1>
+          <h1>Taux:</h1>
         </div>
         <form
           onSubmit={(e) => {

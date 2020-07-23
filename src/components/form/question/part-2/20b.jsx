@@ -24,7 +24,7 @@ function Question20b() {
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
           <h1>
-            Indiquez le montant des frais de annexes : (frais d&apos;agence,
+            Indiquez le montant des frais de annexes: (frais d&apos;agence,
             expétersie, autre)
           </h1>
         </div>

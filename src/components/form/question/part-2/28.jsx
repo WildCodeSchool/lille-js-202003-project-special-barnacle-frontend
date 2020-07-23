@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import '../../styleForm.css';
 
-function Question28({ nextStep, prevStep }) {
-  const [bool2, setBool2] = useState(false);
-
+const Question28 = () => {
   const dispatch = useDispatch();
 
-  const handleNameBoolTrue = () => setBool2(true);
-  dispatch({ type: 'BOOL_APPORT', bool: bool2 });
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question28', text: va });
+  };
 
-  const handleNameBoolFalse = () => setBool2(false);
-  dispatch({ type: 'BOOL_APPORT', bool: bool2 });
+  useEffect(() => {
+    dispatch({ type: 'ANSWER' });
+  }, [dispatch]);
 
   return (
     <div className="questionTxt">
@@ -26,7 +25,9 @@ function Question28({ nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="oui"
-            onClick={handleNameBoolTrue}
+            onClick={() => {
+              handleAnswer('question28 - Oui');
+            }}
           >
             <p className="my-auto">Oui</p>
 
@@ -43,7 +44,9 @@ function Question28({ nextStep, prevStep }) {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="non"
-            onClick={handleNameBoolFalse}
+            onClick={() => {
+              handleAnswer('question28 - Non');
+            }}
           >
             <p className="my-auto">Non</p>
             <img
@@ -54,31 +57,8 @@ function Question28({ nextStep, prevStep }) {
           </button>
         </div>
       </div>
-      <div>
-        <button
-          type="button"
-          onClick={(e) => {
-            prevStep(e);
-          }}
-        >
-          PREV
-        </button>
-        <button
-          type="button"
-          onClick={(e) => {
-            nextStep(e);
-          }}
-        >
-          NEXT
-        </button>
-      </div>
     </div>
   );
-}
-
-Question28.propTypes = {
-  prevStep: PropTypes.number.isRequired,
-  nextStep: PropTypes.number.isRequired,
 };
 
 export default Question28;

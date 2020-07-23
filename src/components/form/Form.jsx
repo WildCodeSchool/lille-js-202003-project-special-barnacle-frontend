@@ -75,6 +75,9 @@ const Form = () => {
     if (answers.question42 !== '') {
       return <Question38bisa />;
     }
+    if (answers.question41 === 'question41 - Autre') {
+      return <Question40 />;
+    }
     if (answers.question41 === 'question41 - Retraité') {
       return <Question42bis />;
     }
@@ -167,7 +170,7 @@ const Form = () => {
     if (answers.question34 === 'question34 - Salarié du public') {
       return <Question35 />;
     }
-    if (answers.question34 === 'question34 - Travailleur non salarié') {
+    if (answers.question34 === 'question34 - TNS - Travailleur non salarié') {
       return <Question41 />;
     }
     if (answers.question34 === 'question34 - Autre') {
