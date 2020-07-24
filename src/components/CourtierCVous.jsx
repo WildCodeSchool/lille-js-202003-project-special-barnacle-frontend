@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
@@ -111,8 +112,12 @@ function CourtierCVous() {
             </ul>
 
             <div className="buttons">
-              <button type="button">Nos offres</button>
-              <button type="button">Commencer</button>
+              <Link to="/offer">
+                <button type="button">Nos offres</button>
+              </Link>
+              <Link to="/form">
+                <button type="button">Commencer</button>
+              </Link>
             </div>
 
             <img
