@@ -69,16 +69,16 @@ function Question5() {
             <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
               <input
                 id="image"
-                value="Autre"
+                value="Miwte"
                 type="image"
-                alt="Autre"
+                alt="Miwte"
                 src="img/form/question1/autresprojets.jpg"
                 width="100%"
                 onClick={() => {
                   handleAnswer('question5 - Résidence mixte');
                 }}
               />
-              <p className="my-auto py-2">Autre</p>
+              <p className="my-auto py-2">Mixte</p>
             </div>
           </div>
         </div>

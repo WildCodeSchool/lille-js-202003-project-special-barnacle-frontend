@@ -179,14 +179,14 @@ const Form = () => {
     if (answers.question5bis === 'question5bis - Résidence secondaire') {
       return <Question16 />;
     }
-    if (answers.question5 === 'question5 - Résidence mixte') {
-      return <Question5b />;
+    if (answers.question5b !== '') {
+      return <Question6 />;
     }
     if (answers.question5a !== '') {
       return <Question6 />;
     }
-    if (answers.question5b !== '') {
-      return <Question6 />;
+    if (answers.question5 === 'question5 - Résidence mixte') {
+      return <Question5b />;
     }
     if (answers.question5 === 'question5 - Résidence secondaire') {
       return <Question6 />;

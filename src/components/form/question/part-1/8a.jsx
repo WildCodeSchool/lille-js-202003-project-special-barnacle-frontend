@@ -24,7 +24,7 @@ const Question8a = () => {
     <div>
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Merci d&apos;indiquer le montant</h1>
+          <h1>Merci d&apos;indiquer le montant du loyer</h1>
         </div>
         <form
           onSubmit={(e) => {
