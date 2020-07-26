@@ -52,10 +52,7 @@ const Form = () => {
     if (answers.question17 !== '') {
       return <Question18 />;
     }
-    if (answers.question16a !== '') {
-      return <Question17 />;
-    }
-    if (answers.question16b !== '') {
+    if (answers.question16a !== '' || answers.question16b !== '') {
       return <Question17 />;
     }
     if (answers.question16 === 'question16 - A l étranger') {
@@ -117,7 +114,14 @@ const Form = () => {
     ) {
       return <Question7 />;
     }
-
+    if (
+      answers.question5bis === 'question5bis - Résidence secondaire' ||
+      answers.question5bis === 'question5bis - Résidence principale' ||
+      answers.question5bisb !== '' ||
+      answers.question5bisa !== ''
+    ) {
+      return <Question16 />;
+    }
     if (answers.question5bis === 'question5bis - Résidence mixte') {
       return <Question5bisb />;
     }
@@ -137,14 +141,6 @@ const Form = () => {
       answers.question5 === 'question5 - Résidence secondaire'
     ) {
       return <Question6 />;
-    }
-    if (
-      answers.question5bis === 'question5bis - Résidence secondaire' ||
-      answers.question5bis === 'question5bis - Résidence principale' ||
-      answers.question5bisb !== '' ||
-      answers.question5bisa !== ''
-    ) {
-      return <Question16 />;
     }
     if (
       answers.question4 === 'question4 - Non' ||
