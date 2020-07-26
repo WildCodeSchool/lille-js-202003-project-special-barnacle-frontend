@@ -121,17 +121,8 @@ const Form = () => {
     if (answers.question5bis === 'question5bis - Résidence mixte') {
       return <Question5bisb />;
     }
-
     if (answers.question5bis === 'question5bis - Résidence locative') {
       return <Question5bisa />;
-    }
-    if (
-      answers.question5bis === 'question5bis - Résidence secondaire' ||
-      answers.question5bis === 'question5bis - Résidence principale' ||
-      answers.question5bisb !== '' ||
-      answers.question5bisa !== ''
-    ) {
-      return <Question16 />;
     }
     if (answers.question5 === 'question5 - Résidence mixte') {
       return <Question5b />;
@@ -146,6 +137,14 @@ const Form = () => {
       answers.question5 === 'question5 - Résidence secondaire'
     ) {
       return <Question6 />;
+    }
+    if (
+      answers.question5bis === 'question5bis - Résidence secondaire' ||
+      answers.question5bis === 'question5bis - Résidence principale' ||
+      answers.question5bisb !== '' ||
+      answers.question5bisa !== ''
+    ) {
+      return <Question16 />;
     }
     if (
       answers.question4 === 'question4 - Non' ||
