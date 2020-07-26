@@ -37,7 +37,6 @@ import Contact from './Contact';
 const Form = () => {
   const answers = useSelector((state) => state.question);
   const [question, setQuestion] = useState(<Question1 />);
-
   function switchQuestion() {
     if (answers.question18a !== '') {
       // TODO modifier le return vers la question 19
@@ -77,24 +76,6 @@ const Form = () => {
     if (answers.question15 === 'question15 - Autre') {
       return <Question5bis />;
     }
-    if (answers.question14 === 'question14 - Autre') {
-      return <Question5 />;
-    }
-    if (answers.question14 === 'question14 - Appartement') {
-      return <Question5 />;
-    }
-    if (answers.question14 === 'question14 - Maison') {
-      return <Question5 />;
-    }
-    if (
-      answers.question12 ===
-      'question12 - Acquérir le terrain et réaliser une construction'
-    ) {
-      return <Question5 />;
-    }
-    if (answers.question12 === 'question12 - Réaliser une construction seule') {
-      return <Question5 />;
-    }
     if (
       answers.question11 === 'question11 - J ai signé un compromis de vente'
     ) {
@@ -102,6 +83,12 @@ const Form = () => {
     }
     if (answers.question11 === 'question11 - Je recherche un terrain') {
       return <Question7 />;
+    }
+    if (answers.question10a !== '') {
+      return <Question11 />;
+    }
+    if (answers.question10b !== '') {
+      return <Question11 />;
     }
     if (answers.question10 === 'question10 - Mixte') {
       return <Question10b />;
@@ -116,11 +103,9 @@ const Form = () => {
       return <Contact />;
     }
     if (answers.question9 === 'question9 - A deux') {
-      // TODO modifier le return vers la question 19
       return <Question9 />;
     }
     if (answers.question9 === 'question9 - Seul') {
-      // TODO modifier le return vers la question 19
       return <Question9 />;
     }
     if (answers.question8a !== '') {
@@ -176,14 +161,14 @@ const Form = () => {
     if (answers.question5bis === 'question5bis - Résidence secondaire') {
       return <Question16 />;
     }
-    if (answers.question5 === 'question5 - Résidence mixte') {
-      return <Question5b />;
+    if (answers.question5b !== '') {
+      return <Question6 />;
     }
     if (answers.question5a !== '') {
       return <Question6 />;
     }
-    if (answers.question5b !== '') {
-      return <Question6 />;
+    if (answers.question5 === 'question5 - Résidence mixte') {
+      return <Question5b />;
     }
     if (answers.question5 === 'question5 - Résidence secondaire') {
       return <Question6 />;
@@ -194,20 +179,22 @@ const Form = () => {
     if (answers.question5 === 'question5 - Résidence principale') {
       return <Question6 />;
     }
-    if (answers.question4a !== '') {
-      return <Question5 />;
-    }
-    if (answers.question4 === 'question4 - Non') {
+    if (
+      answers.question4 === 'question4 - Non' ||
+      answers.question4a !== '' ||
+      answers.question12 === 'question12 - Réaliser une construction seule' ||
+      answers.question12 ===
+        'question12 - Acquérir le terrain et réaliser une construction' ||
+      answers.question14 === 'question14 - Maison' ||
+      answers.question14 === 'question14 - Appartement' ||
+      answers.question14 === 'question14 - Autre' ||
+      answers.question3 === 'question3 - Neuf' ||
+      answers.question3 === 'question3 - En état futur d achevement'
+    ) {
       return <Question5 />;
     }
     if (answers.question4 === 'question4 - Oui') {
       return <Question4a />;
-    }
-    if (answers.question3 === 'question3 - En état futur d achevement') {
-      return <Question5 />;
-    }
-    if (answers.question3 === 'question3 - Neuf') {
-      return <Question5 />;
     }
     if (answers.question3 === 'question3 - Ancien') {
       return <Question4 />;
@@ -242,6 +229,7 @@ const Form = () => {
     if (answers.question1 === '') {
       return <Question1 />;
     }
+
     return <Question1 />;
   }
 
