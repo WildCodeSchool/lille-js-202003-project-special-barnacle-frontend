@@ -1,5 +1,4 @@
 const initial = {
-  curStep: 1,
   question1: '',
   question2: '',
   question3: '',
@@ -8,6 +7,8 @@ const initial = {
   question5: '',
   question5a: '',
   question5b: '',
+  question5bisa: '',
+  question5bisb: '',
   question6: '',
   question7: '',
   question7a: '',
@@ -34,8 +35,6 @@ const Reducer = (state = initial, action) => {
   switch (action.type) {
     case 'ANSWER':
       return { ...state, [action.question]: action.text };
-    case 'SETSTEP':
-      return { ...state, curStep: action.value };
     default:
       return state;
   }

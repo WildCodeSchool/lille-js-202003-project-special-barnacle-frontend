@@ -37,6 +37,7 @@ import Contact from './Contact';
 const Form = () => {
   const answers = useSelector((state) => state.question);
   const [question, setQuestion] = useState(<Question1 />);
+  const [activeStep, setActiveStep] = React.useState(0);
 
   function switchQuestion() {
     if (answers.question18a !== '') {
@@ -45,7 +46,11 @@ const Form = () => {
     }
     if (answers.question18 === 'question18 - non') {
       // TODO modifier le return vers la question 19
-      return <Question18 />;
+      return (
+        <div>
+          <Question18 activeStep={activeStep} />
+        </div>
+      );
     }
     if (answers.question18 === 'question18 - oui') {
       return <Question18a />;
@@ -237,7 +242,9 @@ const Form = () => {
       return <Question12 />;
     }
     if (answers.question1 === 'question1 - Acheter un bien') {
-      return <Question2 />;
+      return (
+        <Question2 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question1 === '') {
       return <Question1 />;
@@ -251,7 +258,7 @@ const Form = () => {
 
   return (
     <>
-      <Stepper />
+      <Stepper activeStep={activeStep} setActiveStep={setActiveStep} />
 
       <div>{question}</div>
     </>

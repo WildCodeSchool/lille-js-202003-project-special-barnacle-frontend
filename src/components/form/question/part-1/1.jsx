@@ -6,7 +6,11 @@ const Question1 = () => {
   const dispatch = useDispatch();
 
   const handleAnswer = (va) => {
-    dispatch({ type: 'ANSWER', question: 'question1', text: va });
+    dispatch({
+      type: 'ANSWER',
+      question: 'question1',
+      text: va,
+    });
   };
 
   useEffect(() => {
