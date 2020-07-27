@@ -46,6 +46,15 @@ input {
   border: 0;
 }
 
+.multipleForms {
+}
+
+.multipleForms input {
+  height: 60px;
+  border-radius: 10px;
+  border: 0;
+}
+
 .questionEnter .formCard:hover {
   transform: none;
 }
