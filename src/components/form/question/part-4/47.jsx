@@ -1,29 +1,39 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import '../../styleForm.css';
+// import '../styleForm.css';
 
-function Question47({ nextStep, prevStep }) {
-  const [bool2, setBool2] = useState(false);
+const Question47 = () => {
   const dispatch = useDispatch();
-  const handleNameBoolTrue = () => setBool2(true);
-  dispatch({ type: 'BOOL_APPORT', bool: bool2 });
-  const handleNameBoolFalse = () => setBool2(false);
-  dispatch({ type: 'BOOL_APPORT', bool: bool2 });
+
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question47', text: va });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER' });
+  }, [dispatch]);
+
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Avez vous des enfants à charge?</h1>
+          <h1>
+            Avez vous des enfants à charge? (si 2 emprunteurs, indiquez tous les
+            enfants))
+          </h1>
         </div>
+
         <div className="row">
           <button
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="oui"
-            onClick={handleNameBoolTrue}
+            onClick={() => {
+              handleAnswer('question47 - Oui');
+            }}
           >
             <p className="my-auto">Oui</p>
+
             <img
               className="col-2 col-sm-1 my-auto p-1"
               src="img/arrow.png"
@@ -31,12 +41,15 @@ function Question47({ nextStep, prevStep }) {
             />
           </button>
         </div>
+
         <div className="row">
           <button
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="non"
-            onClick={handleNameBoolFalse}
+            onClick={() => {
+              handleAnswer('question47 - Non');
+            }}
           >
             <p className="my-auto">Non</p>
             <img
@@ -47,29 +60,8 @@ function Question47({ nextStep, prevStep }) {
           </button>
         </div>
       </div>
-      <div>
-        <button
-          type="button"
-          onClick={(e) => {
-            prevStep(e);
-          }}
-        >
-          PREV
-        </button>
-        <button
-          type="button"
-          onClick={(e) => {
-            nextStep(e);
-          }}
-        >
-          NEXT
-        </button>
-      </div>
     </div>
   );
-}
-Question47.propTypes = {
-  prevStep: PropTypes.number.isRequired,
-  nextStep: PropTypes.number.isRequired,
 };
+
 export default Question47;
