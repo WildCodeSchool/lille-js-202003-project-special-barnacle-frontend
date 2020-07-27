@@ -25,7 +25,7 @@ function App() {
             <NosOffres />
           </Route>
           <Route path="/project" component={Form} />
-          <Route path="/contact" component={() => <div>contact</div>} />
+          <Route path="/contact" component={Contact} />
           <Route path="/user/:id" component={() => <div>user</div>} />
           {/* <Route path="/form">
             <Form />

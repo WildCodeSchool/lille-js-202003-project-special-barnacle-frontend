@@ -1,0 +1,11 @@
+h1 {
+  color: #2a96af;
+  font-size: 2em;
+  padding: 6vh;
+  text-align: center;
+}
+.contact {
+  background-color: #edf1f5;
+  text-align: center;
+  padding-bottom: 10vh;
+}
