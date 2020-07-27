@@ -88,6 +88,7 @@ const initial = {
     datedenaissance: '',
     nationalite: '',
   },
+  question46: '',
 };
 
 const Reducer = (state = initial, action) => {
