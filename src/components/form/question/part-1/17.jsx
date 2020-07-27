@@ -11,8 +11,8 @@ function Question17() {
     e.preventDefault();
     dispatch({
       type: 'ANSWER',
-      question: 'question16b',
-      text: `question16b - ${answer}`,
+      question: 'question17',
+      text: `question17 - ${answer}`,
     });
   };
 
