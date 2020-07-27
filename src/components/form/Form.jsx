@@ -324,10 +324,10 @@ const Form = () => {
 
     // Part 2 & 3
 
-    if (answers.question18a !== '') {
-      return <Question19a />;
-    }
-    if (answers.question18 === 'question18 - Non') {
+    if (
+      answers.question18 === 'question18 - Non' ||
+      answers.question18a !== ''
+    ) {
       return <Question19a />;
     }
     if (answers.question18 === 'question18 - Oui') {
@@ -346,13 +346,17 @@ const Form = () => {
       return <Question16a />;
     }
     if (
+      answers.question9 === 'question9 - Seul' ||
+      answers.question9 === 'question9 - A deux'
+    ) {
+      return <Question19a />;
+    }
+    if (
       answers.question8 === 'question8 - Propriétaire' ||
       answers.question8 ===
         'question8 - Bénéficiaire d un logement de fonction' ||
       answers.question8 === 'question8 - Hébergé à titre gratuit' ||
-      answers.question8a !== '' ||
-      answers.question9 === 'question9 - Seul' ||
-      answers.question9 === 'question9 - A deux'
+      answers.question8a !== ''
     ) {
       return <Question9 />;
     }
