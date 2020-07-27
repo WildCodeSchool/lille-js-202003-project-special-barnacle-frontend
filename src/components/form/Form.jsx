@@ -92,14 +92,7 @@ const Form = () => {
     if (answers.question7a !== '' || answers.question7b !== '') {
       return <Question8 />;
     }
-    if (
-      answers.question15 === 'question15 - Autre' ||
-      answers.question15 === 'question15 - Un terrain' ||
-      answers.question15 === 'question15 - Un appartement' ||
-      answers.question15 === 'question15 - Une maison'
-    ) {
-      return <Question5bis />;
-    }
+
     if (answers.question7 === 'question7 - A l étranger') {
       return <Question7b />;
     }
@@ -122,6 +115,14 @@ const Form = () => {
     ) {
       return <Question16 />;
     }
+    if (
+      answers.question15 === 'question15 - Autre' ||
+      answers.question15 === 'question15 - Un terrain' ||
+      answers.question15 === 'question15 - Un appartement' ||
+      answers.question15 === 'question15 - Une maison'
+    ) {
+      return <Question5bis />;
+    }
     if (answers.question5bis === 'question5bis - Résidence mixte') {
       return <Question5bisb />;
     }
@@ -142,6 +143,7 @@ const Form = () => {
     ) {
       return <Question6 />;
     }
+
     if (
       answers.question4 === 'question4 - Non' ||
       answers.question4a !== '' ||
