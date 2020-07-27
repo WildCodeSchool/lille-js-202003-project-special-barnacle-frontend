@@ -91,6 +91,11 @@ const initial = {
   question46: '',
   question47: '',
   question47a: '',
+  question48: {
+    portable: '',
+    fixe: '',
+    mail: '',
+  },
 };
 
 const Reducer = (state = initial, action) => {

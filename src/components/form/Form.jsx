@@ -9,7 +9,7 @@ import Question45 from './question/part-4/45';
 import Question46 from './question/part-4/46';
 import Question47 from './question/part-4/47';
 import Question47a from './question/part-4/47a';
-import Question48a from './question/part-4/48a';
+import Question48 from './question/part-4/48';
 import Question48b from './question/part-4/48b';
 import Question48c from './question/part-4/48c';
 import Question49a from './question/part-4/49a';
@@ -30,7 +30,7 @@ const Form = () => {
     questio46: '',
     questio47: '',
     questio47a: '',
-    questio48a: '',
+    questio48: '',
     questio48b: '',
     questio48c: '',
     questio49a: '',
@@ -196,7 +196,7 @@ const Form = () => {
     case 92:
       return (
         <div>
-          <Question48a
+          <Question48
             nextStep={nextStep}
             prevStep={prevStep}
             handleChangeTest={handleChangeTest}

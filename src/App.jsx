@@ -13,9 +13,7 @@ import Question45 from './components/form/question/part-4/45';
 import Question46 from './components/form/question/part-4/46';
 import Question47 from './components/form/question/part-4/47';
 import Question47a from './components/form/question/part-4/47a';
-import Question48a from './components/form/question/part-4/48a';
-import Question48b from './components/form/question/part-4/48b';
-import Question48c from './components/form/question/part-4/48c';
+import Question48 from './components/form/question/part-4/48';
 import Question49a from './components/form/question/part-4/49a';
 import Question49b from './components/form/question/part-4/49b';
 import Question49c from './components/form/question/part-4/49c';
@@ -73,14 +71,8 @@ function App() {
           <Route exact path="/question47a">
             <Question47a />
           </Route>
-          <Route exact path="/question48a">
-            <Question48a />
-          </Route>
-          <Route exact path="/question48b">
-            <Question48b />
-          </Route>
-          <Route exact path="/question48c">
-            <Question48c />
+          <Route exact path="/question48">
+            <Question48 />
           </Route>
           <Route exact path="/question49a">
             <Question49a />
