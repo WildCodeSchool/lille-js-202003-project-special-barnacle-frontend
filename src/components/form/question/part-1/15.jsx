@@ -53,7 +53,7 @@ const Question15 = () => {
               value="Un terrain"
               type="image"
               alt="Un terrain"
-              src="img/form/question2/Terrain.jpg"
+              src="img/form/question1/Terrain.jpg"
               width="100%"
               onClick={() => {
                 handleAnswer('question15 - Un terrain');
@@ -68,7 +68,7 @@ const Question15 = () => {
               value="Autre"
               type="image"
               alt="Autre"
-              src="img/form/question1/autresprojets.jpg"
+              src="img/form/question2/autresprojets.jpg"
               width="100%"
               onClick={() => {
                 handleAnswer('question15 - Autre');

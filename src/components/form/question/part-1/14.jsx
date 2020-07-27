@@ -16,7 +16,7 @@ const Question14 = () => {
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Dans quel type de bien souhaitez-vous faire des travaux ?</h1>
+          <h1>Dans quel type de bien souhaitez-vous faire des travaux?</h1>
         </div>
 
         <div className="row">

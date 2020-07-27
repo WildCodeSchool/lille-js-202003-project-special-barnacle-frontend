@@ -42,20 +42,17 @@ const Form = () => {
       // TODO modifier le return vers la question 19
       return <Question18a />;
     }
-    if (answers.question18 === 'question18 - non') {
+    if (answers.question18 === 'question18 - Non') {
       // TODO modifier le return vers la question 19
-      return <Question18 />;
+      return <Question18a />;
     }
-    if (answers.question18 === 'question18 - oui') {
+    if (answers.question18 === 'question18 - Oui') {
       return <Question18a />;
     }
     if (answers.question17 !== '') {
       return <Question18 />;
     }
-    if (answers.question16a !== '') {
-      return <Question17 />;
-    }
-    if (answers.question16b !== '') {
+    if (answers.question16a !== '' || answers.question16b !== '') {
       return <Question17 />;
     }
     if (answers.question16 === 'question16 - A l étranger') {
@@ -64,71 +61,21 @@ const Form = () => {
     if (answers.question16 === 'question16 - En France') {
       return <Question16a />;
     }
-    if (answers.question15 === 'question15 - Une maison') {
-      return <Question5bis />;
-    }
-    if (answers.question15 === 'question15 - Un appartement') {
-      return <Question5bis />;
-    }
-    if (answers.question15 === 'question15 - Un terrain') {
-      return <Question5bis />;
-    }
-    if (answers.question15 === 'question15 - Autre') {
-      return <Question5bis />;
-    }
     if (
-      answers.question11 === 'question11 - J ai signé un compromis de vente'
+      answers.question8 === 'question8 - Propriétaire' ||
+      answers.question8 ===
+        'question8 - Bénéficiaire d un logement de fonction' ||
+      answers.question8 === 'question8 - Hébergé à titre gratuit' ||
+      answers.question8a !== '' ||
+      answers.question9 === 'question9 - Seul' ||
+      answers.question9 === 'question9 - A deux'
     ) {
-      return <Question7 />;
-    }
-    if (answers.question11 === 'question11 - Je recherche un terrain') {
-      return <Question7 />;
-    }
-    if (answers.question10a !== '') {
-      return <Question11 />;
-    }
-    if (answers.question10b !== '') {
-      return <Question11 />;
-    }
-    if (answers.question10 === 'question10 - Mixte') {
-      return <Question10b />;
-    }
-    if (answers.question10 === 'question10 - Locatif') {
-      return <Question10a />;
-    }
-    if (answers.question10 === 'question10 - Personnel') {
-      return <Question11 />;
-    }
-    if (answers.question9 === 'question9 - A plus de deux') {
-      return <Contact />;
-    }
-    if (answers.question9 === 'question9 - A deux') {
-      return <Question9 />;
-    }
-    if (answers.question9 === 'question9 - Seul') {
-      return <Question9 />;
-    }
-    if (answers.question8a !== '') {
-      return <Question9 />;
-    }
-    if (answers.question8 === 'question8 - Hébergé à titre gratuit') {
-      return <Question9 />;
-    }
-    if (
-      answers.question8 === 'question8 - Bénéficiaire d un logement de fonction'
-    ) {
-      return <Question9 />;
-    }
-    if (answers.question8 === 'question8 - Propriétaire') {
       return <Question9 />;
     }
     if (answers.question8 === 'question8 - Locataire') {
       return <Question8a />;
     }
-    if (answers.question7b !== '') {
-      return <Question8 />;
-    }
-    if (answers.question7a !== '') {
+    if (answers.question7a !== '' || answers.question7b !== '') {
       return <Question8 />;
     }
     if (answers.question7 === 'question7 - A l étranger') {
@@ -137,47 +84,66 @@ const Form = () => {
     if (answers.question7 === 'question7 - En France') {
       return <Question7a />;
     }
-    if (answers.question6 === 'question6 - J ai signé un compromis de vente') {
+    if (
+      answers.question6 === 'question6 - Je fais des simulations' ||
+      answers.question6 === 'question6 - J ai signé un compromis de vente'
+    ) {
       return <Question7 />;
     }
-    if (answers.question6 === 'question6 - Je fais des simulations') {
+    if (
+      answers.question11 === 'question11 - Je recherche un terrain' ||
+      answers.question11 === 'question11 - J ai signé un compromis de vente'
+    ) {
       return <Question7 />;
     }
-    if (answers.question5bisa !== '') {
-      return <Question16 />;
+    if (
+      answers.question10 === 'question10 - Personnel' ||
+      answers.question10b !== '' ||
+      answers.question10a !== ''
+    ) {
+      return <Question11 />;
     }
-    if (answers.question5bisb !== '') {
+    if (answers.question10 === 'question10 - Mixte') {
+      return <Question10b />;
+    }
+    if (answers.question10 === 'question10 - Locatif') {
+      return <Question10a />;
+    }
+    if (
+      answers.question5bis === 'question5bis - Résidence secondaire' ||
+      answers.question5bis === 'question5bis - Résidence principale' ||
+      answers.question5bisb !== '' ||
+      answers.question5bisa !== ''
+    ) {
       return <Question16 />;
     }
     if (answers.question5bis === 'question5bis - Résidence mixte') {
       return <Question5bisb />;
     }
-    if (answers.question5bis === 'question5bis - Résidence principale') {
-      return <Question16 />;
-    }
     if (answers.question5bis === 'question5bis - Résidence locative') {
       return <Question5bisa />;
     }
-    if (answers.question5bis === 'question5bis - Résidence secondaire') {
-      return <Question16 />;
+    if (
+      answers.question15 === 'question15 - Autre' ||
+      answers.question15 === 'question15 - Un terrain' ||
+      answers.question15 === 'question15 - Un appartement' ||
+      answers.question15 === 'question15 - Une maison'
+    ) {
+      return <Question5bis />;
     }
-    if (answers.question5b !== '') {
-      return <Question6 />;
-    }
-    if (answers.question5a !== '') {
+    if (
+      answers.question5 === 'question5 - Résidence principale' ||
+      answers.question5a !== '' ||
+      answers.question5b !== '' ||
+      answers.question5 === 'question5 - Résidence secondaire'
+    ) {
       return <Question6 />;
     }
     if (answers.question5 === 'question5 - Résidence mixte') {
       return <Question5b />;
     }
-    if (answers.question5 === 'question5 - Résidence secondaire') {
-      return <Question6 />;
-    }
     if (answers.question5 === 'question5 - Résidence locative') {
       return <Question5a />;
-    }
-    if (answers.question5 === 'question5 - Résidence principale') {
-      return <Question6 />;
     }
     if (
       answers.question4 === 'question4 - Non' ||
@@ -199,19 +165,20 @@ const Form = () => {
     if (answers.question3 === 'question3 - Ancien') {
       return <Question4 />;
     }
-    if (answers.question2 === 'question2 - Autre') {
-      return <Question3 />;
-    }
     if (answers.question2 === 'question2 - Un terrain seul') {
       return <Question10 />;
     }
-    if (answers.question2 === 'question2 - Un appartement') {
+    if (
+      answers.question2 === 'question2 - Une maison' ||
+      answers.question2 === 'question2 - Un appartement' ||
+      answers.question2 === 'question2 - Autre'
+    ) {
       return <Question3 />;
     }
-    if (answers.question2 === 'question2 - Une maison') {
-      return <Question3 />;
-    }
-    if (answers.question1 === 'question1 - Autres projets') {
+    if (
+      answers.question1 === 'question1 - Autres projets' ||
+      answers.question9 === 'question9 - A plus de deux'
+    ) {
       return <Contact />;
     }
     if (answers.question1 === 'question1 - Renégocier') {
@@ -229,7 +196,6 @@ const Form = () => {
     if (answers.question1 === '') {
       return <Question1 />;
     }
-
     return <Question1 />;
   }
 

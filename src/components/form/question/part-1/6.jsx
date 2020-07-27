@@ -17,7 +17,7 @@ function Question6() {
     <div className="questionImg">
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 p-5 text-center">
-          <h1>Où en êtes-vous dans l’avancement du projet ?</h1>
+          <h1>Où en êtes-vous dans l’avancement du projet?</h1>
         </div>
         <div className="row text-center">
           <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
