@@ -115,7 +115,7 @@ function CourtierCVous() {
               <Link to="/offer">
                 <button type="button">Nos offres</button>
               </Link>
-              <Link to="/project">
+              <Link to="/form">
                 <button type="button">Commencer</button>
               </Link>
             </div>
