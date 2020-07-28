@@ -367,10 +367,10 @@ const Form = () => {
       return <Question8a />;
     }
     if (
-      (answers.question18 === 'question18 - Non' &&
-        answers.question1 === 'question1 - Renégocier') ||
-      (answers.question18a !== '' &&
-        answers.question1 === 'question1 - Renégocier')
+      (answers.question1 === 'question1 - Renégocier' &&
+        answers.question18 === 'question18 - Non') ||
+      (answers.question1 === 'question1 - Renégocier' &&
+        answers.question18a !== '')
     ) {
       return <Question8 />;
     }
