@@ -84,6 +84,36 @@ const initial = {
   question43: '',
   question431: '',
   question432: '',
+  question45: {
+    nom: '',
+    nomdejeunefille: '',
+    prenom: '',
+    datedenaissance: '',
+    nationalite: '',
+  },
+  question46: '',
+  question47: '',
+  question47a: '',
+  question48: {
+    portable: '',
+    fixe: '',
+    mail: '',
+  },
+  question49: {
+    adresse: '',
+    cp: '',
+    ville: '',
+    etranger: '',
+  },
+  question50: '',
+  question51: {
+    raisonsociale: '',
+    cp: '',
+    ville: '',
+    siret: '',
+    creation: '',
+    taxation: '',
+  },
 };
 
 const Reducer = (state = initial, action) => {
