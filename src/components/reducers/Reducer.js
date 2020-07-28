@@ -102,6 +102,15 @@ const initial = {
     ville: '',
     etranger: '',
   },
+  question50: '',
+  question51: {
+    raisonsociale: '',
+    cp: '',
+    ville: '',
+    siret: '',
+    creation: '',
+    taxation: '',
+  },
 };
 
 const Reducer = (state = initial, action) => {
