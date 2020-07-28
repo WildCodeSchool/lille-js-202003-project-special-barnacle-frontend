@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import '../styleForm.css';
+import '../styleForm.css';
 
 function Question45() {
   const dispatch = useDispatch();
