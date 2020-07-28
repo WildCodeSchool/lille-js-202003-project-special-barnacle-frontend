@@ -101,8 +101,8 @@ function Question45() {
             <p className="col-12 col-lg-4 my-lg-auto">Date de naissance :</p>
             <input
               className="col-12 col-lg-8"
-              type="date"
-              placeholder="Date de naissance"
+              type="text"
+              placeholder="aaaa/mm/jj"
               label="question45"
               value={answer4}
               onChange={(e) => {

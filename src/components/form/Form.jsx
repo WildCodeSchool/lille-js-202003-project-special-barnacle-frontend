@@ -101,6 +101,7 @@ import Contact from './Contact';
 const Form = () => {
   const answers = useSelector((state) => state.question);
   const [question, setQuestion] = useState(<Question1 />);
+  const [activeStep, setActiveStep] = React.useState(0);
   function switchQuestion() {
     if (
       answers.question52 === 'question52 - Un homme' ||
@@ -144,8 +145,13 @@ const Form = () => {
     ) {
       return <Question45 />;
     }
+
+    // Part 4
+
     if (answers.question432 !== '') {
-      return <Question44 />;
+      return (
+        <Question44 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question431 !== '') {
       return <Question432 />;
@@ -196,10 +202,14 @@ const Form = () => {
       return <Question42 />;
     }
     if (answers.question40a !== '') {
-      return <Question44 />;
+      return (
+        <Question44 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question40 === 'question40 - Non') {
-      return <Question44 />;
+      return (
+        <Question44 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question40 === 'question40 - Oui') {
       return <Question40a />;
@@ -262,7 +272,9 @@ const Form = () => {
       return <Question41 />;
     }
     if (answers.question33 !== '') {
-      return <Question34 />;
+      return (
+        <Question34 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question32 !== '') {
       return <Question33 />;
@@ -286,10 +298,14 @@ const Form = () => {
       return <Question30 />;
     }
     if (answers.question28a !== '') {
-      return <Question34 />;
+      return (
+        <Question34 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question28 === 'question28 - Non') {
-      return <Question34 />;
+      return (
+        <Question34 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question28 === 'question28 - Oui') {
       return <Question28a />;
@@ -377,11 +393,14 @@ const Form = () => {
     }
 
     // Part 2 & 3
+
     if (
       answers.question9bis === 'question9bis - Seul' ||
       answers.question9bis === 'question9bis - A deux'
     ) {
-      return <Question29 />;
+      return (
+        <Question29 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (
       answers.question8bis === 'question8bis - Propriétaire' ||
@@ -420,7 +439,9 @@ const Form = () => {
       answers.question9 === 'question9 - Seul' ||
       answers.question9 === 'question9 - A deux'
     ) {
-      return <Question19a />;
+      return (
+        <Question19a activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (
       answers.question8 === 'question8 - Propriétaire' ||
@@ -564,8 +585,7 @@ const Form = () => {
 
   return (
     <>
-      <Stepper />
-
+      <Stepper activeStep={activeStep} setActiveStep={setActiveStep} />
       <div>{question}</div>
     </>
   );
