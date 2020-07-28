@@ -10,12 +10,7 @@ import Question46 from './question/part-4/46';
 import Question47 from './question/part-4/47';
 import Question47a from './question/part-4/47a';
 import Question48 from './question/part-4/48';
-import Question48b from './question/part-4/48b';
-import Question48c from './question/part-4/48c';
-import Question49a from './question/part-4/49a';
-import Question49b from './question/part-4/49b';
-import Question49c from './question/part-4/49c';
-import Question49d from './question/part-4/49d';
+import Question49 from './question/part-4/49';
 import Question50 from './question/part-4/50';
 import Question51 from './question/part-4/51';
 import Question52 from './question/part-4/52';
@@ -193,7 +188,7 @@ const Form = () => {
           />
         </div>
       );
-    case 92:
+    case 94:
       return (
         <div>
           <Question48
@@ -206,36 +201,11 @@ const Form = () => {
           />
         </div>
       );
-    case 93:
-      return (
-        <div>
-          <Question48b
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 94:
-      return (
-        <div>
-          <Question48c
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
+
     case 95:
       return (
         <div>
-          <Question49a
+          <Question49
             nextStep={nextStep}
             prevStep={prevStep}
             handleChangeTest={handleChangeTest}
@@ -245,45 +215,7 @@ const Form = () => {
           />
         </div>
       );
-    case 96:
-      return (
-        <div>
-          <Question49b
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 97:
-      return (
-        <div>
-          <Question49c
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
-    case 98:
-      return (
-        <div>
-          <Question49d
-            nextStep={nextStep}
-            prevStep={prevStep}
-            handleChangeTest={handleChangeTest}
-            values={values}
-            step={step}
-            handleSubmit={handleSubmit}
-          />
-        </div>
-      );
+
     case 99:
       return (
         <div>

@@ -14,10 +14,7 @@ import Question46 from './components/form/question/part-4/46';
 import Question47 from './components/form/question/part-4/47';
 import Question47a from './components/form/question/part-4/47a';
 import Question48 from './components/form/question/part-4/48';
-import Question49a from './components/form/question/part-4/49a';
-import Question49b from './components/form/question/part-4/49b';
-import Question49c from './components/form/question/part-4/49c';
-import Question49d from './components/form/question/part-4/49d';
+import Question49 from './components/form/question/part-4/49';
 import Question50 from './components/form/question/part-4/50';
 import Question51 from './components/form/question/part-4/51';
 import Question52 from './components/form/question/part-4/52';
@@ -74,17 +71,8 @@ function App() {
           <Route exact path="/question48">
             <Question48 />
           </Route>
-          <Route exact path="/question49a">
-            <Question49a />
-          </Route>
-          <Route exact path="/question49b">
-            <Question49b />
-          </Route>
-          <Route exact path="/question49c">
-            <Question49c />
-          </Route>
-          <Route exact path="/question49d">
-            <Question49d />
+          <Route exact path="/question49">
+            <Question49 />
           </Route>
           <Route exact path="/question50">
             <Question50 />

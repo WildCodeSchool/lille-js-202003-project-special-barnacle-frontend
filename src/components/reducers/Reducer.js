@@ -96,6 +96,12 @@ const initial = {
     fixe: '',
     mail: '',
   },
+  question49: {
+    adresse: '',
+    cp: '',
+    ville: '',
+    etranger: '',
+  },
 };
 
 const Reducer = (state = initial, action) => {
