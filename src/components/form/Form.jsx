@@ -345,14 +345,14 @@ const Form = () => {
     if (answers.question8bis === 'question8bis - Locataire') {
       return <Question8bisa />;
     }
-    if (answers.question18 === 'question18 - Oui') {
-      return <Question18a />;
-    }
     if (
       answers.question18 === 'question18 - Non' ||
       answers.question18a !== ''
     ) {
       return <Question8bis />;
+    }
+    if (answers.question18 === 'question18 - Oui') {
+      return <Question18a />;
     }
     if (answers.question17 !== '') {
       return <Question18 />;
