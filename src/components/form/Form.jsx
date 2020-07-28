@@ -19,6 +19,9 @@ import Question7b from './question/part-1/7b';
 import Question8 from './question/part-1/8';
 import Question8a from './question/part-1/8a';
 import Question9 from './question/part-1/9';
+import Question8bis from './question/part-1/8bis';
+import Question8bisa from './question/part-1/8bisa';
+import Question9bis from './question/part-1/9bis';
 import Question10 from './question/part-1/10';
 import Question10a from './question/part-1/10a';
 import Question10b from './question/part-1/10b';
@@ -89,6 +92,7 @@ const Form = () => {
   const [question, setQuestion] = useState(<Question1 />);
   function switchQuestion() {
     if (answers.question432 !== '') {
+      // TODO 44
       return <Question40 />;
     }
     if (answers.question431 !== '') {
@@ -102,6 +106,15 @@ const Form = () => {
     }
     if (answers.question42bis === 'question42bis - Privé') {
       return <Question431 />;
+    }
+    if (answers.question38bisc !== '') {
+      return <Question43 />;
+    }
+    if (answers.question38bisb !== '') {
+      return <Question38bisc />;
+    }
+    if (answers.question38bisa !== '') {
+      return <Question38bisb />;
     }
     if (answers.question42 !== '') {
       return <Question38bisa />;
@@ -149,15 +162,6 @@ const Form = () => {
     }
     if (answers.question38c !== '') {
       return <Question39a />;
-    }
-    if (answers.question38bisc !== '') {
-      return <Question43 />;
-    }
-    if (answers.question38bisb !== '') {
-      return <Question38bisc />;
-    }
-    if (answers.question38bisa !== '') {
-      return <Question38bisb />;
     }
     if (answers.question38b !== '') {
       return <Question38c />;
@@ -232,10 +236,10 @@ const Form = () => {
       return <Question30 />;
     }
     if (answers.question28a !== '') {
-      return <Question29 />;
+      return <Question34 />;
     }
     if (answers.question28 === 'question28 - Non') {
-      return <Question29 />;
+      return <Question34 />;
     }
     if (answers.question28 === 'question28 - Oui') {
       return <Question28a />;
@@ -323,12 +327,29 @@ const Form = () => {
     }
 
     // Part 2 & 3
-
-    if (answers.question18a !== '') {
-      return <Question19a />;
+    if (
+      answers.question9bis === 'question9bis - Seul' ||
+      answers.question9bis === 'question9bis - A deux'
+    ) {
+      return <Question29 />;
     }
-    if (answers.question18 === 'question18 - Non') {
-      return <Question19a />;
+    if (
+      answers.question8bis === 'question8bis - Propriétaire' ||
+      answers.question8bis ===
+        'question8bis - Bénéficiaire d un logement de fonction' ||
+      answers.question8bis === 'question8bis - Hébergé à titre gratuit' ||
+      answers.question8bisa !== ''
+    ) {
+      return <Question9bis />;
+    }
+    if (answers.question8bis === 'question8bis - Locataire') {
+      return <Question8bisa />;
+    }
+    if (
+      answers.question18 === 'question18 - Non' ||
+      answers.question18a !== ''
+    ) {
+      return <Question8bis />;
     }
     if (answers.question18 === 'question18 - Oui') {
       return <Question18a />;
@@ -346,13 +367,17 @@ const Form = () => {
       return <Question16a />;
     }
     if (
+      answers.question9 === 'question9 - Seul' ||
+      answers.question9 === 'question9 - A deux'
+    ) {
+      return <Question19a />;
+    }
+    if (
       answers.question8 === 'question8 - Propriétaire' ||
       answers.question8 ===
         'question8 - Bénéficiaire d un logement de fonction' ||
       answers.question8 === 'question8 - Hébergé à titre gratuit' ||
-      answers.question8a !== '' ||
-      answers.question9 === 'question9 - Seul' ||
-      answers.question9 === 'question9 - A deux'
+      answers.question8a !== ''
     ) {
       return <Question9 />;
     }

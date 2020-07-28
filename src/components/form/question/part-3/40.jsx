@@ -16,7 +16,7 @@ const Question40 = () => {
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
-        <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
+        <div className="row-cols-12 py-4 p-lg-5 text-center mb-3 mb-lg-5">
           <h1>
             Avez-vous d’autres types de revenus? (si 2 emprunteurs, mettre un
             revenu commun)
