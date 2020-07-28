@@ -84,6 +84,7 @@ const initial = {
   question43: '',
   question431: '',
   question432: '',
+  question44: '',
   question45: {
     nom: '',
     nomdejeunefille: '',

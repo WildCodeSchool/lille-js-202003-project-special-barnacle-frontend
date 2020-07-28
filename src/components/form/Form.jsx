@@ -85,15 +85,18 @@ import Question42bis from './question/part-3/42bis';
 import Question43 from './question/part-3/43';
 import Question431 from './question/part-3/431';
 import Question432 from './question/part-3/432';
+import Question44 from './question/part-4/44';
 import Contact from './Contact';
 
 const Form = () => {
   const answers = useSelector((state) => state.question);
   const [question, setQuestion] = useState(<Question1 />);
   function switchQuestion() {
+    if (answers.question44 !== '') {
+      return <Question44 />;
+    }
     if (answers.question432 !== '') {
-      // TODO 44
-      return <Question40 />;
+      return <Question44 />;
     }
     if (answers.question431 !== '') {
       return <Question432 />;
@@ -144,12 +147,10 @@ const Form = () => {
       return <Question42 />;
     }
     if (answers.question40a !== '') {
-      // TODO return 44
-      return <Question40a />;
+      return <Question44 />;
     }
     if (answers.question40 === 'question40 - Non') {
-      // TODO return 44
-      return <Question40 />;
+      return <Question44 />;
     }
     if (answers.question40 === 'question40 - Oui') {
       return <Question40a />;
