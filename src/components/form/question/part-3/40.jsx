@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
-const Question4 = () => {
+const Question40 = () => {
   const dispatch = useDispatch();
 
   const handleAnswer = (va) => {
-    dispatch({ type: 'ANSWER', question: 'question4', text: va });
+    dispatch({ type: 'ANSWER', question: 'question40', text: va });
   };
 
   useEffect(() => {
@@ -17,7 +17,10 @@ const Question4 = () => {
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Souhaitez-vous faire des travaux?</h1>
+          <h1>
+            Avez-vous d’autres types de revenus? (si 2 emprunteurs, mettre un
+            revenu commun)
+          </h1>
         </div>
 
         <div className="row">
@@ -26,7 +29,7 @@ const Question4 = () => {
             type="button"
             value="oui"
             onClick={() => {
-              handleAnswer('question4 - Oui');
+              handleAnswer('question40 - Oui');
             }}
           >
             <p className="my-auto">Oui</p>
@@ -45,7 +48,7 @@ const Question4 = () => {
             type="button"
             value="non"
             onClick={() => {
-              handleAnswer('question4 - Non');
+              handleAnswer('question40 - Non');
             }}
           >
             <p className="my-auto">Non</p>
@@ -61,4 +64,4 @@ const Question4 = () => {
   );
 };
 
-export default Question4;
+export default Question40;

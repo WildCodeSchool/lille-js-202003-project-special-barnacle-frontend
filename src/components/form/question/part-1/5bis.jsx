@@ -4,9 +4,11 @@ import '../styleForm.css';
 
 function Question5bis() {
   const dispatch = useDispatch();
+
   const handleAnswer = (va) => {
     dispatch({ type: 'ANSWER', question: 'question5bis', text: va });
   };
+
   useEffect(() => {
     dispatch({ type: 'ANSWER' });
   }, [dispatch]);
@@ -66,16 +68,16 @@ function Question5bis() {
           <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
             <input
               id="image"
-              value="Autre"
+              value="Mixte"
               type="image"
-              alt="Autre"
+              alt="Mixte"
               src="img/form/question1/autresprojets.jpg"
               width="100%"
               onClick={() => {
                 handleAnswer('question5bis - Résidence mixte');
               }}
             />
-            <p className="my-auto py-2">Résidence mixte</p>
+            <p className="my-auto py-2">Mixte</p>
           </div>
         </div>
       </div>

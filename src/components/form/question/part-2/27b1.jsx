@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
-function Question17() {
+function Question27b1() {
   const dispatch = useDispatch();
 
   const [answer, setAnswer] = useState('');
@@ -11,20 +11,24 @@ function Question17() {
     e.preventDefault();
     dispatch({
       type: 'ANSWER',
-      question: 'question17',
-      text: `question17 - ${answer}`,
+      question: 'question27b1',
+      text: `question27b1 - ${answer}`,
     });
   };
 
   const handleChange = (value) => {
     setAnswer(value);
   };
-
   return (
     <div>
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Quelle est la valeur de votre bien?</h1>
+          <h1>
+            Veuillez indiquer pour chacun de vos prêts, le capital restant dû,
+            le taux, le type de taux, la date de 1ère échéance, la durée de
+            l&apos;emprunt en mois et le montant de la mensualité assurance
+            comprise.
+          </h1>
         </div>
         <form
           onSubmit={(e) => {
@@ -34,8 +38,8 @@ function Question17() {
           <input
             className="questionEnter col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="text"
-            placeholder="Valeur"
-            label="question17"
+            placeholder="Détails"
+            label="question27b1"
             value={answer}
             onChange={(e) => {
               handleChange(e.target.value);
@@ -46,5 +50,4 @@ function Question17() {
     </div>
   );
 }
-
-export default Question17;
+export default Question27b1;

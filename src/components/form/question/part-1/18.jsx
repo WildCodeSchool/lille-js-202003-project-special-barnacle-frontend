@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
-function Question18() {
+const Question18 = () => {
+  const dispatch = useDispatch();
+
+  const handleAnswer = (va) => {
+    dispatch({ type: 'ANSWER', question: 'question18', text: va });
+  };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER' });
+  }, [dispatch]);
+
   return (
     <div className="questionTxt">
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Souhaitez-vous le revendre ?</h1>
+          <h1>Souhaitez-vous le revendre?</h1>
         </div>
 
         <div className="row">
@@ -14,6 +25,9 @@ function Question18() {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="oui"
+            onClick={() => {
+              handleAnswer('question18 - Oui');
+            }}
           >
             <p className="my-auto">Oui</p>
 
@@ -30,6 +44,9 @@ function Question18() {
             className="formCard col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="button"
             value="non"
+            onClick={() => {
+              handleAnswer('question18 - Non');
+            }}
           >
             <p className="my-auto">Non</p>
             <img
@@ -42,6 +59,6 @@ function Question18() {
       </div>
     </div>
   );
-}
+};
 
 export default Question18;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
-function Question17() {
+function Question37() {
   const dispatch = useDispatch();
 
   const [answer, setAnswer] = useState('');
@@ -11,20 +11,19 @@ function Question17() {
     e.preventDefault();
     dispatch({
       type: 'ANSWER',
-      question: 'question17',
-      text: `question17 - ${answer}`,
+      question: 'question37',
+      text: `question37 - ${answer}`,
     });
   };
 
   const handleChange = (value) => {
     setAnswer(value);
   };
-
   return (
     <div>
       <div className="form container-fluid pb-5">
         <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
-          <h1>Quelle est la valeur de votre bien?</h1>
+          <h1>A quelle date avez vous été embauché?</h1>
         </div>
         <form
           onSubmit={(e) => {
@@ -34,8 +33,8 @@ function Question17() {
           <input
             className="questionEnter col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
             type="text"
-            placeholder="Valeur"
-            label="question17"
+            placeholder="Date"
+            label="question37"
             value={answer}
             onChange={(e) => {
               handleChange(e.target.value);
@@ -47,4 +46,4 @@ function Question17() {
   );
 }
 
-export default Question17;
+export default Question37;

@@ -68,9 +68,9 @@ function Question5() {
           <div className="col-10 col-sm-5 col-lg-2 px-0 formCard mb-5 text-center mx-auto">
             <input
               id="image"
-              value="Miwte"
+              value="Mixte"
               type="image"
-              alt="Miwte"
+              alt="Mixte"
               src="img/form/question1/autresprojets.jpg"
               width="100%"
               onClick={() => {
