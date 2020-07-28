@@ -232,10 +232,10 @@ const Form = () => {
       return <Question30 />;
     }
     if (answers.question28a !== '') {
-      return <Question29 />;
+      return <Question34 />;
     }
     if (answers.question28 === 'question28 - Non') {
-      return <Question29 />;
+      return <Question34 />;
     }
     if (answers.question28 === 'question28 - Oui') {
       return <Question28a />;
@@ -324,12 +324,6 @@ const Form = () => {
 
     // Part 2 & 3
 
-    if (
-      answers.question18 === 'question18 - Non' ||
-      answers.question18a !== ''
-    ) {
-      return <Question19a />;
-    }
     if (answers.question18 === 'question18 - Oui') {
       return <Question18a />;
     }
@@ -344,6 +338,14 @@ const Form = () => {
     }
     if (answers.question16 === 'question16 - En France') {
       return <Question16a />;
+    }
+    if (
+      (answers.question9 === 'question9 - Seul' &&
+        answers.question1 === 'question1 - Renégocier') ||
+      (answers.question9 === 'question9 - A deux' &&
+        answers.question1 === 'question1 - Renégocier')
+    ) {
+      return <Question29 />;
     }
     if (
       answers.question9 === 'question9 - Seul' ||
@@ -362,6 +364,20 @@ const Form = () => {
     }
     if (answers.question8 === 'question8 - Locataire') {
       return <Question8a />;
+    }
+    if (
+      (answers.question18 === 'question18 - Non' &&
+        answers.question1 === 'question1 - Renégocier') ||
+      (answers.question18a !== '' &&
+        answers.question1 === 'question1 - Renégocier')
+    ) {
+      return <Question8 />;
+    }
+    if (
+      answers.question18 === 'question18 - Non' ||
+      answers.question18a !== ''
+    ) {
+      return <Question19a />;
     }
     if (answers.question7a !== '' || answers.question7b !== '') {
       return <Question8 />;
