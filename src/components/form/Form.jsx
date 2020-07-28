@@ -109,7 +109,7 @@ const Form = () => {
     ) {
       return <Question45bis />;
     }
-    if (answers.question51 !== '') {
+    if (answers.question51.cp !== '') {
       return <Question52 />;
     }
     if (
@@ -118,7 +118,7 @@ const Form = () => {
     ) {
       return <Question51 />;
     }
-    if (answers.question48 !== '') {
+    if (answers.question48.fixe !== '') {
       return <Question49 />;
     }
     if (answers.question47a !== '') {
@@ -130,10 +130,16 @@ const Form = () => {
     if (answers.question47 === 'question47 - Oui') {
       return <Question47a />;
     }
-    if (answers.question46 !== '') {
+    if (
+      answers.question46 === 'question46 - Marié' ||
+      answers.question46 === 'question46 - Célibataire' ||
+      answers.question46 === 'question46 - Pacsé' ||
+      answers.question46 === 'question46 - Union libre' ||
+      answers.question46 === 'question46 - Divorcé'
+    ) {
       return <Question47 />;
     }
-    if (answers.question45 !== '') {
+    if (answers.question45.nom !== '') {
       return <Question46 />;
     }
     if (answers.question44 === 'question44 - Une société') {
