@@ -19,6 +19,9 @@ import Question7b from './question/part-1/7b';
 import Question8 from './question/part-1/8';
 import Question8a from './question/part-1/8a';
 import Question9 from './question/part-1/9';
+import Question8bis from './question/part-1/8bis';
+import Question8bisa from './question/part-1/8bisa';
+import Question9bis from './question/part-1/9bis';
 import Question10 from './question/part-1/10';
 import Question10a from './question/part-1/10a';
 import Question10b from './question/part-1/10b';
@@ -324,7 +327,30 @@ const Form = () => {
     }
 
     // Part 2 & 3
-
+    if (
+      answers.question9bis === 'question9bis - Seul' ||
+      answers.question9bis === 'question9bis - A deux'
+    ) {
+      return <Question29 />;
+    }
+    if (
+      answers.question8bis === 'question8bis - Propriétaire' ||
+      answers.question8bis ===
+        'question8bis - Bénéficiaire d un logement de fonction' ||
+      answers.question8bis === 'question8bis - Hébergé à titre gratuit' ||
+      answers.question8bisa !== ''
+    ) {
+      return <Question9bis />;
+    }
+    if (answers.question8bis === 'question8bis - Locataire') {
+      return <Question8bisa />;
+    }
+    if (
+      answers.question18 === 'question18 - Non' ||
+      answers.question18a !== ''
+    ) {
+      return <Question8bis />;
+    }
     if (answers.question18 === 'question18 - Oui') {
       return <Question18a />;
     }
@@ -339,14 +365,6 @@ const Form = () => {
     }
     if (answers.question16 === 'question16 - En France') {
       return <Question16a />;
-    }
-    if (
-      (answers.question9 === 'question9 - Seul' &&
-        answers.question1 === 'question1 - Renégocier') ||
-      (answers.question9 === 'question9 - A deux' &&
-        answers.question1 === 'question1 - Renégocier')
-    ) {
-      return <Question29 />;
     }
     if (
       answers.question9 === 'question9 - Seul' ||
@@ -365,20 +383,6 @@ const Form = () => {
     }
     if (answers.question8 === 'question8 - Locataire') {
       return <Question8a />;
-    }
-    if (
-      (answers.question18 === 'question18 - Non' &&
-        answers.question1 === 'question1 - Renégocier') ||
-      (answers.question18a !== '' &&
-        answers.question1 === 'question1 - Renégocier')
-    ) {
-      return <Question8 />;
-    }
-    if (
-      answers.question18 === 'question18 - Non' ||
-      answers.question18a !== ''
-    ) {
-      return <Question19a />;
     }
     if (answers.question7a !== '' || answers.question7b !== '') {
       return <Question8 />;
