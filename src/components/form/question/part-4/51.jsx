@@ -147,7 +147,7 @@ function Question51() {
             />
           </div>
         </div>
-        <button type="button">GO</button>
+        <button type="submit">GO</button>
       </form>
     </div>
   );

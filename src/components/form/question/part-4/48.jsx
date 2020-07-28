@@ -85,7 +85,7 @@ function Question48() {
             />
           </div>
         </div>
-        <button type="button">GO</button>
+        <button type="submit">GO</button>
       </form>
     </div>
   );
