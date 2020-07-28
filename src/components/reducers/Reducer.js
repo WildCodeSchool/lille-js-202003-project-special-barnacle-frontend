@@ -92,6 +92,13 @@ const initial = {
     datedenaissance: '',
     nationalite: '',
   },
+  question45bis: {
+    nom: '',
+    nomdejeunefille: '',
+    prenom: '',
+    datedenaissance: '',
+    nationalite: '',
+  },
   question46: '',
   question47: '',
   question47a: '',
@@ -115,6 +122,7 @@ const initial = {
     creation: '',
     taxation: '',
   },
+  question52: '',
 };
 
 const Reducer = (state = initial, action) => {

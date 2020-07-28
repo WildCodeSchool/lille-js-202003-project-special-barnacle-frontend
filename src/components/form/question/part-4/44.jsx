@@ -34,7 +34,7 @@ const Question44 = () => {
                 src="img/form/question52/homme.png"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('question52 - Un homme');
+                  handleAnswer('question44 - Un homme');
                 }}
               />
               <p className="my-auto py-2">Un homme</p>
@@ -63,7 +63,7 @@ const Question44 = () => {
                 src="img/form/question52/societe.jpg"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('question52 - Une societe');
+                  handleAnswer('question44 - Une societe');
                 }}
               />
               <p className="my-auto py-2">Une société</p>
