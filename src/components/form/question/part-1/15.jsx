@@ -23,7 +23,7 @@ const Question15 = () => {
               value="Une maison"
               type="image"
               alt="maison"
-              src="img/form/question2/Maison.jpg"
+              src="img/form/question2/maison.jpg"
               width="100%"
               onClick={() => {
                 handleAnswer('question15 - Une maison');
@@ -38,7 +38,7 @@ const Question15 = () => {
               value="Un appartement"
               type="image"
               alt="Un appartement"
-              src="img/form/question2/Appartement.jpg"
+              src="img/form/question2/appartement.jpg"
               width="100%"
               onClick={() => {
                 handleAnswer('question15 - Un appartement');
@@ -53,7 +53,7 @@ const Question15 = () => {
               value="Un terrain"
               type="image"
               alt="Un terrain"
-              src="img/form/question1/Terrain.jpg"
+              src="img/form/question2/terrain.jpg"
               width="100%"
               onClick={() => {
                 handleAnswer('question15 - Un terrain');
@@ -68,7 +68,7 @@ const Question15 = () => {
               value="Autre"
               type="image"
               alt="Autre"
-              src="img/form/question2/autresprojets.jpg"
+              src="img/form/question2/autresprojets2.jpg"
               width="100%"
               onClick={() => {
                 handleAnswer('question15 - Autre');

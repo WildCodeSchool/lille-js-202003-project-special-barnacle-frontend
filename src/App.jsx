@@ -24,12 +24,9 @@ function App() {
           <Route path="/offer">
             <NosOffres />
           </Route>
-          <Route path="/project" component={Form} />
+          <Route path="/form" component={Form} />
           <Route path="/contact" component={() => <div>contact</div>} />
           <Route path="/user/:id" component={() => <div>user</div>} />
-          {/* <Route path="/form">
-            <Form />
-          </Route> */}
           <Route exact path="/contact">
             <Contact />
           </Route>
