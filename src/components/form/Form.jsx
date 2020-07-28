@@ -87,6 +87,7 @@ import Contact from './Contact';
 const Form = () => {
   const answers = useSelector((state) => state.question);
   const [question, setQuestion] = useState(<Question1 />);
+
   function switchQuestion() {
     if (answers.question432 !== '') {
       return <Question40 />;
@@ -102,6 +103,15 @@ const Form = () => {
     }
     if (answers.question42bis === 'question42bis - Privé') {
       return <Question431 />;
+    }
+    if (answers.question38bisc !== '') {
+      return <Question43 />;
+    }
+    if (answers.question38bisb !== '') {
+      return <Question38bisc />;
+    }
+    if (answers.question38bisa !== '') {
+      return <Question38bisb />;
     }
     if (answers.question42 !== '') {
       return <Question38bisa />;
@@ -149,15 +159,6 @@ const Form = () => {
     }
     if (answers.question38c !== '') {
       return <Question39a />;
-    }
-    if (answers.question38bisc !== '') {
-      return <Question43 />;
-    }
-    if (answers.question38bisb !== '') {
-      return <Question38bisc />;
-    }
-    if (answers.question38bisa !== '') {
-      return <Question38bisb />;
     }
     if (answers.question38b !== '') {
       return <Question38c />;
