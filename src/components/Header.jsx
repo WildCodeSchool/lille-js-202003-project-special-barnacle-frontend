@@ -70,7 +70,7 @@ const Header = () => {
             <NavLink className="mx-2 mx-xl-3" to="/offer">
               Nos offres
             </NavLink>
-            <NavLink className="mx-2 mx-xl-3" to="/project">
+            <NavLink className="mx-2 mx-xl-3" to="/form">
               Démarrez votre projet
             </NavLink>
             <NavLink className="mx-2 mx-xl-3" to="/contact">
