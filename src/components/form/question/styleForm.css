@@ -14,7 +14,6 @@ h1 {
   background-color: #173753;
 }
 
-.questionTxt,
 .formCard,
 .questionEnter {
   border-radius: 10px;
@@ -63,12 +62,6 @@ input {
 .questionEnter {
   border-radius: 10px;
   border: 0;
-}
-
-.questionTxt p {
-  color: #000;
-  font-weight: 700;
-  font-size: 1em;
 }
 button {
   background-color: transparent;

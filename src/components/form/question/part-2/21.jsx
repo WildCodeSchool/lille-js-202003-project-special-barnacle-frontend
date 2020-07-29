@@ -14,7 +14,7 @@ const Question21 = () => {
   }, [dispatch]);
 
   return (
-    <div className="questionTxt form container-fluid pb-5">
+    <div className="form container-fluid pb-5">
       <div className="row-cols-12 py-4 p-lg-5 text-center mb-3 mb-lg-5">
         <h1>Souhaitez-vous mettre un apport personnel?</h1>
       </div>

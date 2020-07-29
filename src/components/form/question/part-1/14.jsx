@@ -13,7 +13,7 @@ const Question14 = () => {
     dispatch({ type: 'ANSWER' });
   }, [dispatch]);
   return (
-    <div className="questionTxt form container-fluid pb-5">
+    <div className="form container-fluid pb-5">
       <div className="row-cols-12 py-4 p-lg-5 text-center mb-3 mb-lg-5">
         <h1>Dans quel type de bien souhaitez-vous faire des travaux?</h1>
       </div>

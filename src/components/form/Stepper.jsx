@@ -7,7 +7,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: 'background',
+    background: '#edf1f5',
     width: '100%',
   },
   button: {
