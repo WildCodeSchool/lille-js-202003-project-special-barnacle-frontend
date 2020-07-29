@@ -6,11 +6,13 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledFin = styled.section`
+  .bg {
+    background-color: #edf1f5;
+  }
   h1 {
     color: #2b95ad;
     text-transform: uppercase;
   }
-
   h2 {
     color: #2b95ad;
     margin-top: 1.2em;
@@ -78,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(2),
       width: '100ch',
-      background: '#fff',
+      background: '#edf1f5',
     },
   },
   button: {
@@ -95,7 +97,7 @@ function Fin({ setActiveStep }) {
 
   return (
     <StyledFin>
-      <div className="container-fluid p-lg-5 p-2">
+      <div className="bg container-fluid p-lg-5 p-2">
         <div className="apropos">
           <h1 className="text-center my-5">MERCI</h1>
           <h3 className="text-center">

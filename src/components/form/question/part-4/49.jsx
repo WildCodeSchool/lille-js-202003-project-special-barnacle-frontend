@@ -1,8 +1,25 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 import '../styleForm.css';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    '& > *': {
+      margin: theme.spacing(2),
+      width: '100ch',
+      background: '#fff',
+    },
+  },
+  button: {
+    margin: theme.spacing(4),
+  },
+}));
+
 function Question49() {
+  const classes = useStyles();
+
   const dispatch = useDispatch();
 
   const [answer1, setAnswer1] = useState('');
@@ -110,7 +127,16 @@ function Question49() {
             />
           </div>
         </div>
-        <button type="submit">GO</button>
+        <div className="text-center">
+          <Button
+            className={classes.button}
+            variant="contained"
+            color="primary"
+            type="submit"
+          >
+            Valider
+          </Button>
+        </div>
       </form>
     </div>
   );
