@@ -147,7 +147,7 @@ const Form = () => {
     }
     if (
       answers.question44 === 'question44 - Un homme' ||
-      answers.question44 === 'question44 - Un femme'
+      answers.question44 === 'question44 - Une femme'
     ) {
       return <Question45 />;
     }
@@ -385,10 +385,10 @@ const Form = () => {
     if (answers.question20a !== '') {
       return <Question20b />;
     }
-    if (answers.question19b !== '') {
-      return <Question20a />;
-    }
-    if (answers.question19a1 === 'question19a1 - Non') {
+    if (
+      answers.question19b !== '' ||
+      answers.question19a1 === 'question19a1 - Non'
+    ) {
       return <Question20a />;
     }
     if (answers.question19a1 === 'question19a1 - Oui') {

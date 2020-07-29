@@ -51,7 +51,7 @@ function Question44({ setActiveStep }) {
                 src="img/form/question52/femme.png"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('question52 - Une femme');
+                  handleAnswer('question44 - Une femme');
                 }}
               />
               <p className="my-auto py-2">Une femme</p>
@@ -65,7 +65,7 @@ function Question44({ setActiveStep }) {
                 src="img/form/question52/societe.jpg"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('question44 - Une societe');
+                  handleAnswer('question44 - Une société');
                 }}
               />
               <p className="my-auto py-2">Une société</p>
