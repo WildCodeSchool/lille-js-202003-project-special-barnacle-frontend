@@ -21,10 +21,8 @@ function App() {
           <Route path="/about">
             <Apropos />
           </Route>
-          <Route path="/offer">
-            <NosOffres />
-          </Route>
           <Route path="/form" component={Form} />
+          <Route path="/offer" component={NosOffres} />
           <Route path="/contact" component={Contact} />
           <Route path="/user/:id" component={() => <div>user</div>} />
           <Route exact path="/contact">
