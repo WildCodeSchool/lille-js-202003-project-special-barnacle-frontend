@@ -84,7 +84,15 @@ const initial = {
   question43: '',
   question431: '',
   question432: '',
+  question44: '',
   question45: {
+    nom: '',
+    nomdejeunefille: '',
+    prenom: '',
+    datedenaissance: '',
+    nationalite: '',
+  },
+  question45bis: {
     nom: '',
     nomdejeunefille: '',
     prenom: '',
@@ -114,6 +122,7 @@ const initial = {
     creation: '',
     taxation: '',
   },
+  question52: '',
 };
 
 const Reducer = (state = initial, action) => {

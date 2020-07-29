@@ -32,8 +32,9 @@ const Question8a = () => {
       >
         <input
           className="questionEnter col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
-          type="text"
+          type="number"
           label="question8a"
+          PlaceHolder="Montant"
           value={answer}
           onChange={(e) => {
             handleChange(e.target.value);

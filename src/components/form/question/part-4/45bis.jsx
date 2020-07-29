@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import '../styleForm.css';
 
-function Question45() {
+function Question45bis() {
   const dispatch = useDispatch();
 
   const [answer1, setAnswer1] = useState('');
@@ -35,7 +35,7 @@ function Question45() {
     e.preventDefault();
     dispatch({
       type: 'ANSWER',
-      question: 'question45',
+      question: 'question45bis',
       text: {
         nom: answer1,
         nomdejeunefille: answer2,
@@ -61,7 +61,7 @@ function Question45() {
               className=" col-12 col-lg-8"
               type="text"
               placeholder="Nom"
-              label="question45"
+              label="question45bis"
               value={answer1}
               onChange={(e) => {
                 handleChange1(e.target.value);
@@ -75,7 +75,7 @@ function Question45() {
               className="col-12 col-lg-8"
               type="text"
               placeholder="Nom de jeune fille"
-              label="question45"
+              label="question45bis"
               value={answer2}
               onChange={(e) => {
                 handleChange2(e.target.value);
@@ -89,7 +89,7 @@ function Question45() {
               className="col-12 col-lg-8"
               type="text"
               placeholder="Prénom"
-              label="question45"
+              label="question45bis"
               value={answer3}
               onChange={(e) => {
                 handleChange3(e.target.value);
@@ -101,9 +101,9 @@ function Question45() {
             <p className="col-12 col-lg-4 my-lg-auto">Date de naissance :</p>
             <input
               className="col-12 col-lg-8"
-              type="text"
-              placeholder="aaaa/mm/jj"
-              label="question45"
+              type="date"
+              placeholder="Date de naissance"
+              label="question45bis"
               value={answer4}
               onChange={(e) => {
                 handleChange4(e.target.value);
@@ -117,7 +117,7 @@ function Question45() {
               className="col-12 col-lg-8"
               type="text"
               placeholder="Nationalité"
-              label="question45"
+              label="question45bis"
               value={answer5}
               onChange={(e) => {
                 handleChange5(e.target.value);
@@ -125,10 +125,10 @@ function Question45() {
             />
           </div>
         </div>
-        <button type="submit">GO</button>
+        <button type="button">GO</button>
       </form>
     </div>
   );
 }
 
-export default Question45;
+export default Question45bis;

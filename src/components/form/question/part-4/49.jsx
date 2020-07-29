@@ -42,7 +42,7 @@ function Question49() {
 
   return (
     <div className="form container-fluid pb-5">
-      <h1 className="py-4 my-3 text-center">
+      <h1 className="py-4 mb-3 text-center">
         Quelle est votre adresse actuelle ?
       </h1>
       <form
@@ -110,7 +110,7 @@ function Question49() {
             />
           </div>
         </div>
-        <button type="button">GO</button>
+        <button type="submit">GO</button>
       </form>
     </div>
   );

@@ -31,8 +31,8 @@ function Question37() {
       >
         <input
           className="questionEnter col-10 col-sm-6 py-4 px-0 px-3 px-lg-5 mb-5 mx-auto d-flex justify-content-between"
-          type="date"
-          placeholder="Date"
+          type="text"
+          placeholder="aaaa/mm/jj"
           label="question37"
           value={answer}
           onChange={(e) => {

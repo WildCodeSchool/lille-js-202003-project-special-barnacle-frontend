@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
@@ -17,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(1),
   },
 }));
-
 function getSteps() {
   return [
     'Projet',
@@ -28,12 +28,9 @@ function getSteps() {
     'Validation',
   ];
 }
-
-export default function HorizontalLinearStepper() {
+export default function HorizontalLinearStepper({ activeStep }) {
   const classes = useStyles();
-  const activeStep = React.useState(0);
   const steps = getSteps();
-
   return (
     <div className={classes.root}>
       <Stepper activeStep={activeStep} className={classes.root}>
@@ -48,3 +45,6 @@ export default function HorizontalLinearStepper() {
     </div>
   );
 }
+HorizontalLinearStepper.propTypes = {
+  activeStep: PropTypes.number.isRequired,
+};

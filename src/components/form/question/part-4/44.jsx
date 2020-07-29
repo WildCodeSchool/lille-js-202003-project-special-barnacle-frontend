@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import '../styleForm.css';
 
-const Question44 = () => {
+function Question44({ setActiveStep }) {
   const dispatch = useDispatch();
 
   const handleAnswer = (va) => {
@@ -11,7 +12,8 @@ const Question44 = () => {
 
   useEffect(() => {
     dispatch({ type: 'ANSWER' });
-  }, [dispatch]);
+    setActiveStep(3);
+  }, [dispatch, setActiveStep]);
 
   return (
     <div className="questionImg">
@@ -34,7 +36,7 @@ const Question44 = () => {
                 src="img/form/question52/homme.png"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('question52 - Un homme');
+                  handleAnswer('question44 - Un homme');
                 }}
               />
               <p className="my-auto py-2">Un homme</p>
@@ -49,7 +51,7 @@ const Question44 = () => {
                 src="img/form/question52/femme.png"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('question52 - Une femme');
+                  handleAnswer('question44 - Une femme');
                 }}
               />
               <p className="my-auto py-2">Une femme</p>
@@ -63,7 +65,7 @@ const Question44 = () => {
                 src="img/form/question52/societe.jpg"
                 width="100%"
                 onClick={() => {
-                  handleAnswer('question52 - Une societe');
+                  handleAnswer('question44 - Une société');
                 }}
               />
               <p className="my-auto py-2">Une société</p>
@@ -73,6 +75,9 @@ const Question44 = () => {
       </div>
     </div>
   );
-};
+}
 
+Question44.propTypes = {
+  setActiveStep: PropTypes.number.isRequired,
+};
 export default Question44;

@@ -85,15 +85,83 @@ import Question42bis from './question/part-3/42bis';
 import Question43 from './question/part-3/43';
 import Question431 from './question/part-3/431';
 import Question432 from './question/part-3/432';
+import Question44 from './question/part-4/44';
+import Question45 from './question/part-4/45';
+import Question45bis from './question/part-4/45bis';
+import Question46 from './question/part-4/46';
+import Question47 from './question/part-4/47';
+import Question47a from './question/part-4/47a';
+import Question48 from './question/part-4/48';
+import Question49 from './question/part-4/49';
+import Question50 from './question/part-4/50';
+import Question51 from './question/part-4/51';
+import Question52 from './question/part-4/52';
+import Fin from './Fin';
 import Contact from './Contact';
 
 const Form = () => {
   const answers = useSelector((state) => state.question);
   const [question, setQuestion] = useState(<Question1 />);
+  const [activeStep, setActiveStep] = React.useState(0);
   function switchQuestion() {
+    if (answers.question45bis.nom !== '' || answers.question49.adresse !== '') {
+      return <Fin activeStep={activeStep} setActiveStep={setActiveStep} />;
+    }
+    if (
+      answers.question52 === 'question52 - Un homme' ||
+      answers.question52 === 'question52 - Un femme'
+    ) {
+      return <Question45bis />;
+    }
+    if (answers.question51.cp !== '') {
+      return <Question52 />;
+    }
+    if (
+      answers.question50 === 'question50 - SCI (société civile immobilière' ||
+      answers.question50 === 'question50 - Autre'
+    ) {
+      return <Question51 />;
+    }
+    if (answers.question48.portable !== '') {
+      return <Question49 />;
+    }
+    if (answers.question47a !== '') {
+      return <Question48 />;
+    }
+    if (answers.question47 === 'question47 - Non') {
+      return <Question48 />;
+    }
+    if (answers.question47 === 'question47 - Oui') {
+      return <Question47a />;
+    }
+    if (
+      answers.question46 === 'question46 - Marié' ||
+      answers.question46 === 'question46 - Célibataire' ||
+      answers.question46 === 'question46 - Pacsé' ||
+      answers.question46 === 'question46 - Union libre' ||
+      answers.question46 === 'question46 - Divorcé'
+    ) {
+      return <Question47 />;
+    }
+    if (answers.question45.nom !== '') {
+      return <Question46 />;
+    }
+    if (answers.question44 === 'question44 - Une société') {
+      return <Question50 />;
+    }
+    if (
+      answers.question44 === 'question44 - Un homme' ||
+      answers.question44 === 'question44 - Une femme'
+    ) {
+      return <Question45 />;
+    }
+
+    // Part 4
+
     if (answers.question432 !== '') {
-      // TODO 44
-      return <Question40 />;
+      return (
+        <Question44 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question431 !== '') {
       return <Question432 />;
@@ -144,12 +212,14 @@ const Form = () => {
       return <Question42 />;
     }
     if (answers.question40a !== '') {
-      // TODO return 44
-      return <Question40a />;
+      return (
+        <Question44 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question40 === 'question40 - Non') {
-      // TODO return 44
-      return <Question40 />;
+      return (
+        <Question44 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question40 === 'question40 - Oui') {
       return <Question40a />;
@@ -212,7 +282,9 @@ const Form = () => {
       return <Question41 />;
     }
     if (answers.question33 !== '') {
-      return <Question34 />;
+      return (
+        <Question34 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question32 !== '') {
       return <Question33 />;
@@ -236,10 +308,14 @@ const Form = () => {
       return <Question30 />;
     }
     if (answers.question28a !== '') {
-      return <Question34 />;
+      return (
+        <Question34 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question28 === 'question28 - Non') {
-      return <Question34 />;
+      return (
+        <Question34 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (answers.question28 === 'question28 - Oui') {
       return <Question28a />;
@@ -313,10 +389,10 @@ const Form = () => {
     if (answers.question20a !== '') {
       return <Question20b />;
     }
-    if (answers.question19b !== '') {
-      return <Question20a />;
-    }
-    if (answers.question19a1 === 'question19a1 - Non') {
+    if (
+      answers.question19b !== '' ||
+      answers.question19a1 === 'question19a1 - Non'
+    ) {
       return <Question20a />;
     }
     if (answers.question19a1 === 'question19a1 - Oui') {
@@ -327,11 +403,14 @@ const Form = () => {
     }
 
     // Part 2 & 3
+
     if (
       answers.question9bis === 'question9bis - Seul' ||
       answers.question9bis === 'question9bis - A deux'
     ) {
-      return <Question29 />;
+      return (
+        <Question29 activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (
       answers.question8bis === 'question8bis - Propriétaire' ||
@@ -370,7 +449,9 @@ const Form = () => {
       answers.question9 === 'question9 - Seul' ||
       answers.question9 === 'question9 - A deux'
     ) {
-      return <Question19a />;
+      return (
+        <Question19a activeStep={activeStep} setActiveStep={setActiveStep} />
+      );
     }
     if (
       answers.question8 === 'question8 - Propriétaire' ||
@@ -514,8 +595,7 @@ const Form = () => {
 
   return (
     <>
-      <Stepper />
-
+      <Stepper activeStep={activeStep} setActiveStep={setActiveStep} />
       <div>{question}</div>
     </>
   );

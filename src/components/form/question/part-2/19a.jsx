@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import '../styleForm.css';
 
-function Question19a() {
+function Question19a({ setActiveStep }) {
   const dispatch = useDispatch();
 
   const [answer, setAnswer] = useState('');
@@ -15,6 +16,11 @@ function Question19a() {
       text: `question19a - ${answer}`,
     });
   };
+
+  useEffect(() => {
+    dispatch({ type: 'ANSWER' });
+    setActiveStep(1);
+  }, [dispatch, setActiveStep]);
 
   const handleChange = (value) => {
     setAnswer(value);
@@ -45,4 +51,7 @@ function Question19a() {
   );
 }
 
+Question19a.propTypes = {
+  setActiveStep: PropTypes.number.isRequired,
+};
 export default Question19a;

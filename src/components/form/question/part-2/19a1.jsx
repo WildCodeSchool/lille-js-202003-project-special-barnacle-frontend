@@ -14,7 +14,7 @@ const Question19a1 = () => {
   }, [dispatch]);
 
   return (
-    <div className="questionTxt form container-fluid pb-5">
+    <div className="form container-fluid pb-5">
       <div className="row-cols-12 py-4 p-lg-5 text-center mb-3 mb-lg-5">
         <h1>Y a t-il des travaux à prévoir?</h1>
       </div>
@@ -44,7 +44,7 @@ const Question19a1 = () => {
           type="button"
           value="non"
           onClick={() => {
-            handleAnswer('question9a1 - Non');
+            handleAnswer('question19a1 - Non');
           }}
         >
           <p className="my-auto">Non</p>
