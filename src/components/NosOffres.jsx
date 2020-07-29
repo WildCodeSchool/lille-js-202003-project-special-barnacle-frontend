@@ -70,7 +70,7 @@ function NosOffres() {
     <StyledNosOffres>
       <div className="container-fluid p-lg-5 p-2">
         <div className="apropos">
-          <h1 className="text-center my-5">Une stratégie tarifaire inédite!</h1>
+          <h1 className="text-center">Une stratégie tarifaire inédite!</h1>
           <p>
             Actuellement, le courtier en prêt immobilier touche en moyenne 1% de
             la banque et 1% de frais de courtage qu’il vous facture sur le

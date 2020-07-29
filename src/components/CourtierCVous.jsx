@@ -5,7 +5,6 @@ import styled from 'styled-components';
 const Wrapper = styled.section`
   color: #fff;
   h1 {
-    margin: 20px;
     color: #fff;
   }
 
@@ -20,7 +19,6 @@ const Wrapper = styled.section`
   ul {
     list-style-image: url('img/star.png');
     list-style-position: inside;
-    margin-top: 2vh;
   }
 
   li {
@@ -66,10 +64,6 @@ const Wrapper = styled.section`
       border: 1px yellow magenta;
     }
 
-    h1 {
-      margin: 0;
-    }
-
     button {
       width: 15vw;
       margin: 40px 20px;
@@ -92,7 +86,7 @@ function CourtierCVous() {
       <div className="container-fluid">
         <div className="row">
           <div className="card mx-auto">
-            <h1 className="text-center mx-auto mt-5">
+            <h1 className="text-center mx-auto mt-5 pb-3 pt-0">
               Le courtier c’est vous !
             </h1>
 

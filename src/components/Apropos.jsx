@@ -82,7 +82,7 @@ function Apropos() {
     <StyledApropos>
       <div className="container-fluid p-lg-5 p-2">
         <div className="apropos">
-          <h1 className="text-center my-5">A propos de NEGODI</h1>
+          <h1 className="text-center">A propos de NEGODI</h1>
           <p>
             Negodi pour «Négociation directe» se veut être une alternative
             économique, éthique aux solutions de courtage classiques. L’objectif
