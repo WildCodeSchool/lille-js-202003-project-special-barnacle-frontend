@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-// import axios from 'axios';
+import React from 'react';
 import './styleContact.css';
-// import { backend } from '../conf';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -22,84 +20,20 @@ const useStyles = makeStyles((theme) => ({
 const Contact = () => {
   const classes = useStyles();
 
-  const [nom, setNom] = useState('');
-  const [prenom, setPrenom] = useState('');
-  const [mail, setMail] = useState('');
-  const [message, setMessage] = useState('');
-
-  const handleChangeNom = (value) => {
-    setNom(value);
-  };
-
-  const handleChangePrenom = (value) => {
-    setPrenom(value);
-  };
-  const handleChangeMail = (value) => {
-    setMail(value);
-  };
-  const handleChangeMessage = (value) => {
-    setMessage(value);
-  };
-
-  const handleSubmit = (e) => {
-    // axios
-    //   .post(`backend/contact`, { nom, prenom, mail, message })
-    //   .catch((err) => {
-    //     console.log('Erreur:', err);
-    //   });
-    e.preventDefault();
-  };
-
-  const formulaire = {
-    nom,
-    prenom,
-    mail,
-    message,
-  };
   return (
     <div className="contact">
       <h1>Contact</h1>
-      <form
-        noValidate
-        autoComplete="off"
-        onSubmit={(e) => {
-          handleSubmit(e);
-        }}
-      >
+      <form noValidate autoComplete="off">
         <span className={classes.root}>
-          <TextField
-            id="outlined-basic"
-            label="Nom"
-            variant="outlined"
-            onChange={(e) => {
-              handleChangeNom(e.target.value);
-            }}
-          />
-          <TextField
-            id="outlined-basic"
-            label="Prénom"
-            variant="outlined"
-            onChange={(e) => {
-              handleChangePrenom(e.target.value);
-            }}
-          />
-          <TextField
-            id="outlined-basic"
-            label="E-mail"
-            variant="outlined"
-            onChange={(e) => {
-              handleChangeMail(e.target.value);
-            }}
-          />
+          <TextField id="outlined-basic" label="Nom" variant="outlined" />
+          <TextField id="outlined-basic" label="Prénom" variant="outlined" />
+          <TextField id="outlined-basic" label="E-mail" variant="outlined" />
           <TextField
             id="outlined-multiline-static"
             label="Message"
             variant="outlined"
             multiline
             rows={9}
-            onChange={(e) => {
-              handleChangeMessage(e.target.value);
-            }}
           />
         </span>
         <br />
@@ -112,8 +46,6 @@ const Contact = () => {
           Envoyer
         </Button>
       </form>
-
-      {formulaire}
     </div>
   );
 };
