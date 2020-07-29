@@ -96,6 +96,7 @@ import Question49 from './question/part-4/49';
 import Question50 from './question/part-4/50';
 import Question51 from './question/part-4/51';
 import Question52 from './question/part-4/52';
+import Fin from './Fin';
 import Contact from './Contact';
 
 const Form = () => {
@@ -103,6 +104,9 @@ const Form = () => {
   const [question, setQuestion] = useState(<Question1 />);
   const [activeStep, setActiveStep] = React.useState(0);
   function switchQuestion() {
+    if (answers.question45bis.nom !== '' || answers.question49.adresse !== '') {
+      return <Fin activeStep={activeStep} setActiveStep={setActiveStep} />;
+    }
     if (
       answers.question52 === 'question52 - Un homme' ||
       answers.question52 === 'question52 - Un femme'
@@ -118,7 +122,7 @@ const Form = () => {
     ) {
       return <Question51 />;
     }
-    if (answers.question48.fixe !== '') {
+    if (answers.question48.portable !== '') {
       return <Question49 />;
     }
     if (answers.question47a !== '') {

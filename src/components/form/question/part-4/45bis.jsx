@@ -48,7 +48,7 @@ function Question45bis() {
 
   return (
     <div className="form container-fluid pb-5">
-      <h1 className="py-4 my-3 text-center">Identité</h1>
+      <h1 className="py-4 mb-3 text-center">Identité</h1>
       <form
         onSubmit={(e) => {
           handleSubmit(e);

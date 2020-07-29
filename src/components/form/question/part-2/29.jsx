@@ -29,7 +29,7 @@ function Question29({ setActiveStep }) {
       <div className="row-cols-12 py-4 p-lg-5 text-center my-3 mb-lg-5">
         <h1>
           Veuillez indiquer pour chacun de des prêts que vous souhaitez
-          racheter, le capital restant dû, le taux, le type de taux, la date de
+          racheter: le capital restant dû, le taux, le type de taux, la date de
           1ère échéance, la durée de l&apos;emprunt en mois et le montant de la
           mensualité assurance comprise.
         </h1>
